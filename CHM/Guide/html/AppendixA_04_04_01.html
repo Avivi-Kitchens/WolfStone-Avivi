@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_04_04_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+<head><title>Torrent Properties: General</title>
+
+
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" /></head><body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="AppendixA_04_04.html">«&nbsp; Previous</a></li>
+				<li><a href="AppendixA_04_04_02.html">Next &nbsp;»</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">µTorrent User Manual</a> &gt;
+			<a href="AppendixA.html">Appendix A: The µTorrent Interface</a> &gt;
+			<a href="AppendixA_04.html">Miscellaneous</a> &gt;
+			<a href="AppendixA_04_04.html">Torrent Properties</a>
+			<h1>General</h1>
+		</div>
+		<div id="content">
+
+<h3><a class="name" id="Trackers" href="#Trackers">Trackers</a></h3>
+<ul class="uienum">
+	<li><a class="name" id="Trackers.edit_control" href="#Trackers.edit_control" />The edit control lists all the trackers the torrent job(s) will use, and is interpreted identically to how the <a href="AppendixA_04_03.html#Torrent_Properties.Trackers">"<em>Create New Torrent</em>" dialog's "<em>Trackers</em>" edit control</a>
+is interpreted. If a private torrent job's trackers list is modified,
+all existing peer connections for that torrent job will be dropped.</li>
+</ul>
+
+<h3><a class="name" id="Bandwidth_Settings" href="#Bandwidth_Settings">Bandwidth Settings</a></h3>
+<ul class="uienum">
+	<li>The <a class="name" id="Bandwidth_Settings.Maximum_upload_rate" href="#Bandwidth_Settings.Maximum_upload_rate">Maximum upload rate</a> field will limit the maximum rate at which µTorrent will upload for the selected torrent job(s). Setting the value to <span class="value">0</span> is equivalent to setting it to unlimited. Setting the value to anywhere between <span class="value">1</span> and <span class="value">3</span> will limit the download speed for the torrent job to <span class="value">12</span> times the set upload speed, and you will see a "<em>[Limited]</em>" message <a href="AppendixA_01_05_01.html#Transfer.Download_Limit">in the Transfer tab</a>. This value is interpreted in KiB/s, so please enter it as such. This limit will not override the <a href="AppendixA_02_05.html#Global_Upload_Rate_Limiting">global maximum upload rate</a>.</li>
+	<li>The <a class="name" id="Bandwidth_Settings.Maximum_download_rate" href="#Bandwidth_Settings.Maximum_download_rate">Maximum download rate</a> field will limit the maximum rate at which µTorrent will download for the selected torrent job(s). Setting the value to <span class="value">0</span>
+is equivalent to setting it to unlimited. This value is interpreted in
+KiB/s, so please enter it as such. This limit will not override the <a href="AppendixA_02_05.html#Global_Download_Rate_Limiting">global maximum download rate</a>.</li>
+	<li>The <a class="name" id="Bandwidth_Settings.Number_of_upload_slots" href="#Bandwidth_Settings.Number_of_upload_slots">Number of upload slots</a>
+field defines the maximum number of peers that µTorrent will upload to
+at any given moment for the selected torrent job(s). This value will
+override the <a href="AppendixA_02_05.html#Number_of_Connections">default value</a>. Leaving this blank tells µTorrent to use the default settings.</li>
+  <li>The <a class="name" id="Bandwidth_Settings.Number_of_upload_slots" href="AppendixA_04_04_01.html#Bandwidth_Settings.Number_of_upload_slots">Minimum number of available seeds</a> field defines the minimum number of seeds This value will override the <a href="AppendixA_02_05.html#Number_of_Connections">default value</a>. Leaving this blank tells µTorrent to use the default settings. </li>
+
+</ul>
+
+<h3><a class="name" id="Seeding_Goal" href="#Seeding_Goal">Seeding Goal</a></h3>
+<ul class="uienum">
+	<li><a class="name" id="Seeding_Goal.Override_default_settings" href="#Seeding_Goal.Override_default_settings">Override default settings</a> tells µTorrent to override <a href="AppendixA_02_08.html#Seeding_Goal">the default queueing settings</a> for the selected torrent job(s).</li>
+	<li>The <a class="name" id="Seeding_Goal.Minimum_ratio" href="#Seeding_Goal.Minimum_ratio">Minimum ratio</a>
+field behaves identically to the respective option in the default
+queueing preferences, but affects only the torrent job(s) whose
+properties are being edited.</li>
+	<li>The <a class="name" id="Seeding_Goal.Minimum_seeding_time" href="#Seeding_Goal.Minimum_seeding_time">Minimum seeding time</a>
+field behaves identically to the respective option in the default
+queueing preferences, but affects only the torrent job(s) whose
+properties are being edited.</li>
+  <li>The <a class="name" id="Bandwidth_Settings.Number_of_upload_slots" href="#Seeding_Goal.Minimum_number_of_available_seeds">Minimum number of available seeds</a> field behaves identically to the respective option in the default queueing
+preferences, but affects only the torrent job(s) whose properties are
+being edited..</li>
+
+</ul>
+
+<h3><a class="name" id="Other_Settings" href="#Other_Settings">Other Settings</a></h3>
+<ul class="uienum">
+	<li><a class="name" id="Other_Settings.Initial_Seeding" href="#Other_Settings.Initial_Seeding">Initial Seeding</a>
+enables a more bandwidth efficient method of seeding the torrent
+job(s). This should be used only if you are the sole seeder in the
+swarm, and if there are at least <span class="value">2</span> peers connected. Generally, this option should not be used by people with high upload speeds.</li>
+	<li><a class="name" id="Other_Settings.Enable_DHT" href="#Other_Settings.Enable_DHT">Enable DHT</a>
+enables announcing the torrent over DHT. This option is automatically
+disabled if DHT is turned off, or if the selected .torrent file has the
+'private' flag set.</li>
+	<li><a class="name" id="Other_Settings.Peer_Exchange" href="#Other_Settings.Peer_Exchange">Peer Exchange</a>
+enables trading of peer lists with other peers that support µTorrent's
+implementation of Peer Exchange. This option is disabled if the
+selected .torrent file has the 'private' flag set.</li>
+	<li><a class="name" id="Other_Settings.Local_Peer_Discovery" href="#Other_Settings.Local_Peer_Discovery">Local Peer Discovery</a>
+enables discovery of local peers via multicast. This option is disabled
+if the selected .torrent file has the 'private' flag set.</li>
+</ul>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="AppendixA_04_04.html">«&nbsp; Previous</a></li>
+				<li><a href="AppendixA_04_04_02.html">Next &nbsp;»</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_04_04_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+</html>

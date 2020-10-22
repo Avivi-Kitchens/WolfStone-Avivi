@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_02_06.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+<head>
+	<title>Preferences: BitTorrent</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="AppendixA_02_05.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="AppendixA_02_07.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">&micro;Torrent User Manual</a> &gt;
+			<a href="AppendixA.html">Appendix A: The &micro;Torrent Interface</a> &gt;
+			<a href="AppendixA_02.html">Preferences</a>
+			<h1>BitTorrent</h1>
+		</div>
+		<div id="content">
+
+<h3><a class="name" id="Basic_BitTorrent_Features" href="#Basic_BitTorrent_Features">Basic BitTorrent Features</a></h3>
+<ul class="uienum">
+	<li><a class="name" id="Basic_BitTorrent_Features.Enable_DHT_Network" href="#Basic_BitTorrent_Features.Enable_DHT_Network">Enable DHT Network</a> enables the Distributed Hash Table (DHT) if checked. You can also do this by <span class="mouse">right-click</span>ing the DHT status in the main window status bar and selecting the corresponding option.</li>
+	<li><a class="name" id="Basic_BitTorrent_Features.Enable_DHT_for_new_torrents" href="#Basic_BitTorrent_Features.Enable_DHT_for_new_torrents">Enable DHT for new torrents</a> tells &micro;Torrent to check for peers from the DHT network on each newly added torrent job. This option only works if DHT is enabled, and if the 'private' flag is not set in the .torrent file.</li>
+	<li><a class="name" id="Basic_BitTorrent_Features.Enable_Local_Peer_Discovery" href="#Basic_BitTorrent_Features.Enable_Local_Peer_Discovery">Enable Local Peer Discovery</a> allows &micro;Torrent to attempt to discover local peers via multicast. If a peer is considered local, transfer rates with the peer will not be limited unless <a href="#Basic_BitTorrent_Features.Limit_local_peer_bandwidth">Limit local peer bandwidth</a> is also enabled. Local Peer Discovery will not be used for .torrent files with the 'private' flag set. This option serves as a default setting for newly-added torrent jobs, and does not retroactively affect previously-added. This option can be disabled on a per torrent job basis in the respective torrent job's <a href="AppendixA_04_04_01.html#Other_Settings.Local_Peer_Discovery">Properties</a> dialog.</li>
+	<li><a class="name" id="Basic_BitTorrent_Features.Enable_bandwidth_management" href="#Basic_BitTorrent_Features.Enable_bandwidth_management">Enable bandwidth management</a> allows &micro;Torrent to use uTP to try and gain a better sense of how much bandwidth it should be using while maintaining quality of Internet service.</li>
+	<li><a class="name" id="Basic_BitTorrent_Features.Enable_UDP_tracker_support" href="#Basic_BitTorrent_Features.Enable_UDP_tracker_support">Enable UDP tracker support</a> allows &micro;Torrent to communicate with trackers using the UDP-based tracker communication protocol. Such trackers have URLs that begin with "<em><span class="value">udp://</span></em>".</li>
+	<li><a class="name" id="Basic_BitTorrent_Features.Ask_tracker_for_scrape_information" href="#Basic_BitTorrent_Features.Ask_tracker_for_scrape_information">Ask tracker for scrape information</a> tells &micro;Torrent to scrape the tracker (ask for peer and seed counts). By default, the tracker is scraped only when the torrent job is started, but <a href="AppendixA_02_12.html#bt.scrape_stopped">this can be changed</a>.</li>
+	<li><a class="name" id="Basic_BitTorrent_Features.Enable_Peer_Exchange" href="#Basic_BitTorrent_Features.Enable_Peer_Exchange">Enable Peer Exchange</a> enables Peer Exchange (PEX) for each newly added torrent job, provided the 'private' flag is not set for that .torrent file. This option serves as a default setting for newly-added torrent jobs, and does not retroactively affect previously-added. This option can be disabled on a per torrent job basis in the respective torrent job's <a href="AppendixA_04_04_01.html#Other_Settings.Peer_Exchange">Properties</a> dialog.</li>
+	<li><a class="name" id="Basic_BitTorrent_Features.Limit_local_peer_bandwidth" href="#Basic_BitTorrent_Features.Limit_local_peer_bandwidth">Limit local peer bandwidth</a>: This option decides whether &micro;Torrent should apply the rate limits to traffic between itself and peers on the local network. Peers are considered local if they are discovered by Local Peer Discovery, or if they are on the same LAN as the client.</li>
+	<li>The <a class="name" id="Basic_BitTorrent_Features.IP_Hostname_to_report_to_tracker" href="#Basic_BitTorrent_Features.IP_Hostname_to_report_to_tracker">IP/Hostname to report to tracker</a> field allows you to specify your IP address when reporting to the tracker. This is used in the case where your WAN (Internet) IP address is not reported correctly to the tracker for whatever reason (might be that you are behind a proxy server). Note that you can type a hostname in this field, so if you use a dynamic DNS service, you can enter your domain into this field. Also, realize that not all trackers pay attention to this information, and often ignore it.</li>
+</ul>
+
+<h3><a class="name" id="Protocol_Encryption" href="#Protocol_Encryption">Protocol Encryption</a></h3>
+<ul class="uienum">
+	<li>The <a class="name" id="Protocol_Encryption.Outgoing" href="#Protocol_Encryption.Outgoing">Outgoing</a> dropdown menu allows you to select the mode of encryption that you prefer &micro;Torrent to establish. All modes will accept incoming encrypted connections, and the encryption is 2-way.
+		<ul class="sublist">
+			<li><a class="name" id="Protocol_Encryption.Outgoing.Disabled" href="#Protocol_Encryption.Outgoing.Disabled">Disabled</a> will force &micro;Torrent to attempt to establish only unencrypted outgoing connections.</li>
+			<li><a class="name" id="Protocol_Encryption.Outgoing.Enabled" href="#Protocol_Encryption.Outgoing.Enabled">Enabled</a> will allow &micro;Torrent to establish encrypted and unencrypted outgoing connections, depending on how the peer responds to the handshake. This option provides &micro;Torrent with the largest pool of peers to pick from for connecting to, but incurs additional overhead that may often be unnecessary in most typical situations.</li>
+			<li><a class="name" id="Protocol_Encryption.Outgoing.Forced" href="#Protocol_Encryption.Outgoing.Forced">Forced</a> forces &micro;Torrent to establish only encrypted outgoing connections. Any peer that doesn't support encryption will not be connected to. It is recommended that you not use this option unless your ISP actively searches for unencrypted outgoing connections, as it can impair your ability to connect to peers.</li>
+		</ul>
+	</li>
+	<li><a class="name" id="Protocol_Encryption.Allow_incoming_legacy_connections" href="#Protocol_Encryption.Allow_incoming_legacy_connections">Allow incoming legacy connections</a> allows &micro;Torrent to accept unencrypted incoming connections. If disabled, any incoming connection that is unencrypted will be ignored. It is recommended that you not disable this option unless your ISP actively searches for unencrypted incoming connections, as it can significantly impair your ability to connect to peers.</li>
+</ul>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="AppendixA_02_05.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="AppendixA_02_07.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_02_06.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+</html>

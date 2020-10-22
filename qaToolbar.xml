@@ -1,0 +1,4 @@
+﻿<XtraSerializer version="1.0" application="RibbonQuickAccessToolbar">
+  <property name="ShowCustomizeItem">true</property>
+  <property name="ItemLinks" iskey="true" value="0" />
+</XtraSerializer>

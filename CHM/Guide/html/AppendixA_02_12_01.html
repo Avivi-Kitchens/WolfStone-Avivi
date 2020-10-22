@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_02_12_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+<head>
+	<title>Preferences: Advanced &gt; UI Extras</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="AppendixA_02_12.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="AppendixA_02_12_02.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">&micro;Torrent User Manual</a> &gt;
+			<a href="AppendixA.html">Appendix A: The &micro;Torrent Interface</a> &gt;
+			<a href="AppendixA_02.html">Preferences</a> &gt;
+			<a href="AppendixA_02_12.html">Advanced</a>
+			<h1>UI Extras</h1>
+		</div>
+		<div id="content">
+
+<h3><a class="name" id="Speed_Popup_List" href="#Speed_Popup_List">Speed Popup List</a></h3>
+<ul class="uienum">
+	<li><a class="name" id="Speed_Popup_List.Override_automatic_speed_popup_list" href="#Speed_Popup_List.Override_automatic_speed_popup_list">Override automatic speed popup list</a> allows you to define the lists of speeds that are displayed when <span class="mouse">right-click</span>ing the corresponding item in the status bar on the main window. If left unchecked, &micro;Torrent automatically generates the list in context, based on the current limit.
+		<ul class="sublist">
+			<li><a class="name" id="Speed_Popup_List.Override_automatic_speed_popup_list.Upload_speed_list" href="#Speed_Popup_List.Override_automatic_speed_popup_list.Upload_speed_list">Upload speed list</a> defines the upload speed list. <span class="value">-1</span> adds a separator to the list. <span class="value">0</span> means <strong>Unlimited</strong>. Any other positive value is interpreted normally (as that value). Each value must be separated with a comma. The values are interpreted in KiB/s, so please enter them as such.</li>
+			<li><a class="name" id="Speed_Popup_List.Override_automatic_speed_popup_list.Download_speed_list" href="#Speed_Popup_List.Override_automatic_speed_popup_list.Download_speed_list">Download speed list</a> defines the download speed list. <span class="value">-1</span> adds a separator to the list. <span class="value">0</span> means <strong>Unlimited</strong>. Any other positive value is interpreted normally (as that value). Each value must be separated with a comma. The values are interpreted in KiB/s, so please enter them as such.</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a class="name" id="Persistent_Labels" href="#Persistent_Labels">Persistent Labels</a></h3>
+<ul class="uienum">
+	<li>The field here allows you to specify permanent labels that remain regardless of the number of torrent jobs there are actually using that label. Multiple persistent labels may be entered, but must be separated with a <span class="value">|</span> (vertical pipe). Note that persistent labels are given higher priority than normal labels in the <a href="AppendixA_01_03.html">category list</a>, and so, are displayed above their normal counterparts.</li>
+</ul>
+
+<h3><a class="name" id="Search_Engines" href="#Search_Engines">Search Engines</a></h3>
+<ul class="uienum">
+	<li>This edit control allows you to edit the list of search engines that &micro;Torrent can use when using the built-in torrent search facility. One search engine may be entered per line, and must be entered as follows (where <span class="value">?search=</span> is arbitrary and depends on the search engine being used):<br /><span class="value">Name|http://domain/path?search=</span></li>
+	<li>If found in the URL, &micro;Torrent will replace the following tokens as described:
+		<ul class="sublist">
+			<li><span class="value">%s</span> is replaced with the entered search query. If this is not found in the search URL, then the query will be appended to the end of the URL instead.</li>
+			<li><span class="value">%v</span> is replaced with the client user agent ID.</li>
+		</ul>
+	</li>
+	<li>In order to add custom search engines to the list on your own, you should have some basic understanding of HTML and how HTTP <span class="value">GET</span> works. The topics themselves are outside the scope of this manual. The alternative would be to check whether your favorite search engine serves <span class="value">.btsearch</span> files that &micro;Torrent can use to automatically add the search engine to the list.</li>
+	<li>Blank lines are displayed as separators in the search engine menu.</li>
+	<li>If you leave the entire field blank, the <a href="AppendixA_01_02.html#Search">search widgets in the toolbar</a> will be hidden from view.</li>
+</ul>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="AppendixA_02_12.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="AppendixA_02_12_02.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_02_12_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+</html>

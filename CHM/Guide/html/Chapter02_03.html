@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/Chapter02_03.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:37:56 GMT -->
+<head>
+	<title>Port Forwarding</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="Chapter02_02.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="Chapter02_04.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">&micro;Torrent User Manual</a> &gt;
+			<a href="Chapter02.html">Chapter 02: Basic Guides</a>
+			<h1>Port Forwarding</h1>
+		</div>
+		<div id="content">
+
+<p>A large portion of the time, users complain that they are not getting great speeds with &micro;Torrent. This can sometimes be a problem with an individual torrent (a lack of quality seeds, for example), but it is also possible that the user is not allowing incoming connections to reach his computer, and thus, is not making optimal use of &micro;Torrent's ability to connect to peers with that torrent. Since &micro;Torrent works best when it can connect freely to other peers, blocked or reduced access to other peers will adversely affect the download speeds a user can expect to achieve.</p> 
+
+<p>Being unable to accept incoming connections means your computer is in a <strong>firewalled state</strong>. In &micro;Torrent, if you are unable to get a green <a href="AppendixA_01_06.html#Network_Status">network status icon</a> after a long period of transferring different torrents, it is an indication that you might be in a firewalled state.</p>
+
+<h3><a class="name" id="Why_Being_Firewalled_is_Bad" href="#Why_Being_Firewalled_is_Bad">Why Being Firewalled is Bad</a></h3>
+<p>Many firewalled users find themselves thinking "Hey, I'm firewalled, but I can still transfer the files, so it must mean I'm okay!" What they fail to realize is that being firewalled does not necessarily mean you cannot download at all, as firewalled users can still make outgoing connections, connecting to peers to transfer data in that way. While this is true, that's all you are limited to. That means that if someone else tries to initiate a connection with you, the attempt is blocked by your firewall.</p>
+<p>You must then realize that you might not be the only firewalled user in the swarm. Since firewalled users can only make outgoing connections, and cannot accept incoming connections, it is natural that they (the firewalled users) cannot connect to each other. Being in a firewalled state not only cuts into the potential speed you could be attaining when not firewalled, but also means you are of very limited use to other peers in the swarm. Because there are less people available for firewalled users to connect to, they are open to less sources for data. Additionally, because they cannot accept incoming connections, other peers do not connect to them, so they lose even more attention. Essentially, peers who are not in a firewalled state have the potential to connect to many more sources of data.</p>
+<p>Removing yourself from being in a firewalled state does not mean you have to get rid of your firewall entirely. The only requirement is that you allow the application you wish to be unfirewalled in to listen to the port they want to through the firewall, also known as <strong>port forwarding</strong>. In the case of &micro;Torrent, you need to set your firewall to allow &micro;Torrent to listen to <a href="AppendixA_02_04.html#Listening_Port.Port_used_for_incoming_connections">the port set in the connection preferences</a>.</p>
+<p>Although it may sound like a security risk to "poke" a hole in your firewall, it is not the case. If no application is listening on the port that is opened in your firewall, any incoming connections on that port will be ignored. If an application is listening, security is up to that application. Unless there is a known, fully-remote exploit for the current version of &micro;Torrent that would break your computer's security setup, there is no risk in opening a port on your firewall for &micro;Torrent.</p>
+
+<h3><a class="name" id="Forwarding_Ports_in_Your_Software_Personal_Firewall" href="#Forwarding_Ports_in_Your_Software_Personal_Firewall">Forwarding Ports in Your Software Personal Firewall</a></h3>
+<p>Nowadays, it is not uncommon for people to have a software personal firewall installed on their computers. While many people simply allow applications they recognize to access the Internet, oftentimes, it is not enough, as the firewall may continue to block the port that the allowed application is trying to listen on. As such, specific firewall rules may need to be created in order for &micro;Torrent to work on a computer with a software personal firewall installed. The general rule of thumb you should follow is that you have to allow incoming TCP and UDP connections through the listening port set in the connection preferences. Because you are forwarding a specific port in your firewall, it is imperative that you do not have &micro;Torrent <a href="AppendixA_02_04.html#Listening_Port.Randomize_port_each_start">randomize the listening port each time it starts</a>.</p>
+<p>Because of the wide variety of software personal firewalls available today, there is no way to include specific instructions for every product. Though this is the case, there is one specific firewall that &micro;Torrent can create a firewall rule for automatically, and that is the Windows Firewall. <a href="AppendixA_02_04.html#Listening_Port.Add_Windows_Firewall_exception">The relevant option</a> assumes you are running Windows XP with at least Service Pack 2 (SP2) installed or newer, and have the firewall enabled.</p>
+
+<h3><a class="name" id="Forwarding_Ports_in_Your_Router" href="#Forwarding_Ports_in_Your_Router">Forwarding Ports in Your Router</a></h3>
+<p>With broadband becoming the prevalent way by which people access the Internet, and multiple computers in each home becoming a common sight, routers are often used to share the broadband connection across the computer network in the home. Even if multiple computers are not being used on the broadband connection, ISPs often supply routers for their customers to use. What many people don't realize is that routers themselves act like a firewall that, when left unconfigured, will generally leave your computer firewalled, even if you have your software firewall configured properly.</p>
+
+<h4><a class="name" id="Universal_Plug_and_Play" href="#Universal_Plug_and_Play">Universal Plug and Play</a> and <a class="name" id="NAT_Port_Mapping_Protocol" href="#NAT_Port_Mapping_Protocol">NAT Port Mapping Protocol</a></h4>
+<p>As with software personal firewalls, there are a wide variety of routers available, and because of the sheer number, it is impossible to include port forwarding instructions for each router model in this user manual. Fortunately many routers support <strong>Universal Plug and Play (UPnP)</strong> or the <strong>NAT Port Mapping Protocol (NAT-PMP)</strong>, which allow &micro;Torrent to open a port on the router automatically without user intervention, then close the port when the port is done being used. The problem with these zero-configuration protocols for automatically telling routers to forward ports is that they may not be supported by all routers, and different/incompatible implementations of the protocols may be included in many routers. By default, <a href="AppendixA_02_04.html#Listening_Port.Enable_UPnP_port_mapping">UPnP</a> and <a href="AppendixA_02_04.html#Listening_Port.Enable_NAT-PMP_port_mapping">NAT-PMP</a> are enabled in &micro;Torrent. If you find that you are still in a firewalled state, then it likely means your router does not support either protocol, or includes an implementation incompatible with the implementation used by &micro;Torrent. If this is the case, then it is recommended that you disable these features in &micro;Torrent, set up a static IP, and forward your ports manually.</p>
+
+<h4><a class="name" id="Setting_Up_a_Static_IP" href="#Setting_Up_a_Static_IP">Setting Up a Static IP</a></h4>
+<p>On most routers, a connected computer's IP address on the network is picked from a pool of IP addresses available for the router to choose from through <strong>Dynamic Host Configuration Protocol (DHCP)</strong>. The keyword here is "dynamic," as this indicates that each computer's IP address is assigned on-the-fly based on what IP addresses are still available in the router's pool of usable IP addresses. While some people get lucky and keep their LAN IP addresses for a long period of time, that is not a guarantee under DHCP. As such, port forwarding rules might work one day in forwarding traffic through a specific port to a specific computer at its LAN IP address at the time that the rule was made, but it may cease to work on another day because that specific computer's LAN IP address may have changed along the way. Some routers (notably, Linksys routers) don't even bother to forward ports to computers whose LAN IP addresses are within the DHCP IP range. Because of these reasons, it is necessary that you set up a <strong>static IP address</strong> for your computer (preferrably, outside of the DHCP range) before you continue with forwarding your ports manually on the router.</p>
+<p>Note that static IP refers to static LAN IP, which is different and unrelated to WAN IP. Your <strong>LAN IP address</strong> is the location of your computer within your network, but is not public for anyone to see besides the other computers within your network. Your <strong>WAN IP address</strong> is the IP address that people outside of your network see your network at, but it does not reveal the internal IP address allocation on your LAN, which may contain multiple computers, each (naturally) having their own LAN IPs. In the context of setting up a static IP for port forwarding, your WAN IP is irrelevant, and is normally not used in any step along the way.</p>
+<p>The directions for setting up a static IP can be found on <a href="ExternalLinks.html#PortForward">PortForward.com</a>.</p>
+
+<h4><a class="name" id="Manual_Port_Forwarding" href="#Manual_Port_Forwarding">Manual Port Forwarding</a></h4>
+<p>Assuming you have a static IP set up properly, the final step would be to do the actual port forwarding on your router. To get to the router configuration, you can normally visit the Default Gateway IP address in your web browser (you may have to append <span class="value">http://</span> before the IP address in some web browsers for this to work). From there, you look for some method of forwarding ports or allowing/hosting "applications" through the firewall, whereby you forward incoming connections on the listening port selected in &micro;Torrent over both TCP and UDP to your computer's IP address, which should be the IP you selected when setting up the static IP. A list of many routers and port forwarding instructions for them can be found on <a href="ExternalLinks.html#PortForward">PortForward.com</a>. Be sure you know your router's exact brand and model. If your router is not listed there, you should consult with your router's documentation, or search the Internet for more detailed instructions.</p>
+
+<h4><a class="name" id="Testing_Your_Configuration" href="#Testing_Your_Configuration">Testing Your Configuration</a></h4>
+<p>After you forward your ports, use the port checker from step 2 of the Setup Guide to test whether the port was opened correctly. If it confirms that the port is open, then you're done! If otherwise, then go over the previous instructions and make sure you did not skip a step or make any mistakes. If you're absolutely sure you configured everything properly, then there might be other problems at hand. In that case, you should read <a href="Chapter03_01.html">the advanced guide on port forwarding</a>.</p>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="Chapter02_02.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="Chapter02_04.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/Chapter02_03.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:37:56 GMT -->
+</html>

@@ -1,0 +1,85 @@
+
+[INFOTYPES]
+
+[OPTIONS]
+Auto Index=No
+Binary Index=Yes
+Binary TOC=No
+Compatibility=1.1 or later
+Compiled File=User Manual.chm
+Contents File=User Manual.hhc
+Index File=User Manual.hhk
+Error log file=User Manual.log.txt
+Full-text search=Yes
+Language=0x40d Hebrew
+Title=WolfStone מדריך
+Default Topic=Guide\index.html
+Default Window=
+Default Font=Arial, 9, 177
+Create CHI file=No
+Full text search stop list file=
+Display compile notes=Yes
+Display compile progress=Yes
+
+[FILES]
+Guide\index.html
+Guide\html\Chapter01_01.html
+Guide\html\Chapter01_02.html
+Guide\html\Chapter01_03.html
+Guide\html\Chapter02_01.html
+Guide\html\Chapter02_02.html
+Guide\html\Chapter02_03.html
+Guide\html\Chapter02_04.html
+Guide\html\Chapter02_05.html
+Guide\html\Chapter03_01.html
+Guide\html\Chapter03_02.html
+Guide\html\Chapter03_03.html
+Guide\html\Chapter03_04.html
+Guide\html\AppendixA_01.html
+Guide\html\AppendixA_01_01.html
+Guide\html\AppendixA_01_02.html
+Guide\html\AppendixA_01_03.html
+Guide\html\AppendixA_01_04.html
+Guide\html\AppendixA_01_05_01.html
+Guide\html\AppendixA_01_05_02.html
+Guide\html\AppendixA_01_05_03.html
+Guide\html\AppendixA_01_05_04.html
+Guide\html\AppendixA_01_05_05.html
+Guide\html\AppendixA_01_05_06.html
+Guide\html\AppendixA_01_05_07.html
+Guide\html\AppendixA_01_05_08.html
+Guide\html\AppendixA_01_05_09.html
+Guide\html\AppendixA_01_06.html
+Guide\html\AppendixA_02_01.html
+Guide\html\AppendixA_02_02.html
+Guide\html\AppendixA_02_03.html
+Guide\html\AppendixA_02_04.html
+Guide\html\AppendixA_02_05.html
+Guide\html\AppendixA_02_06.html
+Guide\html\AppendixA_02_07.html
+Guide\html\AppendixA_02_08.html
+Guide\html\AppendixA_02_09.html
+Guide\html\AppendixA_02_10.html
+Guide\html\AppendixA_02_11.html
+Guide\html\AppendixA_02_11b.html
+Guide\html\AppendixA_02_12_01.html
+Guide\html\AppendixA_02_12_02.html
+Guide\html\AppendixA_02_12_03.html
+Guide\html\AppendixA_02_12_04.html
+Guide\html\AppendixA_03_01.html
+Guide\html\AppendixA_03_02.html
+Guide\html\AppendixB_01.html
+Guide\html\AppendixB_02.html
+Guide\html\AppendixB_03.html
+Guide\html\AppendixB_04.html
+Guide\html\AppendixB_05.html
+Guide\html\Glossary.html
+Guide\html\ExternalLinks.html
+Guide\html\Cl_01.html
+Guide\html\Credits.html
+Guide\html\Chapter01.html
+Guide\html\Chapter02.html
+Guide\html\Chapter03.html
+Guide\html\AppendixA.html
+Guide\html\AppendixA_01_05.html
+Guide\html\AppendixA_02_12.html

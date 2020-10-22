@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_01_05_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:07 GMT -->
+<head><title>Main Window: Detailed Info Pane &gt; Transfer</title>
+
+
+
+  
+
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  
+  <link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+
+  
+  <link rel="stylesheet" href="../style.css" type="text/css" /></head><body>
+<div id="wrapper">
+<div class="navi" id="naviTop">
+<ul>
+  <li><a href="AppendixA_01_05.html">«&nbsp; Previous</a></li>
+  <li><a href="AppendixA_01_05_02.html">Next &nbsp;»</a></li>
+</ul>
+</div>
+<div id="header"> <a href="../utorrent.html">µTorrent User Manual</a>
+&gt; <a href="AppendixA.html">Appendix A: The µTorrent Interface</a>
+&gt; <a href="AppendixA_01.html">Main Window</a> &gt; <a href="AppendixA_01_05.html">Detailed Info Pane</a>
+<h1>Info</h1>
+</div>
+<div id="content">
+<p><a class="name" id="Remove" href="AppendixA_01_02.html#Remove"><img style="border: 0px solid ; width: 14px; height: 16px;" class="floatLeft" src="../img/tabs_info.png" alt="Remove" /></a>The General tab is where you'll find most of the general statistics
+for the currently selected torrent job available.</p>
+<h3><a class="name" id="Graphical_Progress_Bars" href="#Graphical_Progress_Bars">Graphical Progress Bars</a></h3>
+<ul class="uienum">
+  <li>The <a class="name" id="Graphical_Progress_Bars.upper_Downloaded_Bar" href="#Graphical_Progress_Bars.upper_Downloaded_Bar">upper Downloaded
+bar</a>
+is the general progress bar useful for getting a quick visual outlook
+of the percent completed. Selective file downloading is taken into
+account, so only the data you select to be downloaded will be counted.
+The number to the right of the Downloaded bar is the percentage of the
+torrent job that is completed, taking selective file downloading into
+account as well.
+    <ul class="sublist">
+      <li><a class="name" id="Graphical_Progress_Bars.upper_Downloaded_Bar.White" href="#Graphical_Progress_Bars.upper_Downloaded_Bar.White">White</a>
+represents what has not yet been downloaded.</li>
+      <li><a class="name" id="Graphical_Progress_Bars.upper_Downloaded_Bar.Blue" href="#Graphical_Progress_Bars.upper_Downloaded_Bar.Blue">Blue</a>
+represents what has been downloaded.</li>
+    </ul>
+  </li>
+  <li>The <a class="name" id="Graphical_Progress_Bars.lower_Downloaded_Bar" href="#Graphical_Progress_Bars.lower_Downloaded_Bar">lower Downloaded
+bar</a>
+is equivalent to the upper bar, except that it does not take selective
+file downloading into account, and it also displays the distribution of
+pieces completed in your torrent job. If there are more pieces in the
+.torrent file than there are horizontal pixels for your desktop
+resolution, µTorrent will take the average completion of adjacent
+pieces to decide what colors should be shown.
+    <ul class="sublist">
+      <li><a class="name" id="Graphical_Progress_Bars.lower_Downloaded_Bar.White" href="#Graphical_Progress_Bars.lower_Downloaded_Bar.White">White</a>
+represents the pieces that have not yet been downloaded.</li>
+      <li><a class="name" id="Graphical_Progress_Bars.lower_Downloaded_Bar.Blue" href="#Graphical_Progress_Bars.lower_Downloaded_Bar.Blue">Blue</a>
+represents the pieces that have been downloaded.</li>
+    </ul>
+  </li>
+  <li>The <a class="name" id="Graphical_Progress_Bars.Availability_Bar" href="#Graphical_Progress_Bars.Availability_Bar">Availability bar</a>
+shows the spread of the pieces in the network of peers you are
+connected to. If there are more pieces in the .torrent file than there
+are horizontal pixels for your desktop resolution, µTorrent will take
+the average completion of adjacent pieces to decide what colors should
+be shown. The number to the right is the actual availability of the
+selected torrent job.
+    <ul class="sublist">
+      <li><a class="name" id="Graphical_Progress_Bars.Availability_Bar.Dark_blue" href="#Graphical_Progress_Bars.Availability_Bar.Dark_blue">Dark blue</a>
+means the piece is available and common.</li>
+      <li><a class="name" id="Graphical_Progress_Bars.Availability_Bar.Light_blue" href="#Graphical_Progress_Bars.Availability_Bar.Light_blue">Light blue</a>
+means the piece is available, but rare.</li>torrent content size
+      <li><a class="name" id="Graphical_Progress_Bars.Availability_Bar.Red" href="#Graphical_Progress_Bars.Availability_Bar.Red">Red</a> means the
+piece is not available within the group of peers you are connected to.</li>
+    </ul>
+  </li>
+</ul>
+<p>Along with graphical progress bars, textual statistics are provided
+below. Any of these fields can be copied by <span class="mouse">right-click</span>ing
+it and selecting "<em>Copy</em>".
+The following is a description of the information displayed (note that
+most of the information displayed here can be found in the torrent jobs
+list):</p>
+<h3><a class="name" id="Transfer" href="#Transfer">Transfer</a></h3>
+<ul class="uienum">
+  <li><a class="name" id="Transfer.Time_Elapsed" href="AppendixA_01_05_01.html#Transfer.Time_Elapsed">Time Elapsed</a>
+displays the total amount of time accumulated that the torrent job has
+been started.</li>
+  <li><a class="name" id="Transfer.Remaining" href="AppendixA_01_05_01.html#Transfer.Remaining">Remaining</a>
+displays the estimated amount of time needed for µTorrent to finish
+downloading the torrent job. If the torrent job is in seeding mode,
+then the ETA displays the estimated time it will take for µTorrent to
+reach the seeding goal. If the torrent job is stopped, this field will
+be blank. If the torrent job is transferring too slowly, or has reached
+its seeding goal, this field will display the <span class="value">∞</span>
+symbol. Note that this field takes selective file downloading into
+account, so only the data you select to be downloaded will be counted.</li>
+  <li><a class="name" id="Transfer.Wasted" href="AppendixA_01_05_01.html#Transfer.Wasted">Wasted</a>
+displays the amount of data that was downloaded and deleted, either
+from hashfails, or from redundant data. The number in the parentheses
+is the count for the number of hashfails that occurred.</li>
+  <li><a class="name" id="Transfer.Downloaded" href="AppendixA_01_05_01.html#Transfer.Downloaded">Downloaded</a>
+displays the total amount of data you have downloaded, including those
+that were wasted or failed the hash check.</li>
+  <li><a class="name" id="Transfer.Uploaded" href="AppendixA_01_05_01.html#Transfer.Uploaded">Uploaded</a> displays
+the total amount of data you have uploaded since the torrent job was
+added.</li>
+  <li><a class="name" id="Transfer.Seeds" href="AppendixA_01_05_01.html#Transfer.Seeds">Seeds</a>
+displays the number of seeds you are connected to. The second number is
+the number of known seeds in the peer cache collected from the tracker,
+DHT, and PEX. The number in the parentheses is the number of seeds
+reported by the tracker scrape.</li>
+  <li><a class="name" id="Transfer.Download_Speed" href="AppendixA_01_05_01.html#Transfer.Download_Speed">Download Speed</a>
+displays the current speed at which data is being downloaded for the
+individual torrent job. The number in the parentheses is the average
+download speed throughout the time that the torrent job was in
+Downloading mode.</li>
+  <li><a class="name" id="Transfer.Upload_Speed" href="AppendixA_01_05_01.html#Transfer.Upload_Speed">Upload Speed</a>
+displays the current speed at which data is being uploaded for the
+individual torrent job. The number in the parentheses is the average
+upload speed throughout the time that the torrent job was started.</li>
+  <li><a class="name" id="Transfer.Peers" href="AppendixA_01_05_01.html#Transfer.Peers">Peers</a>
+displays the number of peers you are connected to. The second number is
+the number of known peers in the peer cache collected from the tracker,
+DHT, and PEX. The number in the parentheses is the number of peers
+reported by the tracker scrape.</li>
+  <li><a class="name" id="Transfer.Download_Limit" href="AppendixA_01_05_01.html#Transfer.Down_Limit">Down Limit</a>
+displays the maximum download rate limit set on the individual torrent
+job. If no limit is set, or the limit is set to <span class="value">0</span>,
+this field will display the <span class="value">∞</span> symbol.</li>
+  <li><a class="name" id="Transfer.Upload_Limit" href="AppendixA_01_05_01.html#Transfer.Up_Limit">Up Limit</a> displays
+the maximum upload rate limit set on the individual torrent job. If no
+limit is set, or the limit is set to <span class="value">0</span>,
+this field will display the <span class="value">∞</span> symbol.</li>
+  <li><a class="name" id="Transfer.Share_Ratio" href="AppendixA_01_05_01.html#Transfer.Share_Ratio">Share Ratio</a>
+displays the ratio of uploaded data to downloaded data. You can
+calculate it by dividing the number beside the <a href="AppendixA_01_05_01.html#Transfer.Uploaded">Uploaded</a> field by
+the number beside the <a href="AppendixA_01_05_01.html#Transfer.Downloaded">Download</a>
+field. If the torrent job was added when the file was already complete
+(seeding the file upon adding), then the ratio will start from <span class="value">0</span>, and will be calculated based on the ratio of
+the uploaded data to the torrent content size.</li>
+  <li><a class="name" id="Transfer.Share_Ratio" href="AppendixA_01_05_01.html#Transfer.Status">Status</a>
+displays the status of that torrent as seen on the status column.</li>
+
+</ul>
+<h3><a class="name" id="General" href="#General">General</a></h3>
+<ul class="uienum">
+  <li><a class="name" id="General.Save_As" href="AppendixA_01_05_01.html#General.Save_As">Save
+As</a> shows the location that the torrent contents are saved to on the
+disk.</li>
+  <li><a class="name" id="General.Total_Size" href="AppendixA_01_05_01.html#General.Total_Size">Total
+Size</a>
+shows the total size of the torrent contents. The first number displays
+the total amount of data in the torrent contents, taking selective file
+downloading into account. The second number is the total amount of data
+you have downloaded that passed the hash checks and have been written
+to disk. If there is a third number here, then it's because you are
+using selective file downloading. That third number displays the total
+size of the torrent contents, not taking selective file downloading
+into account.<a class="name" id="General.Comment" href="#General.Comment">Comment</a>
+shows the comment placed in the .torrent file by the .torrent file's
+creator.</li>
+  <li><a class="name" id="General.Pieces" href="AppendixA_01_05_01.html#General.Pieces">Pieces</a>
+shows the number of pieces in the torrent job, and the size of each of
+these pieces. The number in the parentheses indicates the number of
+pieces µTorrent has successfully acquired.</li>
+<li><a class="name" id="General.Created_On" href="#General.Created_On">Created
+On</a>
+shows the date and time that the .torrent file was created along with
+the application that was used to create the .torrent file (if it can be
+determined).</li>
+  <li><a class="name" id="General.Created_On" href="AppendixA_01_05_01.html#General.Created_By">Created
+By</a>
+shows whom the .torrent file was created by (if it was entered into it).</li>
+  <li><a class="name" id="General.Created_On" href="AppendixA_01_05_01.html#General.Created_On">Added On</a>
+shows the date and time that the .torrent file was added by the user onto the torrents' jobs list.</li>
+  <li><a class="name" id="General.Created_On" href="AppendixA_01_05_01.html#General.Completed_On">Completed On</a>
+shows the date and time that the torrent job has been completed.</li>
+
+  <li><a class="name" id="General.Hash" href="#General.Hash">Hash</a>
+shows the .torrent file's <span class="value">info</span> dictionary
+hash.</li><li><a class="name" id="General.Hash" href="AppendixA_01_05_01.html#General.Hash">Comment</a>
+shows any comment that was entered into the .torrent file.</li>
+</ul>
+</div>
+<div class="navi" id="naviBot">
+<ul>
+  <li><a href="AppendixA_01_05.html">«&nbsp; Previous</a></li>
+  <li><a href="AppendixA_01_05_02.html">Next &nbsp;»</a></li>
+</ul>
+</div>
+</div>
+
+</body>
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_01_05_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:07 GMT -->
+</html>

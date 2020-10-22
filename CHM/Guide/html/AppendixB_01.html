@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixB_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+<head>
+	<title>Settings Directory</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="AppendixB.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="AppendixB_02.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">&micro;Torrent User Manual</a> &gt;
+			<a href="AppendixB.html">Appendix B: Advanced Information</a>
+			<h1>Settings Directory</h1>
+		</div>
+		<div id="content">
+
+<p>Although &micro;Torrent is mostly self-contained, there has to be a location where it can store its settings for later use after the first run. Because &micro;Torrent does not use the Windows Registry, it has to store its configuration in files on separate files on the disk. By default, those files are located at <span class="value">%AppData%\uTorrent</span>, which can be easily accessed by visiting "<em>Start</em>" &gt; "<em>Run</em>" (or by pressing <span class="key">Windows</span>+<span class="key">R</span> on the keyboard), typing it into the "<em>Open</em>" field, and pressing "<em>OK</em>." Typically, you'll find several <span class="value">.dat</span> files in the settings directory:</p>
+<ul>
+	<li><a class="name" id="dht.dat" href="#dht.dat">dht.dat</a> contains information regarding DHT that &micro;Torrent uses when connecting to the DHT network.</li>
+	<li><a class="name" id="resume.dat" href="#resume.dat">resume.dat</a> contains information regarding currently loaded torrent jobs.</li>
+	<li><a class="name" id="rss.dat" href="#rss.dat">rss.dat</a> stores all RSS-related settings, and also holds the history of previously downloaded torrent jobs. This file only gets created if you use the <a href="AppendixA_03.html">RSS Downloader</a>.</li>
+	<li><a class="name" id="settings.dat" href="#settings.dat">settings.dat</a> contains most of the settings in &micro;Torrent, and also contains the information listed in the statistics dialog.</li>
+</ul>
+<p>Note that it is normal to find <span class="value">.dat.old</span> and <span class="value">.dat.*.bad</span> files in the same directory. The former file type denotes good backup files for the case that the corresponding <span class="value">.dat</span> file becomes corrupted. The latter file type denotes backups of corrupted files, which may be sent to the developer for analysis if necessary.</p>
+<p>In addition to <span class="value">.dat</span>, <span class="value">.dat.old</span>, and <span class="value">.dat.*.bad</span> files, &micro;Torrent stores loaded .torrent files in its settings directory unless <a href="AppendixA_02_03.html#Location_of_.torrents">a storage location</a> is specified. These files need to be stored in order for &micro;Torrent to work properly, so do not delete them unless you are absolutely sure &micro;Torrent no longer has the associated torrent job loaded any longer. If you want &micro;Torrent to delete the stored .torrent files automatically upon removal of the torrent job, see the description of the <a href="AppendixA_01_02.html#Remove">Remove</a> button in the toolbar.</p>
+
+<h3><a class="name" id="Encapsulated_Installation" href="#Encapsulated_Installation">Encapsulated "Installation"</a></h3>
+<p>While <span class="value">%AppData%\uTorrent</span> is the default directory for storing the settings, &micro;Torrent actually searches the directory that the executable file is located in first before looking in <span class="value">%AppData%\uTorrent</span>. As such, so long as the directory that the executable is located in contains a <span class="value">settings.dat</span> file (even a blank one), &micro;Torrent will look no further, and use only the files located in its current directory instead. With this behavior, it is possible to create encapsulated &micro;Torrent "installations" for use on portable flash drives, or just to have an isolated copy for any other reason.</p>
+<p>If you don't already have an encapsulated install, you can manually move the contents of <span class="value">%AppData%\uTorrent</span> into the same directory as the &micro;Torrent executable to create such an install.</p>
+
+<h3><a class="name" id="External_Files" href="#External_Files">External Files</a></h3>
+<p>Besides the default <span class="value">.dat</span> files, &micro;Torrent can make use of several other files external from the executable. Such files may modify several subtle behaviors in &micro;Torrent, or allow you to customize the graphical look and feel of &micro;Torrent. What all external files have in common is the location at which they should be placed -- the settings directory.</p>
+
+<h4><a class="name" id="External_Files.Extended_Functionality" href="#External_Files.Extended_Functionality">Extended Functionality</a></h4>
+<ul class="uienum">
+	<li>
+		<a class="name" id="External_Files.Extended_Functionality.ipfilter.dat" href="#External_Files.Extended_Functionality.ipfilter.dat">ipfilter.dat</a> is a simple text file that specifies IP ranges to block. Only blocks are supported; any allows will be ignored. The format is as follows:
+		<ul class="sublist">
+			<li><a class="name" id="External_Files.Extended_Functionality.ipfilter.dat.IPv4" href="#External_Files.Extended_Functionality.ipfilter.dat.IPv4">IPv4</a>: <span class="value">xxx.xxx.xxx.xxx - yyy.yyy.yyy.yyy</span> for each line, where each <span class="value">x</span> and each <span class="value">y</span> corresponds to arbitrary decimal values between <span class="value">0</span> and <span class="value">9</span>.</li>
+			<li><a class="name" id="External_Files.Extended_Functionality.ipfilter.dat.IPv6" href="#External_Files.Extended_Functionality.ipfilter.dat.IPv6">IPv6</a>: <span class="value">[xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx] - [yyyy:yyyy:yyyy:yyyy:yyyy:yyyy:yyyy:yyyy]</span> for each line, where each <span class="value">x</span> and each <span class="value">y</span> corresponds to arbitrary hexadecimal values between <span class="value">0</span> and <span class="value">F</span>. Zero-grouped IPv6 addresses are accepted.</li>
+		</ul>
+		 Single IPs can be specified on a line without having to write it in IP range notation. This file can be reloaded via the <a href="AppendixA_01_05_03.html#Context_Menu.Reload_IPFilter">context menu in the Peers tab</a>. If you wish to make use of this file, <a href="AppendixA_02_12.html#ipfilter.enable">ipfilter.enable</a> should be enabled. Note that only peer connections are blocked by ipfilter.dat; tracker connections (including DHT) are not blocked, even if their IPs fall within any ranges specified in ipfilter.dat.
+	</li>
+	<li><a class="name" id="External_Files.Extended_Functionality.utorrent.chm" href="#External_Files.Extended_Functionality.utorrent.chm">utorrent.chm</a> is the user manual. The manual can be accessed via the <a href="AppendixA_01_01.html#Help.uTorrent_Help">help entry in the Help menu</a>, or by pressing <span class="key">F1</span> on the keyboard.</li>
+	<li><a class="name" id="External_Files.Extended_Functionality.utorrent.lng" href="#External_Files.Extended_Functionality.utorrent.lng">utorrent.lng</a> is the file that contains all available translations for &micro;Torrent at the time of download. When first added to the settings directory, &micro;Torrent will automatically switch to the system language if a translation is available. The <a href="AppendixA_02_01.html#Language">language can be changed</a> in the Preferences.</li>
+	<li><a class="name" id="External_Files.Extended_Functionality.webui.zip" href="#External_Files.Extended_Functionality.webui.zip">webui.zip</a> is a zip file containing data &micro;Torrent will serve when the <a href="AppendixA_02_10.html">Web UI</a> is enabled and you access <span class="value">http://IP:port/gui/</span> in a web browser, where <span class="value">IP</span> is your computer's IP address, and <span class="value">port</span> is the port &micro;Torrent is listening on. Using Web UI, you can control &micro;Torrent from any other computer with an Internet connection and a compatible browser installed.</li>
+</ul>
+
+<h4><a class="name" id="External_Files.Interface_Customization" href="#External_Files.Interface_Customization">Interface Customization</a></h4>
+<ul class="uienum">
+	<li><a class="name" id="External_Files.Interface_Customization.flags.conf" href="#External_Files.Interface_Customization.flags.conf">flags.conf</a> &amp; <a class="name" id="External_Files.Interface_Customization.flags.bmp" href="#External_Files.Interface_Customization.flags.bmp">flags.bmp</a> are files used to replace the internal &micro;Torrent assignment of flags to a peer's resolved IP's host domain. <span class="value">flags.conf</span> is a text file that specifies the flag order, and maps host domains to a country, whose flag is then obtained from <span class="value">flags.bmp</span>. <span class="value">flags.conf</span> only works on hosts with a TLD of .net or .com, each mapping in the format <span class="value">host domain|country code</span>, where the country code is the country's IANA-assigned two-letter code. <span class="value">flags.bmp</span> is a Windows bitmap that contains adjacently-conjoined bitmaps of dimensions 16x16 each (without any space in between), each 16x16 square being a flag. A custom <span class="value">flags.conf</span> and <span class="value">flags.bmp</span> is maintained as <a href="ExternalLinks.html#uTorrent">a community project in the &micro;Torrent forums</a>, compiled by eng. Pressing <span class="key">Ctrl</span>+<span class="key">Shift</span>+<span class="key">R</span> on your keyboard tells &micro;Torrent to (re)load <span class="value">flags.conf</span>. If <a href="AppendixA_02_12.html#peer.resolve_country">peer.resolve_country</a> is enabled, these files will be ignored.</li>
+	<li><a class="name" id="External_Files.Interface_Customization.main.ico" href="#External_Files.Interface_Customization.main.ico">main.ico</a> is the icon that will be displayed in the icon at the top-left of the &micro;Torrent window.</li>
+	<li><a class="name" id="External_Files.Interface_Customization.maindoc.ico" href="#External_Files.Interface_Customization.maindoc.ico">maindoc.ico</a> is the icon that will be used as a file type icon for .torrent files <a href="AppendixA_02_01.html#Windows_Integration.Associate_with_.torrent_files">upon association</a>. This is mainly used for older versions of Windows, which might have problems generating file type icons automatically for .torrent files upon association.</li>
+	<li><a class="name" id="External_Files.Interface_Customization.tray.ico" href="#External_Files.Interface_Customization.tray.ico">tray.ico</a> is the icon that will be displayed in the system tray if the relevant <a href="AppendixA_02_02.html#System_Tray">system tray settings</a> are enabled.</li>
+	<li><a class="name" id="External_Files.Interface_Customization.tabs.bmp" href="#External_Files.Interface_Customization.tabs.bmp">tabs.bmp</a> is a Windows bitmap of dimensions 224x16, consisting of 14 adjacently-conjoined bitmaps of dimensions 16x16 each (without any space in between), that &micro;Torrent uses <a href="AppendixA_01_01.html#Options.Icons_on_Tabs">when icons are displayed on detailed info pane tabs</a>. Icons are arranged in the following order:
+		<ul class="sublist">
+			<li>General</li>
+			<li>Trackers</li>
+			<li>Peers</li>
+			<li>Pieces</li>
+			<li>Files</li>
+			<li>Speed</li>
+			<li>Logger</li>
+			<li>General (inactive)</li>
+			<li>Trackers (inactive)</li>
+			<li>Peers (inactive)</li>
+			<li>Pieces (inactive)</li>
+			<li>Files (inactive)</li>
+			<li>Speed (inactive)</li>
+			<li>Logger (inactive)</li>
+		</ul>
+	</li>
+	<li><a class="name" id="External_Files.Interface_Customization.toolbar.bmp" href="#External_Files.Interface_Customization.toolbar.bmp">toolbar.bmp</a> is a Windows bitmap of dimensions 288x24, consisting of 12 adjacently-conjoined bitmaps of dimensions 24x24 each (without any space in between), that &micro;Torrent uses for the images in <a href="AppendixA_01_02.html">the &micro;Torrent toolbar</a>. Icons are arranged in the following order:
+		<ul class="sublist">
+			<li>Add Torrent</li>
+			<li>Add Torrent from URL</li>
+			<li>Create New Torrent</li>
+			<li>Remove</li>
+			<li>Start</li>
+			<li>Pause</li>
+			<li>Stop</li>
+			<li>Move Up Queue</li>
+			<li>Move Down Queue</li>
+			<li>Search</li>
+			<li>Add RSS Feed</li>
+			<li>Preferences</li>
+		</ul>
+	</li>
+	<li><a class="name" id="External_Files.Interface_Customization.tstatus.bmp" href="#External_Files.Interface_Customization.tstatus.bmp">tstatus.bmp</a> is a Windows bitmap of dimensions 304x16, consisting of 19 adjacently-conjoined bitmaps of dimensions 16x16 each (without any space in between), that &micro;Torrent uses for the images in <a href="AppendixA_01_04.html#Name">torrent job status icons</a> and <a href="AppendixA_01_03.html">the category list</a>. Icons are arranged in the following order:
+		<ul class="sublist">
+			<li>Downloading</li> 
+			<li>Seeding</li> 
+			<li>Stopped</li> 
+			<li>Paused</li> 
+			<li>Downloading (tracker error)</li> 
+			<li>Seeding (tracker error)</li> 
+			<li>Critical Error</li> 
+			<li>Stopped and Finished</li> 
+			<li>Queued Download</li> 
+			<li>Queued Seed</li> 
+			<li>Active (category icon)</li> 
+			<li>All (category icon)</li> 
+			<li>Inactive (category icon)</li>
+			<li>RSS Feed (icon 1)</li>
+			<li>RSS Feed (icon 2)</li>
+			<li>RSS Feed (icon 3)</li>
+			<li>RSS Feed (invalid feed)</li>
+			<li>RSS Item (new release, within 24 hours)</li>
+			<li>RSS Item (downloaded)</li>
+		</ul>
+		Multiple RSS Feed icons are needed because &micro;Torrent treats the icons as separate frames in an animation to indicate that there is RSS activity.
+	</li>
+</ul>
+<p>External files that change the &micro;Torrent interface are numerous, but thankfully, there is a central repository where you can find many of them. Check out the <a href="ExternalLinks.html#uTorrent">&micro;Torrent Skins Page</a> for your skinning needs! If you ever decide to create your own interface files, feel free to submit them on that page, and inform us about it in the forums!</p>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="AppendixB.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="AppendixB_02.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixB_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+</html>

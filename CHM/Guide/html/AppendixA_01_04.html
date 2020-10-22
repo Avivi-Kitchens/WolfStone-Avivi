@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_01_04.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:03 GMT -->
+<head>
+	
+	<title>Main Window: Torrent Jobs List</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon">
+	<link rel="stylesheet" href="../style.css" type="text/css"></head>
+
+<body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="AppendixA_01_03.html">«&nbsp; Previous</a></li>
+				<li><a href="AppendixA_01_05.html">Next &nbsp;»</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">µTorrent User Manual</a> &gt;
+			<a href="AppendixA.html">Appendix A: The µTorrent Interface</a> &gt;
+			<a href="AppendixA_01.html">Main Window</a>
+			<h1>Torrent Jobs List</h1>
+		</div>
+		<div id="content">
+
+<p>The torrent jobs list is the main interface item in µTorrent. It is
+where your torrent jobs are displayed, along with plenty of information
+for each of them. Sorting by more than one column is possible in this
+list. You can do so by sorting by one column, then hold <span class="key">Shift</span> on your keyboard while selecting the secondary column by which µTorrent should sort the list by. If an RSS item is <span class="mouse">double-click</span>ed, it gets added to the download queue. The following is a description of each column:</p>
+<ul class="uienum">
+	<li><a class="name" id="Name" href="#Name">Name</a>
+displays the name of the torrent job. The initial name used for each
+torrent job is the name of the file being transferred (if the torrent
+contents consist of a single file), or the directory being transferred
+(if the torrent contents consist of multiple files). A torrent job can
+be renamed in the list by slow <span class="mouse">double-click</span>ing on the torrent job, or by pressing <span class="key">F2</span> on the keyboard while the torrent job is selected. To cancel the renaming, you should press <span class="key">Esc</span> on the keyboard. To confirm the change, you should press <span class="key">Enter</span>
+on the keyboard, or use the mouse to click anywhere else on the torrent
+jobs list. Renaming the torrent job will not rename the file or
+directory being transferred. <ul class="sublist">
+			<li><a class="name" id="Name.status_downloading" href="#Name.status_downloading"><img src="../img/tstatus_downloading.png" alt="Downloading"></a> means the torrent job is downloading without issue</li>
+			<li><a class="name" id="Name.status_downloading_queued" href="#Name.status_downloading_queued"><img src="../img/tstatus_downloading_queued.png" alt="Queued Download"></a> means the torrent job is a queued download</li>
+			<li><a class="name" id="Name.status_downloading_error" href="#Name.status_downloading_error"><img src="../img/tstatus_downloading_error.png" alt="Downloading (Error)"></a> means the torrent job is downloading, but there is a tracker error</li>
+			<li><a class="name" id="Name.status_seeding" href="#Name.status_seeding"><img src="../img/tstatus_seeding.png" alt="Seeding"></a> means the torrent job is seeding without issue</li>
+			<li><a class="name" id="Name.status_seeding_queued" href="#Name.status_seeding_queued"><img src="../img/tstatus_seeding_queued.png" alt="Queued Seed"></a> means the torrent job is a queued seed</li>
+			<li><a class="name" id="Name.status_seeding_error" href="#Name.status_seeding_error"><img src="../img/tstatus_seeding_error.png" alt="Seeding (Error)"></a> means the torrent job is seeding, but there is a tracker error</li>
+			<li><a class="name" id="Name.status_paused" href="#Name.status_paused"><img src="../img/tstatus_paused.png" alt="Paused"></a> means the torrent job is paused</li>
+			<li><a class="name" id="Name.status_stopped" href="#Name.status_stopped"><img src="../img/tstatus_stopped.png" alt="Stopped"></a> means the torrent job is stopped, but hasn't finished downloading</li>
+			<li><a class="name" id="Name.status_finished" href="#Name.status_finished"><img src="../img/tstatus_finished.png" alt="Finished"></a> means the torrent job is stopped, and has finished downloading</li>
+			<li><a class="name" id="Name.status_error" href="#Name.status_error"><img src="../img/tstatus_error.png" alt="Error"></a> means the torrent job has a critical error (check the Status column)</li>
+			<li><a class="name" id="Name.rss" href="#Name.rss"><img src="../img/rss.png" alt="RSS"></a> means the item is an RSS feed item that has not been added to the torrent jobs queue</li>
+			<li><a class="name" id="Name.rss_new" href="#Name.rss_new"><img src="../img/rss_clock.png" alt="RSS (New)"></a> means the release is less than 24 hours old</li>
+			<li><a class="name" id="Name.rss_added" href="#Name.rss_added"><img src="../img/rss_checkmark.png" alt="RSS (Added)"></a> means the torrent job has already been added and moved to the history for the RSS item</li>
+		</ul>
+	</li>
+	<li><a class="name" id="Number" href="#Number">#</a>
+displays the torrent job's place in the download queue. When a torrent
+job stops or finishes, the next lowest numbered torrent job that is
+queued for download will start automatically. Torrent jobs that have
+not reached <a href="AppendixA_04_04_01.html#Seeding_Goal">the seeding goal</a> will have a <span class="value">*</span>
+(asterisk) instead of an integer. Torrent jobs that have reached the
+seeding goal will have a blank in this column. Forced torrent jobs do
+not follow the queue order, although they will be assigned queue
+numbers like regular torrent jobs. Note that if you want the arrow
+buttons to move the torrent jobs up and down in the list visually, you
+must sort the torrent jobs list by this column.</li>
+	<li><a class="name" id="Added_On" href="#Added">Added</a> displays the date and time that the torrent job was added to the torrent jobs list.</li><li><a class="name" id="Availability" href="#Availability">Availability</a> displays the number of copies of the torrent contents that are distributed in the swarm.</li>
+	<li><a class="name" id="Bandwidth_Allocation" href="#Bandwidth_Allocation">Bandwidth Allocation</a> displays the bandwidth allocation given to the torrent job (<span class="value">High</span>, <span class="value">Normal</span>, or <span class="value">Low</span>). <span class="mouse">Right-click</span>ing a torrent job on this column will bring up the <a href="#Context_Menu.Torrent_Options.Bandwidth_Allocation">Bandwidth Allocation</a> context sub-menu.</li>
+	<li><a class="name" id="Codec" href="#Codec">Codec</a> displays the codec that the video was encoded in assuming it is a video and is an RSS item.</li>
+	<li><a class="name" id="Completed" href="#Completed">Completed</a>
+displays the total amount of data you have in the torrent contents that
+passed the hash checks, as well as any incomplete pieces currently in
+progress.</li>
+	<li><a class="name" id="Completed_on" href="#Completed_on">Completed On</a>
+displays the date and time that the torrent job finished downloading.
+If the torrent job has yet to be completed, this column will be blank.</li>
+	<li><a class="name" id="Debug" href="#Debug">Debug</a> displays information that might be useful in debugging problems.</li>
+		<li><a class="name" id="Disk_Job" href="#Disk_Job">Disk Job</a> displays information on any torrent jobs that are having disk I/O issues.</li>
+	<li><a class="name" id="Done" href="#Done">Done</a>
+displays the approximate percent of the torrent job that µTorrent has
+completed. Its value is calculated by dividing the number under the <a href="#Completed">Completed</a> column by the number under the <a href="#Selected_Size">Selected Size</a> column. If <a href="AppendixA_02_12.html#gui.graphic_progress">gui.graphic_progress</a> is enabled, µTorrent will draw a progress bar behind the percentage. If <a href="AppendixA_02_12.html#gui.piecebar_progress">gui.piecebar_progress</a> is enabled, µTorrent will draw a piece progress bar instead.</li>
+	<li><a class="name" id="Down_Limit" href="#Down_Limit">Down Limit</a> displays the maximum download rate limit set on the individual torrent job. If no limit is set, this column will be blank. <span class="mouse">Right-click</span>ing a torrent job on this column will bring up the <a href="#Context_Menu.Torrent_Options.Bandwidth_Allocation.Set_Download_Limit">Set Download Limit</a> context sub-menu.</li>
+	<li><a class="name" id="Down_speed" href="#Down_speed">Down Speed</a>
+displays the current speed at which data is being downloaded for the
+individual torrent job. If the download rate is negligible, this column
+will be blank.</li>
+	<li><a class="name" id="Downloaded" href="#Downloaded">Downloaded</a> displays the total amount of data you have downloaded, including those that were wasted or failed the hash checks.</li>
+	<li><a class="name" id="Elapsed" href="#Elapsed">Elapsed</a> displays the total amount of time that µTorrent has had the torrent job started for since it was added.</li>
+	<li><a class="name" id="Episode" href="#Episode">Episode</a> displays the episode number of the torrent job, if applicable.</li>
+	<li><a class="name" id="ETA" href="#ETA">ETA</a>
+displays the estimated amount of time needed for µTorrent to finish
+downloading the torrent job. If the torrent job is in seeding mode,
+then this column displays the estimated time it will take for µTorrent
+to reach <a href="AppendixA_04_04_01.html#Seeding_Goal">the seeding goal</a>.
+If the torrent job is stopped or has reached its seeding goal, this
+column will be blank. If the torrent job is transferring too slowly,
+this column will display the <span class="value">∞</span> symbol. Note
+that this column takes selective file downloading into account, so only
+the data you select to be downloaded will be counted in the time
+calculation.</li>
+	<li><a class="name" id="Format" href="#Format">Format</a> displays the video quality of the torrent job, assuming it is a video and is an RSS item.</li><li><a class="name" id="Format" href="AppendixA_01_04.html#health">Health</a> displays 0-5 bars that indicate the availability of the torrent using:<span dir="ltr"> this formula - log2(<span style="font-style: italic;">Availability</span>).&nbsp; I.e. distributed
+copies being 1 = 1 bar, 2 = 2 bars , </span><span dir="ltr">4 = 3 bars,&nbsp;8 = 4 bars and 16 = 5 bars.</span></li>
+	<li><a class="name" id="Label" href="#Label">Label</a> displays the label set for the torrent job. <span class="mouse">Right-click</span>ing a torrent job on this column will bring up the <a href="#Context_Menu.Torrent_Options.Label">Label</a> context sub-menu.</li>
+	<li><a class="name" id="Last_Active" href="#Last_Active">Last Active</a>
+displays the amount of time that has elapsed since µTorrent last
+finished transferring a chunk of data for the torrent job. When the
+torrent job is downloading, this time will be reset only upon the
+download completion of a piece. When the torrent job is seeding, this
+time will be reset only upon the upload completion of a <span class="value">16</span>
+KiB block of data. This number is updated only when the torrent job is
+started. It should be understood that for stopped torrent jobs, the
+number is relative to the time at which the torrent job was actually
+stopped.</li>
+	<li><a class="name" id="Peers" href="#Peers">Peers</a>
+displays the number of peers you are connected to, and the number of
+peers in the swarm within the parentheses. The number of peers in the
+swarm is an estimate based on the maximum number of peers found either
+between the amounts reported by any tracker, or the number of peers
+µTorrent has encountered within its peer cache. If the torrent job is
+stopped, and <a href="AppendixA_02_12.html#bt.scrape_stopped">bt.scrape_stopped</a> is enabled, µTorrent will show the maximum number of peers in the swarm as reported by the tracker scrapes.</li><li><a class="name" id="Peers" href="AppendixA_01_04.html#Playback">Playback</a>
+- the multi-purpose stream/play/status button and display lets you
+start streaming (of your&nbsp; choice of media file), play the stream
+&nbsp;when ready and in between - shows the estimated time till this
+stream is ready to play.</li>
+	<li><a class="name" id="Ratio" href="#Ratio">Ratio</a> displays the ratio of uploaded data to downloaded data. Its value is calculated by dividing the number under the <a href="#Uploaded">Uploaded</a> column by the number under the <a href="#Downloaded">Downloaded</a>
+column. If the torrent job was added when the file was already complete
+(seeding the file upon adding), then the ratio will start from <span class="value">0</span>, and will be calculated based on the ratio of the uploaded data to the torrent content size.</li><li><a class="name" id="Ratio" href="AppendixA_01_04.html#Ratio">Rating</a> displays the average scores given by all users to this torrent</li>
+	<li><a class="name" id="Remaining" href="#Remaining">Remaining</a>
+displays the amount of data left for µTorrent to download before it
+finishes downloading the torrent job. Note that this column takes
+selective file downloading into account, so only the data you select to
+be downloaded will be counted. If no data is left to be downloaded,
+this column will be blank.</li>
+	<li><a class="name" id="Seeds" href="#Seeds">Seeds</a>
+displays the number of seeds you are connected to, and the number of
+seeds in the swarm within the parentheses. The number of seeds in the
+swarm is an estimate based on the maximum number of seeds found either
+between the amounts reported by any tracker, or the number of seeds
+µTorrent has encountered within its peer cache. If the torrent job is
+stopped, and <a href="AppendixA_02_12.html#bt.scrape_stopped">bt.scrape_stopped</a> is enabled, µTorrent will show the maximum number of seeds in the swarm as reported by the tracker scrapes.</li>
+	<li><a class="name" id="Seeds_Peers" href="#Seeds_Peers">Seeds/Peers</a> displays the ratio of seeds to peers. Its value is by dividing the number in the parentheses under the <a href="#Seeds">Seeds</a> column by the number in the parentheses under the <a href="#Peers">Peers</a> column.</li>
+	<li><a class="name" id="Selected_Size" href="#Selected_Size">Selected Size</a>
+shows only the size of the torrent contents you have selected for
+µTorrent to download. The size of all pieces belonging to skipped files
+that also pass the checks will also be taken into account and added in
+this column.</li>
+	<li><a class="name" id="Size" href="#Size">Size</a>
+shows the complete size of the torrent contents, regardless of whether
+you are using selective file downloading on that torrent job or not.</li>
+	<li><a class="name" id="Source_URL" href="#Source_URL">Source URL</a> displays the URL that the source .torrent file is located at. The source URL is only applicable for RSS items and torrent jobs <a href="AppendixA_01_01.html#File.Add_Torrent_from_URL">added from URL</a>.</li>
+	<li><a class="name" id="Status" href="#Status">Status</a>
+displays the current status of the torrent job. If an error occurs on
+this torrent job, depending on the error, it might be displayed on this
+column. Otherwise, the following are normally displayed: <ul class="sublist">
+			<li><a class="name" id="Status.Downloading" href="#Status.Downloading">Downloading</a> means the torrent job is currently downloading.</li>
+			<li><a class="name" id="Status.Finished" href="#Status.Finished">Finished</a>
+means the torrent job has been stopped after it reached seeding mode.
+If the torrent job reaches this without user intervention, then it
+means it reached <a href="AppendixA_04_04_01.html#Seeding_Goal">the seeding goal</a>.</li>
+			<li><a class="name" id="Status.Initial_Seeding" href="#Status.Initial_Seeding">Initial-Seeding</a> means the torrent job is being seeded in Initial Seeding mode.</li>
+			<li><a class="name" id="Status.Paused" href="#Status.Paused">Paused</a> means the torrent job is paused, but not stopped (still connected to peers).</li>
+			<li><a class="name" id="Status.Queued" href="#Status.Queued">Queued</a> means the torrent job is waiting for another torrent job to finish downloading before starting.</li>
+			<li><a class="name" id="Status.Queued_Seed" href="#Status.Queued_Seed">Queued Seed</a> means the torrent job is waiting for another torrent job to finish seeding before starting.</li>
+			<li><a class="name" id="Status.Seeding" href="#Status.Seeding">Seeding</a> means the torrent job is finished downloading, and is currently in seeding mode.</li>
+			<li><a class="name" id="Status.Stopped" href="#Status.Stopped">Stopped</a> means the torrent job is stopped (not transferring, and not connected to any peers).</li>
+			<li><a class="name" id="Status.F_Downloading" href="#Status.F_Downloading">[F] Downloading</a> means the torrent job is forced started and downloading, so it is outside of the queue order.</li>
+			<li><a class="name" id="Status.F_Initial_Seeding" href="#Status.F_Initial_Seeding">[F] Initial-Seeding</a>
+means the torrent job is forced started and seeding in Initial Seeding
+mode, so it is outside of the queue order. Forced initial-seeding
+torrent jobs do not obey the seeding goal.</li>
+			<li><a class="name" id="Status.F_Seeding" href="#Status.F_Seeding">[F] Seeding</a>
+means the torrent job is forced started and seeding, so it is outside
+of the queue order. Forced seeding torrent jobs do not obey the seeding
+goal.</li>
+			<li><a class="name" id="Status.Previously_Downloaded" href="#Status.Previously_Downloaded">Previously Downloaded</a> means the item is a part of an RSS feed, and was previously added to the torrent jobs list (it is listed in the <a href="AppendixA_03_02.html">RSS History</a> tab).</li>
+			<li><a class="name" id="Status.Downloading_Metadata" href="#Status.Downloading_Metadata">Waiting for Metadata</a> applies to magnet links and means that &micro;Torrent is waiting to download the meta details about the files contained within the magnet link.</li>
+			<li><a class="name" id="Status.Connecting_to_peers" href="#Status.Connecting_to_peers">Connecting to Peers</a> means the client is waiting to make a connection to at least one peer so it can begin downloading the file.</li>
+			<li><a class="name" id="Status.Checked" href="#Status.Checked">Checked %</a> means the client is currently checking previously-downloaded data for the torrent job in question.</li>
+			
+			<li><a class="name" id="Status.RSS" href="#Status.RSS">RSS</a> means the item is a part of an RSS feed, and not yet added to the torrent queue.</li><li><a class="name" id="Status.RSS" href="AppendixA_01_04.html#Status.Moving">Moving</a>
+means the torrent job has completed, and the torrent file(s) are being
+moved to the alternate destination path. This status&nbsp; will also
+show up when using the "Set Download Location" function. &nbsp;</li><li><a class="name" id="Status.RSS" href="AppendixA_01_04.html#Status.Flushing"><span style="font-weight: bold;">Flushing</span></a><span style="font-weight: bold;"></span> means the torrent is about to finish downloading and is writing the pieces, that are still in cache - to the disk.</li></ul>
+	</li>
+	<li><a class="name" id="Tracker" href="#Tracker">Tracker</a> displays the first working tracker's base URL.</li>
+	<li><a class="name" id="Tracker_Status" href="#Tracker_Status">Tracker Status</a> displays the tracker's status.</li>
+	<li><a class="name" id="Up_Limit" href="#Up_Limit">Up Limit</a> displays the maximum upload rate limit set on the individual torrent job. If no limit is set, this column will be blank. <span class="mouse">Right-click</span>ing a torrent job on this column will bring up the <a href="#Context_Menu.Torrent_Options.Bandwidth_Allocation.Set_Upload_Limit">Set Upload Limit</a> context sub-menu.</li>
+	<li><a class="name" id="Up_speed" href="#Up_speed">Up Speed</a>
+displays the current speed at which data is being uploaded for the
+individual torrent job. If the upload rate is negligible, this column
+will be blank.</li>
+	<li><a class="name" id="Uploaded" href="#Uploaded">Uploaded</a> displays the total amount of data you have uploaded.</li>
+</ul>
+
+<h3><a class="name" id="Context_Menu" href="#Context_Menu">Context Menu</a></h3>
+<p>If you <span class="mouse">right-click</span> on a torrent job, you'll see a context menu. They are described in the following list:</p>
+<ul class="uienum">
+	<li><a class="name" id="Context_Menu.Torrent_Options" href="#Context_Menu.Torrent_Options">Torrent Options</a>
+		<ul class="sublist">
+			<li><a class="name" id="Context_Menu.Torrent_Options.Open" href="AppendixA_01_04.html#Context_Menu.Torrent_Options.Transfer">Transfer</a> will copy your converted media file(s) to your selected paired device</li><li><a class="name" id="Context_Menu.Torrent_Options.Open" href="#Context_Menu.Torrent_Options.Open">Open</a>
+will attempt to open the torrent contents for the selected torrent
+job(s) with the associated application for the file type. This will
+only work for single-file torrent jobs.</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Open_Containing_Folder" href="#Context_Menu.Torrent_Options.Open_Containing_Folder">Open Containing Folder</a>
+opens the directory containing the torrent contents in an Explorer
+window. If the torrent job contents consist of a single file, that file
+will be highlighted. Otherwise, the torrent job's directory will be
+displayed instead.</li><li><a class="name" id="Context_Menu.Torrent_Options.Open" href="AppendixA_01_04.html#Context_Menu.Torrent_Options.Show_Converted_Files">Show Converted Files</a> will open Windows Explorer in the location of the media files converted for your paired device</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Copy_Magnet_URI" href="#Context_Menu.Torrent_Options.Copy_Magnet_URI">Copy Magnet URI...</a> copies a magnet URI link to the Windows clipboard for the selected torrent job(s), multiple URIs separated by newlines.</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Open_URL_in_Browser" href="#Context_Menu.RSS_Item_Options.Open_URL_in_Browser">Open URL in Browser</a> will open the linked URL(s) in your default web browser.</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Force_Start" href="#Context_Menu.Torrent_Options.Force_Start">Force Start</a> takes the selected torrent job(s) out of queue order (makes it ignore <a href="AppendixA_02_08.html">queueing</a>)
+and forces it to start immediately, even if the maximum number of
+active torrent jobs and/or downloads has been reached. Forced torrent
+jobs will not stop even if they reach the seeding goal. The <a href="AppendixA_02_09.html">scheduler</a> is unable to stop forced torrent jobs.</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Start" href="#Context_Menu.Torrent_Options.Start">Start</a>
+will start the selected torrent job(s), or add it onto the queue if the
+number of active torrent jobs has reached the maximum set in the
+Preferences.</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Pause" href="#Context_Menu.Torrent_Options.Pause">Pause</a>
+will pause the selected torrent job(s), but won't actually stop it.
+This tells µTorrent to attempt to retain connections to peers without
+having to re-establish them like starting stopped torrent jobs would
+require. It is useful for when you need quick access to bandwidth.
+Realize that while µTorrent won't drop the connections on its own
+accord, the connection can still get dropped by the client on the other
+end of the connection.</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Stop" href="#Context_Menu.Torrent_Options.Stop">Stop</a> will stop the selected torrent job(s). All connections with peers are dropped.</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Move_Up_Queue" href="#Context_Menu.Torrent_Options.Move_Up_Queue">Move Up Queue</a>
+will decrease the selected torrent's queue number, thus bringing it
+closer to the top of the queue (meaning it will become active sooner
+than those with higher queue numbers). Holding <span class="key">Shift</span>
+while pressing this button will move the selected torrent job to the
+top of the queue. Note that this button will not visually move the
+torrent job up the list unless you sort the list by the "#" column.
+Pressing <span class="key">Ctrl</span>+<span class="key">Alt</span>+<span class="key">Up</span> on the keyboard is equivalent to selecting this item when the torrent job is selected.</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Move_Down_Queue" href="#Context_Menu.Torrent_Options.Move_Down_Queue">Move Down Queue</a>
+will increase the selected torrent's queue number, thus bringing it
+further from the top of the queue (meaning it will become active later
+than those with lower queue numbers). Holding <span class="key">Shift</span>
+while pressing this button will move the selected torrent job to the
+bottom of the queue. Note that this button will not visually move the
+torrent job down the list unless you sort the list by the "#" column.
+Pressing <span class="key">Ctrl</span>+<span class="key">Alt</span>+<span class="key">Down</span> on the keyboard is equivalent to selecting this item when the torrent job is selected.</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Label" href="#Context_Menu.Torrent_Options.Labels">Labels</a>
+allows you to set or reset labels for any selected torrent job. All
+labels will be listed at the&nbsp;this submenu, where you can also
+select-check (or un-check) any of them for this torrent.<ul class="sublist">
+					<li><a class="name" id="Context_Menu.Torrent_Options.Label.New_Label" href="#Context_Menu.Torrent_Options.Label.New_Label">New Label...</a> will display a dialog asking you to enter the name of a new (temporary) label.</li>
+					<li><a class="name" id="Context_Menu.Torrent_Options.Label.Remove_Label" href="#Context_Menu.Torrent_Options.Label.Set_Primary">Set Primary</a> will choose a label to be the first one displayed (primary) for this torrent.</li>
+				</ul>
+			</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Bandwidth_Allocation" href="#Context_Menu.Torrent_Options.Bandwidth_Allocation">Bandwidth Allocation</a>
+is an option that makes µTorrent allocate upload bandwidth to the
+selected torrent job(s) based on the option selected. This option works
+only if a <a href="AppendixA_02_05.html#Global_Upload_Rate_Limiting">global maximum upload rate</a> is set, or the selected torrent job(s) each have an individual <a href="AppendixA_04_04_01.html#Bandwidth_Settings.Maximum_upload_rate">maximum upload rate</a> set.
+				<ul class="sublist">
+					<li><a class="name" id="Context_Menu.Torrent_Options.Bandwidth_Allocation.High" href="#Context_Menu.Torrent_Options.Bandwidth_Allocation.High">High</a>
+will give the selected torrent job(s) more upload bandwidth relative to
+other torrent jobs of lower bandwidth allocation levels (Low or Normal).</li>
+					<li><a class="name" id="Context_Menu.Torrent_Options.Bandwidth_Allocation.Normal" href="#Context_Menu.Torrent_Options.Bandwidth_Allocation.Normal">Normal</a> is the default bandwidth allocation given.</li>
+					<li><a class="name" id="Context_Menu.Torrent_Options.Bandwidth_Allocation.Low" href="#Context_Menu.Torrent_Options.Bandwidth_Allocation.Low">Low</a>
+will give the selected torrent job(s) less upload bandwidth relative to
+other torrent jobs of higher bandwidth allocation levels (Normal or
+High).</li>
+					<li class="sep">&nbsp;</li>
+					<li><a class="name" id="Context_Menu.Torrent_Options.Bandwidth_Allocation.Set_Download_Limit" href="#Context_Menu.Torrent_Options.Bandwidth_Allocation.Set_Download_Limit">Set Download Limit</a> allows you to control the maximum download rate for the selected torrent job(s). The values displayed depend on <a href="AppendixA_02_12_01.html#Speed_Popup_List">the speed popup list settings</a>
+in the Preferences. If the speed popup list is not manually overridden,
+then the maximum value available for selection will depend on the <a href="AppendixA_02_05.html#Global_Download_Rate_Limiting">global maximum download rate limit</a>.</li>
+					<li><a class="name" id="Context_Menu.Torrent_Options.Bandwidth_Allocation.Set_Upload_Limit" href="#Context_Menu.Torrent_Options.Bandwidth_Allocation.Set_Upload_Limit">Set Upload Limit</a> allows you to control the maximum upload rate for the selected torrent job(s). The values displayed depend on <a href="AppendixA_02_12_01.html#Speed_Popup_List">the speed popup list settings</a>
+in the Preferences. If the speed popup list is not manually overridden,
+then the maximum value available for selection will depend on the <a href="AppendixA_02_05.html#Global_Upload_Rate_Limiting">global maximum upload rate limit</a>.</li>
+				</ul>
+			</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Remove" href="#Context_Menu.Torrent_Options.Remove">Remove</a> removes the selected torrent job(s) from the list, but all related files are left intact on the disk.</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Remove_And" href="#Context_Menu.Torrent_Options.Remove_And">Remove And</a>
+				<ul class="sublist">
+					<li><a class="name" id="Context_Menu.Torrent_Options.Remove_And.Delete_torrent" href="#Context_Menu.Torrent_Options.Remove_And.Delete_torrent">Delete .torrent</a> removes the selected torrent job(s) from the list and the corresponding .torrent file(s) from the <a href="AppendixA_02_03.html#Location_of_.torrents.Store_.torrents_in">.torrent file storage location</a>.</li>
+					<li><a class="name" id="Context_Menu.Torrent_Options.Remove_And.Delete_torrent_Data" href="#Context_Menu.Torrent_Options.Remove_And.Delete_torrent_Data">Delete .torrent + Data</a> removes the selected torrent job(s) from the list, the corresponding .torrent file(s) from the <a href="AppendixA_02_03.html#Location_of_.torrents.Store_.torrents_in">.torrent file storage location</a>, and all content downloaded from the torrent job(s). This action can also be performed by pressing <span class="key">Shift</span>+<span class="key">Delete</span> on the keyboard.</li>
+					<li><a class="name" id="Context_Menu.Torrent_Options.Remove_And.Delete_Data" href="#Context_Menu.Torrent_Options.Remove_And.Delete_Data">Delete Data</a> removes the selected torrent job(s) from the list and all content downloaded from the torrent job(s).</li>
+				</ul>
+			</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Force_Re-Check" href="#Context_Menu.Torrent_Options.Force_Re-Check">Force Re-Check</a>
+tells µTorrent to check the torrent contents of the selected torrent
+job(s) for missing files and pieces that fail the hash check. Even if
+multiple torrent jobs are selected to be re-checked, µTorrent will
+check them sequentially, one at a time (known as a round-robin method).
+Pausing a torrent job while it is being re-checked will pause the
+re-checking process for that torrent job, and will move onto the next
+torrent job to re-check if multiple torrent jobs are selected. Any
+incomplete pieces in the torrent contents will be removed during the
+re-checking process, so a drop in progress percentage would not be an
+unlikely occurrence.</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Advanced" href="#Context_Menu.Torrent_Options.Advanced">Advanced</a>
+				<ul class="sublist">
+					<li><a class="name" id="Context_Menu.Torrent_Options.Advanced.Reset_Bans" href="#Context_Menu.Torrent_Options.Advanced.Reset_Bans">Reset Bans</a>
+allows you to clear any bans µTorrent has placed on peers in the
+selected torrent job(s) for sending too many hashfailed pieces.</li>
+					<li><a class="name" id="Context_Menu.Torrent_Options.Advanced.Clear_Peer_List" href="#Context_Menu.Torrent_Options.Advanced.Clear_Peer_List">Clear Peer List</a> allows you to clear all peers from the peer list for the selected torrent job(s).</li>
+					<li><a class="name" id="Context_Menu.Torrent_Options.Advanced.Set_Download_Location" href="#Context_Menu.Torrent_Options.Advanced.Set_Download_Location">Set Download Location...</a>
+lets you set the location of the contents for the particular torrent if
+they are ever moved after the torrent job is added. The next time the
+torrent job is started, it will be hash checked to verify the data
+integrity.</li>
+<li><a class="name" id="Context_Menu.Torrent_Options.Advanced.Set_Destination_name" href="#Context_Menu.Torrent_Options.Advanced.Set_Destination_Name">Set Destination Name...</a>
+lets you change the name of the directory into which the files will be downloaded.</li>
+					<li><a class="name" id="Context_Menu.Torrent_Options.Advanced.Show_Download_Bar" href="#Context_Menu.Torrent_Options.Advanced.Show_Download_Bar">Show Download Bar</a>
+toggles the display of a floating download bar that shows quick
+statistics for the selected torrent job(s). The download bars are
+separate from the µTorrent interface, so they can be displayed while
+the main window is minimized or closed to tray.</li>
+				</ul>
+			</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Update_Tracker" href="#Context_Menu.Torrent_Options.Update_Tracker">Update Tracker</a>
+allows you to perform a manual announce on the selected torrent jobs'
+trackers. Only trackers whose minimum intervals have elapsed since the
+last manual update will be updated. This option is disabled if <span class="value">60</span>
+seconds have not yet passed since the last time it was used, or if the
+elapsed time since the last update is less than the minimum interval
+for every selected torrent job's tracker(s). If the condition to be
+enabled has been satisfied by at least one of the selected torrent
+jobs, the option will be enabled, but when used, will be invoked only
+on those torrent jobs that have met the conditions for option to be
+enabled.</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Context_Menu.Torrent_Options.Properties" href="#Context_Menu.Torrent_Options.Properties">Properties</a> opens up the <a href="AppendixA_04_04.html">Torrent Properties</a> dialog, where you can modify several of the torrent job's settings.</li>
+		</ul>
+	</li>
+	<li><a class="name" id="Context_Menu.RSS_Item_Options" href="#Context_Menu.RSS_Item_Options">RSS Item Options</a>
+		<ul class="sublist">
+			<li><a class="name" id="Context_Menu.RSS_Item_Options.Open" href="#Context_Menu.RSS_Item_Options.Open">Open</a> will attempt to open the .torrent file(s) associated with the selected item(s) to be added to the torrent jobs list. <span class="mouse">Double-click</span>ing on the selected item achieves the same result.</li>
+			<li><a class="name" id="Context_Menu.RSS_Item_Options.Open_URL_in_Browser" href="#Context_Menu.RSS_Item_Options.Open_URL_in_Browser">Open URL in Browser</a>
+will open the linked URL(s) in your default web browser. This is useful
+for RSS feeds that do not link directly to .torrent files, but instead,
+to a page that links to them.</li>
+			<li><a class="name" id="Context_Menu.RSS_Item_Options.Clear_Feed_History" href="#Context_Menu.RSS_Item_Options.Clear_Feed_History">Clear Feed History</a> removes all entries in the RSS Downloader's <a href="AppendixA_03_02.html">History tab</a> that came from the selected feed(s).</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Context_Menu.Add_to_Favorites" href="#Context_Menu.Add_to_Favorites">Add to Favorites</a> adds the selected items to the <a href="AppendixA_03_01.html">Favorites</a>, attempting to create suitable rules for the selected items.</li>
+		</ul>
+	</li>
+</ul>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="AppendixA_01_03.html">«&nbsp; Previous</a></li>
+				<li><a href="AppendixA_01_05.html">Next &nbsp;»</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_01_04.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:05 GMT -->
+</html>

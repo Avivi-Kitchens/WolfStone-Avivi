@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/Chapter02_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:37:56 GMT -->
+<head>
+	<title>The Basics of BitTorrent</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="Chapter02.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="Chapter02_02.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">&micro;Torrent User Manual</a> &gt;
+			<a href="Chapter02.html">Chapter 02: Basic Guides</a>
+			<h1>The Basics of BitTorrent</h1>
+		</div>
+		<div id="content">
+
+<p>BitTorrent (often abbreviated as BT) is a peer-to-peer (P2P) <strong>protocol</strong> (a description and set of rules on how to do things) created by Bram Cohen, designed to distribute data in such a way that the original distributor would be able to decrease bandwidth usage while still being able to reach at least the same amount of people. Cohen's idea was to "break" the file being transferred into smaller segments called <strong>pieces</strong>. To save bandwidth, each person downloading (more commonly referred to as <strong>peers</strong> in the BitTorrent community) would have the pieces that they acquired available for upload to other peers in the <strong>swarm</strong> (the entire network of people connected to a single torrent). In this way, much of the load of sharing the file to every peer interested in it is offloaded to the peers. Note that a <strong>seed</strong> is basically a peer with every piece, so when a peer successfully attains all data in the torrent contents, that peer becomes a seed as well.</p>
+<p>While on the surface, it appears that the only way to maintain a swarm's health is for there to always be a seed connected to the swarm, that is not the case. The most important factor to determining whether a swarm can continue to allow peers to complete a torrent is the <strong>availability</strong>. The availability of a torrent is the number of complete copies of the torrent contents there are distributed in the part of the swarm you're connected to, including the data you have. In most cases, if there is an availability of <span class="value">1.0</span> or greater, then even if one single person does not have all the pieces, they are all still distributed across the entire swarm and can be acquired to form the complete file.</p>
+<p>In order for everyone to be able to locate one another, there needs to be some centralized location that peers could connect to in order to obtain the other peers' IP addresses. BitTorrent <strong>trackers</strong> serve as this centralized location. In the most basic explanation, for each given swarm, a tracker only needs to collect a peer's IP address and port number to share with other peers connecting to that same swarm.</p>
+<p>Because of the very nature of BitTorrent, speeds are not guaranteed for any given torrent swarm. While you may get great speeds in one swarm, you might not in another. This is due to the fact that BitTorrent is a P2P protocol, so it depends on the upload speeds of the other peers you are connected to to generate your download speeds. A common misconception held by many people is that torrent swarms that contain more seeds and peers are faster than those with less. This is not always the case. There can be a swarm with only a few seeds and/or peers on fast Internet connections, and you'll be able to get great speeds from them, while a swarm with many more seeds and/or peers might contain mostly people with slow, dial-up Internet connections, will get you terrible speeds from them. In the same vein, <em>connecting</em> to more seeds and/or peers does not equate to greater speeds, and seeds don't necessarily give better speeds than normal peers.</p>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="Chapter02.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="Chapter02_02.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/Chapter02_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:37:56 GMT -->
+</html>

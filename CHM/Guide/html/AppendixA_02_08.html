@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_02_08.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+<head>
+	
+	<title>Preferences: Queueing</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon">
+	<link rel="stylesheet" href="../style.css" type="text/css"></head>
+
+<body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="AppendixA_02_07.html">«&nbsp; Previous</a></li>
+				<li><a href="AppendixA_02_09.html">Next &nbsp;»</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">µTorrent User Manual</a> &gt;
+			<a href="AppendixA.html">Appendix A: The µTorrent Interface</a> &gt;
+			<a href="AppendixA_02.html">Preferences</a>
+			<h1>Queueing</h1>
+		</div>
+		<div id="content">
+
+<h3><a class="name" id="Queue_Settings" href="#Queue_Settings">Queue Settings</a></h3>
+<ul class="uienum">
+	<li>The <a class="name" id="Queue_Settings.Maximum_number_of_active_torrents" href="#Queue_Settings.Maximum_number_of_active_torrents">Maximum number of active torrents</a>
+field defines the maximum number of unforced torrent jobs that µTorrent
+will allow to be active before placing it on the queue. Torrent jobs
+are counted regardless of whether they're seeding or downloading
+torrents, as long as they are uploading at rates above the value
+specified by <a href="AppendixA_02_12.html#queue.slow_ul_threshold">queue.slow_ul_threshold</a> or downloading at rates above the value specified by <a href="AppendixA_02_12.html#queue.slow_dl_threshold">queue.slow_dl_threshold</a>.</li>
+	<li>The <a class="name" id="Queue_Settings.Maximum_number_of_active_downloads" href="#Queue_Settings.Maximum_number_of_active_downloads">Maximum number of active downloads</a>
+field defines the maximum number of unforced torrent jobs that µTorrent
+will allow to be downloaded before making it wait on the download
+queue. This option only applies to torrent jobs that are downloading or
+are to be placed in downloading mode.</li>
+</ul>
+
+<h3><a class="name" id="Seeding_Goal" href="#Seeding_Goal">Seeding Goal</a></h3>
+<ul class="uienum">
+	<li>The <a class="name" id="Seeding_Goal.Minimum_ratio" href="#Seeding_Goal.Minimum_ratio">Minimum ratio</a>
+field allows you to set the ratio that you wish to reach before
+µTorrent throttles the speed for the torrent job (or stops it, if you
+set it to do so). Setting the ratio to <span class="value">-1</span> is equivalent to setting it to unlimited. Setting this value to <span class="value">0</span>
+tells µTorrent to ignore this value and look only at the seeding time
+limit. This value is interpreted as a percentage. µTorrent will
+throttle the seeding process only after both this and time limit have
+been reached.</li>
+	<li>The <a class="name" id="Seeding_Goal.Minimum_seeding_time" href="#Seeding_Goal.Minimum_seeding_time">Minimum seeding time</a>
+field allows you to specify the minimum amount of time you wish for the
+torrent job to continue seeding at normal speeds after it has finished
+downloading. µTorrent will throttle the seeding process only after both
+this and the ratio threshold have been reached. This value is
+interpreted in minutes.</li>
+	<li><a class="name" id="Seeding_Goal.Seeding_tasks_have_higher_priority_than_downloading_tasks" href="#Seeding_Goal.Seeding_tasks_have_higher_priority_than_downloading_tasks">Seeding tasks have higher priority than downloading tasks</a>
+will give seeding tasks higher priority than downloads, so if your
+maximum number of active torrents is reached, and a torrent job reaches
+seeding state, the downloading tasks will not force it into queued
+seeding state.</li><li><a class="name" id="Seeding_Goal.Seeding_tasks_have_higher_priority_than_downloading_tasks" href="#Seeding_Goal.Minimum_number_of_available_seeds">Minimum number of available seeds&nbsp;</a> will keep seeding till the specified number of seeds are available for this torrent </li>
+	<li><a class="name" id="Seeding_Goal.Note" href="#Seeding_Goal.Note">Note</a>:
+These values only affect torrent jobs added after they are set.
+Existing torrent jobs will retain their current seeding goals, even if
+these default settings are modified.</li>
+</ul>
+
+<h3><a class="name" id="When_uTorrent_Reaches_the_Seeding_Goal" href="#When_uTorrent_Reaches_the_Seeding_Goal">When µTorrent Reaches the Seeding Goal</a></h3>
+<ul class="uienum">
+	<li>The <a class="name" id="When_uTorrent_has_reached_the_seeding_goal.Limit_the_upload_rate_to" href="#When_uTorrent_has_reached_the_seeding_goal.Limit_the_upload_rate_to">Limit the upload rate to</a>
+field allows you to set the speed that µTorrent throttles the upload
+speed for a torrent job to when it reaches the seeding goal set.
+Setting this value to <span class="value">0</span> is equivalent to
+telling µTorrent to stop the torrent job. A change to this value
+affects only torrent jobs that have not yet reached their seeding
+goals. This value is interpreted in KiB/s, so please enter it as such.</li>
+</ul>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="AppendixA_02_07.html">«&nbsp; Previous</a></li>
+				<li><a href="AppendixA_02_09.html">Next &nbsp;»</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_02_08.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+</html>

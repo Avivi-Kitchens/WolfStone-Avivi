@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/Chapter02_02.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:37:56 GMT -->
+<head>
+	<title>Setup Guide</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="Chapter02_01.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="Chapter02_03.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">&micro;Torrent User Manual</a> &gt;
+			<a href="Chapter02.html">Chapter 02: Basic Guides</a>
+			<h1>Setup Guide</h1>
+		</div>
+		<div id="content">
+
+<p>The focus of this section is to help you configure &micro;Torrent to be able to obtain the optimal speeds for your Internet connection. While configuring it properly does not guarantee that you will hit your maximum upload and/or download speeds, it guarantees that &micro;Torrent is doing the best it can to get good speeds. Be sure to read this entire section if you are unfamiliar with configuring &micro;Torrent, because you will be expected to have read it already when asking for help elsewhere.</p>
+
+<h3><a class="name" id="The_Setup_Guide" href="#The_Setup_Guide">The Setup Guide</a></h3>
+<p>When you open &micro;Torrent for the first time, you are presented with the &micro;Torrent Setup Guide. As stated in the wizard, following the simple directions will help you select the optimal settings for your Internet connection.</p>
+<p>In the first part, you are asked to select your <strong>upload</strong> speed from the dropdown menu. If you do not know this information, you can test your Internet connection speed by selecting a location closest to where you are situated, and click the "<em>Run tests</em>" button at the bottom of the dialog. When you are running the speed test, make sure you are not using your Internet connection for anything besides the test. If you have any other computer on your network, disconnect them or shut them off before running the test. Run the test several times, and take the average of your upload speed given in the tests. After the speed test, &micro;Torrent will automatically attempt to configure the settings based on the results of the test. If you wish, you can manually select your connection's upload rate from the dropdown menu, but do note the fact that there is a distinction between bits and bytes, and speed results are generally given in <span class="data">kbps</span> (kilobits per second), which should not be confused with <span class="data">KiB/s</span> (kibibits per second). Additionally, the tests may not be 100% accurate due to factors outside of your control, so if the closest option is only a little bit higher than what you received on the tests (perhaps by 10%), it's generally safe to select that. If the difference is greater than that, it's best to select the lower option and <a href="#Correcting_Some_Settings">manually set the correct upload speed</a>. Do not be tempted to select an option much higher than indicated on the speed tests in hopes that it will help you download faster, as it will not, and might end being detrimental to your speeds instead.</p>
+<p>In the second part, a port is randomly selected for you the first time the Setup Guide is displayed, though you are free to change the port used. Alternatively, setting the port to <span class="value">0</span> indicates to &micro;Torrent that you would like for it to select a random port after the changes are confirmed. After you select your port, <span class="mouse">left-click</span> "<em>Run tests</em>" to check that the port is open. It is essential that a port is open for &micro;Torrent to listen for incoming connections on. If you are having trouble opening a port, continue reading onto <a href="Chapter02_03.html">the port forwarding guide</a>.</p>
+<p>When you finish configuring everything, <span class="mouse">left-click</span> "<em>Save &amp; Close</em>" and you're done! If, for whatever reason, you need to return to this wizard to make a change, you'll find it accessible by selecting "<em>Options</em>" then "<em>Setup Guide...</em>" (or press <span class="key">Ctrl</span>+<span class="key">G</span>) in &micro;Torrent. Alternatively, you can <span class="mouse">left-click</span> on the <a href="AppendixA_01_06.html#Network_Status">network status icon</a> in the status bar.</p>
+
+<h3><a class="name" id="Correcting_Some_Settings" href="#Correcting_Some_Settings">Correcting Some Settings</a></h3>
+<p>If you manually chose a connection upload rate and found that you had to round down when selecting your connection type in the Setup Guide, you should adjust your upload speed limit to take advantage of the extra upload speed you actually have. Take the average upload speed you received when taking the test and divide it by <span class="value">10</span>, then round it to the closest whole number. Now use this calculated number as your <a href="AppendixA_02_05.html#Global_Upload_Rate_Limiting">global maximum upload rate</a>.</p>
+
+<h3><a class="name" id="Testing_Your_Configuration" href="#Testing_Your_Configuration">Testing Your Configuration</a></h3>
+<p>Because torrents don't necessarily guarantee speeds, you can't just pick any random torrent and expect to be able to test the speeds properly. Luckily, there are many torrents out there that are seeded perpetually by computers sitting on fast broadband connections. Try a <a href="ExternalLinks.html#Speed_Test_Torrents">test torrent</a> to test your configuration!</p>
+<p>When properly configured, &micro;Torrent should be able to attain the maximum speed possible for most common consumer Internet connections with these test torrents without much difficulty. Because these torrents are simply used for testing your connection speeds, it is safe to delete them whenever you are finished testing. Remember that these speeds are not indicative of how fast every torrent you come across will download.</p>
+
+<h3><a class="name" id="ISP_Interference" href="#ISP_Interference">ISP Interference</a></h3>
+<p>Some Internet Service Providers (ISP) block or throttle BitTorrent connections because of the high bandwidth it generates due to the sheer number of people using BitTorrent. <a href="AppendixA_02_06.html#Protocol_Encryption">Protocol Encryption</a> combats this attack vector by hiding the fact that connections are BitTorrent connections. Some ISPs cannot distinguish an encrypted connection from any other random data connection, so they are unable to label it as a BitTorrent connection, and consequently, cannot block or throttle it for being a BitTorrent connection. In general, there is no harm in enabling Protocol Encryption, other than a marginal increase in peer communication overhead.</p>
+<p>Take note that some ISPs are starting to identify even encrypted BitTorrent connections with upgraded hardware, so even Protocol Encryption might not help users getting throttled by their ISPs. For a list of ISPs known to throttle, check the <a href="ExternalLinks.html#VuzeWiki">Bad ISPs</a> list on VuzeWiki. If your ISP is known to throttle or block BitTorrent traffic, then you may want to consider setting the encryption to "<em>Forced</em>" and disable legacy incoming connections. If that fails, then the solution would probably be to switch to an ISP that does not throttle or block.</p>
+
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="Chapter02_01.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="Chapter02_03.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/Chapter02_02.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:37:56 GMT -->
+</html>

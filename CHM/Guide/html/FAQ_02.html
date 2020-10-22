@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/FAQ_02.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+<head>
+	<title>FAQ: Features</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="FAQ_01.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="FAQ_03.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">&micro;Torrent User Manual</a> &gt;
+			<a href="FAQ.html">FAQ: Frequently Asked Questions</a>
+			<h1>Features</h1>
+		</div>
+		<div id="content">
+
+<h3><a class="name" id="Does_uTorrent_have_an_endgame_mode" href="#Does_uTorrent_have_an_endgame_mode">Does &micro;Torrent have an endgame mode?</a></h3>
+<p>Yes, &micro;Torrent automatically enters endgame mode when the pieces remaining are all being actively downloaded. During endgame mode, &micro;Torrent requests each remaining piece from multiple peers instead of requesting each piece from a single peer. This mode helps make getting the last pieces of the torrent contents take much less time than it normally would.</p>
+
+<hr />
+<h3><a class="name" id="Does_uTorrent_have_Unicode_support" href="#Does_uTorrent_have_Unicode_support">Does &micro;Torrent have Unicode support?</a></h3>
+<p>Yes, &micro;Torrent supports Unicode.</p>
+
+<hr />
+<h3><a class="name" id="Does_uTorrent_support_HTTPS_or_UDP_trackers" href="#Does_uTorrent_support_HTTPS_or_UDP_trackers">Does &micro;Torrent support HTTPS or UDP trackers?</a></h3>
+<p>Yes, &micro;Torrent supports HTTPS (SSL) for both trackers and RSS feeds. UDP trackers are supported as well.</p>
+
+<hr />
+<h3><a class="name" id="Does_uTorrent_support_magnet_URIs" href="#Does_uTorrent_support_magnet_URIs">Does &micro;Torrent support magnet URIs?</a></h3>
+<p>Yes, &micro;Torrent can use and create magnet URIs compatible with the Azureus magnet URI implementation. &micro;Torrent can <a href="AppendixA_01_04.html#Context_Menu.Torrent_Options.Copy_Magnet_URI">generate magnet URIs</a> for any torrent job, and magnet URIs can be opened from the <a href="AppendixA_01_01.html#File.Add_Torrent_from_URL">Add Torrent from URL</a> dialog. Metadata regarding the torrent contents are obtained from other peers that support the feature.</p>
+
+<hr />
+<h3><a class="name" id="Does_uTorrent_support_multi-scrape" href="#Does_uTorrent_support_multi-scrape">Does &micro;Torrent support multi-scrape?</a></h3>
+<p>Yes, &micro;Torrent supports multi-scrape and uses it when <a href="AppendixA_02_12.html#bt.multiscrape">bt.multiscrape</a> is enabled. It automatically detects trackers that do not support multi-scrape and falls back to single-scrape mode for those trackers.</p>
+
+<hr />
+<h3><a class="name" id="Does_uTorrent_support_multi-tracker_.torrent_files" href="#Does_uTorrent_support_multi-tracker_.torrent_files">Does &micro;Torrent support multi-tracker .torrent files?</a></h3>
+<p>Yes, &micro;Torrent supports multi-tracker .torrent files. &micro;Torrent announces to all tracker tiers simultaneously, but only one tracker per tier. To see all the trackers in the .torrent file, simply check the <a href="AppendixA_01_04.html#Context_Menu.Torrent_Options.Properties">torrent job's Properties</a>. To learn more about multi-tracker specification, check the <a href="ExternalLinks.html#Depthstrike.com_Resources">multitracker specifications</a> at Depthstrike.com's wiki.</p>
+
+<hr />
+<h3><a class="name" id="Does_uTorrent_support_trackerless_.torrent_files" href="#Does_uTorrent_support_trackerless_.torrent_files">Does &micro;Torrent support trackerless .torrent files?</a></h3>
+<p>Yes, &micro;Torrent supports trackerless .torrent files. The built-in .torrent file creator can also create trackerless .torrent files.</p>
+
+<hr />
+<h3><a class="name" id="Does_uTorrent_support_UNC-style_paths_or_network_drives" href="#Does_uTorrent_support_UNC-style_paths_or_network_drives">Does &micro;Torrent support UNC-style paths or network drives?</a></h3>
+<p>Yes, &micro;Torrent supports UNC-style paths (like <span class="value">\\192.168.1.2\C$\</span>). Note that there may be increased disk fragmentation when saving to a network drive, since pre-allocation of files is not possible across the network.</p>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="FAQ_01.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="FAQ_03.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/FAQ_02.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+</html>

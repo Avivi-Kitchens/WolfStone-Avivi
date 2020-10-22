@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_04_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+<head><title>Add New Torrent</title>
+
+
+  
+
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  
+  <link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+
+  
+  <link rel="stylesheet" href="../style.css" type="text/css" /></head><body>
+<div id="wrapper">
+<div class="navi" id="naviTop">
+<ul>
+  <li><a href="AppendixA_04.html">«&nbsp; Previous</a></li>
+  <li><a href="AppendixA_04_02.html">Next &nbsp;»</a></li>
+</ul>
+</div>
+<div id="header"> <a href="../index.html">µTorrent User Manual</a>
+&gt; <a href="AppendixA.html">Appendix A: The µTorrent Interface</a>
+&gt; <a href="AppendixA_04.html">Miscellaneous</a>
+<h1>Add New Torrent</h1>
+</div>
+<div id="content">
+<p>The Add New Torrent dialog allows you to change several options for
+the torrent job before it is added to your torrent jobs list. This
+dialog is displayed only if <a href="AppendixA_02_02.html#When_Adding_Torrents.Show_a_window_that_displays_the_files_inside_the_torrent">the
+relevant option</a> is enabled in the Preferences. Files
+selected/deselected in this dialog can be deselected/reselected in the <a href="AppendixA_01_05_05.html#Context_Menu">Files tab</a>'s context
+menu.</p>
+<p>When adding <a href="FAQ_02.html#Does_uTorrent_support_magnet_URIs">magnets</a>,
+you can choose to wait while µTorrent retrieves the torrent
+information. At this time, a revolving "waiting" icon will be display
+at the bottom (a temporary message "<span style="font-weight: bold;">waiting
+for torrent information</span>" might be displayed as well in future versions...)<br />
+</p>
+<h3><a class="name" id="Save_As" href="#Save_In">Save In</a></h3>
+<ul class="uienum">
+  <li>The combobox allows you to specify the
+location you wish to download the torrent contents. Previously used
+locations are saved in the combobox and can be used again.</li>
+</ul>
+<h3><a class="name" id="name" href="#Create_Subfolder">Create Subfolder</a></h3>
+<ul class="uienum">
+  <li>If checked a containing folder will be
+created in your download directory and the torrent's contents will be
+downloaded into it. If unchecked, the torrent's contents will be placed
+directly into your download folder in their original file hierarchy.</li>
+</ul>
+<h3><a class="name" id="Name" href="#Name">Name</a></h3>
+<ul>
+  <li>The combobox allows you to change the name of the torrent. It will be used as the
+file name in case of a single file torrent. For torrents with multiple
+files - this will be the name of the subfolder under which the files will be saved.  <br />
+  </li>
+</ul>
+
+
+<h3><a class="name" id="Torrent_Options" href="#Torrent_Options">Torrent Options</a></h3>
+<ul class="uienum">
+  <li>The <a class="name" id="Save_As.Skip_hash_check" href="AppendixA_04_01.html#Save_As.Skip_hash_check">Skip hash check</a>
+checkbox tells µTorrent to not bother checking existing data for
+corruption. It is strongly recommended that you do not use this option,
+as corruption can sometimes happen unknowingly, outside of one's own
+control. Sharing corrupt pieces is detrimental to the swarm.</li>
+  <li>The <a class="name" id="Save_As.Start_torrent" href="AppendixA_04_01.html#Save_As.Start_torrent">Start torrent</a>
+checkbox tells µTorrent to start the torrent job after it is added to
+the torrent jobs list. If unchecked, the torrent job will be added in
+Stopped mode.</li>
+  <li>The <a class="name" id="Save_As.Label" href="AppendixA_04_01.html#Save_As.Label">Label</a>
+combobox allows you to set a label for the torrent job being added.
+Existing labels are displayed in the combobox, but you are free to
+create a new label if you wish.</li>
+  <li>The <a class="name" id="Save_As.Add_to_top_of_queue" href="AppendixA_04_01.html#Save_As.Add_to_top_of_queue">Add to top of
+queue</a> checkbox will give the torrent job a queue number of <span class="value">1</span>. If combined with the <a href="AppendixA_04_01.html#Save_As.Start_torrent">Start torrent</a>
+option, this will start the torrent job immediately.</li>
+</ul>
+<ul class="uienum">
+  <a class="name" id="Save_As.combobox" href="AppendixA_04_01.html#Save_As.combobox"> </a>
+</ul>
+<h3><a class="name" id="Torrent_Contents" href="#Torrent_Contents">Torrent
+Contents</a></h3>
+<ul class="uienum">
+  <li><a class="name" id="Torrent_Contents.Name" href="#Torrent_Contents.Name">Name</a> displays the name of the
+torrent job, taken from the .torrent file.</li>
+  <li><a class="name" id="Torrent_Contents.Comment" href="#Torrent_Contents.Comment">Comment</a> shows the comment placed
+on the .torrent file job by its creator.</li>
+  <li><a class="name" id="Torrent_Contents.Size" href="#Torrent_Contents.Size">Size</a> displays the total amount of
+space required for the files being downloaded. Selective file
+downloading is taken into account, so only the data you select to be
+downloaded will be counted. When files are skipped, the total size of
+the torrent contents (not taking selective file downloading into
+account) is displayed next to the selected size. The last number in the
+parentheses displays the amount of space available in the disk that the
+torrent contents are being downloaded to.</li>
+  <li><a class="name" id="Torrent_Contents.Date" href="#Torrent_Contents.Date">Date</a> shows the day and time at which
+the .torrent file was created.</li>
+  <li>The <a class="name" id="Torrent_Contents.Select_All" href="#Torrent_Contents.Select_All">Select All</a> button will mark
+all files to be downloaded.</li>
+  <li>The <a class="name" id="Torrent_Contents.Select_None" href="#Torrent_Contents.Select_None">Select None</a> button will mark
+all files to be skipped.</li>
+  <li>The <a class="name" id="Torrent_Contents.Files" href="#Torrent_Contents.Files">Files</a> list-view is a list of all
+files in the .torrent file, and allows you to select which files you
+want to download. The following is a description of each column:
+    <ul class="sublist">
+      <li><a class="name" id="Torrent_Contents.Files.Name" href="#Torrent_Contents.Files.Name">Name</a> column displays the
+filename. A checkmark to the left of the filename means the file will
+be downloaded, while an empty checkbox means the file will not be
+downloaded. Pressing <span class="key">Space</span> on the keyboard
+toggles this for the selected file(s).</li>
+      <li><a class="name" id="Torrent_Contents.Files.Path" href="#Torrent_Contents.Files.Path">Path</a> is the location that the
+file will be downloaded to on disk. If this column is blank, then the
+file will be downloaded into the torrent job's <a href="AppendixA_01_05_01.html#General.Save_As">Save As</a> location.
+If this column displays a partial path (not a full path that includes a
+drive root), then that is the subdirectory in the <a href="AppendixA_01_05_01.html#General.Save_As">Save As</a> directory
+that the file will be saved to.</li>
+      <li><a class="name" id="Torrent_Contents.Files.Size" href="#Torrent_Contents.Files.Size">Size</a> column displays the size
+of the file.</li>
+    </ul>
+    <span class="mouse">right-click</span>ing on the list will display
+the following items in a context menu:
+    <ul class="sublist">
+      <li><a class="name" id="Torrent_Contents.Files.Select" href="#Torrent_Contents.Files.Select">Select</a> will mark the
+selected file(s) to be downloaded.</li>
+      <li><a class="name" id="Torrent_Contents.Files.Deselect" href="#Torrent_Contents.Files.Deselect">Deselect</a> will mark the
+selected file(s) to be skipped.</li>
+      <li class="sep">&nbsp;</li>
+      <li><a class="name" id="Torrent_Contents.Files.Select_All" href="#Torrent_Contents.Files.Select_All">Select All</a> will mark all
+files to be downloaded.</li>
+      <li><a class="name" id="Torrent_Contents.Files.Deselect_All" href="#Torrent_Contents.Files.Deselect_All">Deselect All</a> will mark
+all files to be skipped.</li>
+    </ul>
+  </li>
+</ul>
+<p>The <a class="name" id="Advanced" href="#Advanced">Advanced...</a>
+button brings up the <a href="AppendixA_04_04.html">Torrent Properties</a>
+dialog.</p>
+</div>
+<div class="navi" id="naviBot">
+<ul>
+  <li><a href="AppendixA_04.html">«&nbsp; Previous</a></li>
+  <li><a href="AppendixA_04_02.html">Next &nbsp;»</a></li>
+</ul>
+</div>
+</div>
+
+</body>
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_04_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/FAQ_03.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+<head><title>FAQ: Usage</title>
+
+
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" /></head><body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="FAQ_02.html">«&nbsp; Previous</a></li>
+				<li><a href="FAQ_04.html">Next &nbsp;»</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../index.html">µTorrent User Manual</a> &gt;
+			<a href="FAQ.html">FAQ: Frequently Asked Questions</a>
+			<h1>Usage</h1>
+		</div>
+		<div id="content">
+
+<h3><a class="name" id="How_do_I_add_additional_columns_to_a_list-view" href="#How_do_I_add_additional_columns_to_a_list-view">How do I add additional columns to a list-view?</a></h3>
+<p>You can select what columns you wish to see in a list-view by <span class="mouse">right-click</span>ing the column headers. If you wish to reset all changes you've made to the columns, you can select "<em>Reset</em>" in that context menu.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_block_specific_peers_from_connecting_to_me" href="#How_do_I_block_specific_peers_from_connecting_to_me">How do I block specific peers from connecting to me?</a></h3>
+<p>You can create an <a href="AppendixB_01.html#External_Files.Extended_Functionality.ipfilter.dat">ipfilter.dat</a> file and load it in µTorrent, and the specified peers will be blocked.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_change_the_country_flags_shown_in_the_Peers_tab" href="#How_do_I_change_the_country_flags_shown_in_the_Peers_tab">How do I change the country flags shown in the Peers tab?</a></h3>
+<p>You can use <a href="AppendixB_01.html#External_Files.Interface_Customization.flags.conf">flags.conf</a> and <a href="AppendixB_01.html#External_Files.Interface_Customization.flags.bmp">flags.bmp</a> to customize the country flags.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_change_the_icons_in_uTorrent" href="#How_do_I_change_the_icons_in_uTorrent">How do I change the icons in µTorrent?</a></h3>
+<p>You can change the icons by placing <a href="AppendixB_01.html#External_Files.Interface_Customization">the respective interface customization file</a>
+in the µTorrent settings directory in order to customize the interface.
+A restart is required in order for new interface icons to be loaded.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_change_the_interface_language" href="#How_do_I_change_the_interface_language">How do I change the interface language?</a></h3>
+<p>You can install <a href="AppendixB_01.html#External_Files.Extended_Functionality.utorrent.lng">utorrent.lng</a> (by having µTorrent <a href="AppendixA_01_01.html#Help.Download_Translation">download the translation file</a>, or by getting a copy from the <a href="ExternalLinks.html#uTorrent">download page</a> yourself). Afterwards, <a href="AppendixA_02_01.html#Language">select the language</a> you wish to use from the general preferences.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_configure_the_disk_cache" href="#How_do_I_configure_the_disk_cache">How do I configure the disk cache?</a></h3>
+<p>The most important step is to understand how <a href="AppendixA_02_12_02.html">the disk cache options</a>
+affect µTorrent. Options that increase memory usage decrease disk
+access, while options that decrease memory usage increase disk access.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_create_my_own_.torrent_file" href="#How_do_I_create_my_own_.torrent_file">How do I create my own .torrent file?</a></h3>
+<p>You can use the <a href="AppendixA_04_03.html">Create New Torrent</a> feature in µTorrent to create your own .torrent file to share with other people.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_enable_DHT" href="#How_do_I_enable_DHT">How do I enable DHT?</a></h3>
+<p>You can enable it from <a href="AppendixA_02_06.html#Basic_BitTorrent_Features.Enable_DHT_Network">the BitTorrent settings</a>.
+Although DHT is enabled, not all torrent jobs might use it, as .torrent
+files with the 'private' flag set won't announce to the DHT network.
+Additionally, any torrent job that does not <a href="AppendixA_04_04_01.html#Other_Settings.Enable_DHT">have DHT enabled</a> won't be announced on DHT.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_enable_Initial_Seeding" href="#How_do_I_enable_Initial_Seeding">How do I enable Initial Seeding (Super Seeding)?</a></h3>
+<p>You can enable it from <a href="AppendixA_04_04_01.html#Other_Settings.Initial_Seeding">the torrent job properties</a>. If you are not the only seeder in the swarm, you should not enable Initial Seeding.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_enable_Local_Peer_Discovery" href="#How_do_I_enable_Local_Peer_Discovery">How do I enable Local Peer Discovery?</a></h3>
+<p>Local Peer Discovery is enabled on a per torrent job basis. You can enable it from <a href="AppendixA_04_04_01.html#Other_Settings.Local_Peer_Discovery">the torrent job properties</a>,
+assuming the .torrent file does not have the 'private' flag set. To
+automatically enable Local Peer Discovery for any newly added torrent
+job, check the <a href="AppendixA_02_06.html#Basic_BitTorrent_Features.Enable_Local_Peer_Discovery">Enable Local Peer Discovery</a> option in the Preferences.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_enable_Peer_Exchange" href="#How_do_I_enable_Peer_Exchange">How do I enable Peer Exchange?</a></h3>
+<p>Peer Exchange is enabled on a per torrent job basis. You can enable it from <a href="AppendixA_04_04_01.html#Other_Settings.Peer_Exchange">the torrent job properties</a>,
+assuming the .torrent file does not have the 'private' flag set. To
+automatically enable Peer Exchange for any newly added torrent job,
+check the <a href="AppendixA_02_06.html#Basic_BitTorrent_Features.Enable_Peer_Exchange">Enable Peer Exchange</a> option in the Preferences.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_enable_Protocol_Encryption" href="#How_do_I_enable_Protocol_Encryption">How do I enable Protocol Encryption?</a></h3>
+<p>Enable <a href="AppendixA_02_06.html#Protocol_Encryption">Protocol Encryption</a>
+in the Preferences. If your ISP is known to throttle or block
+BitTorrent traffic, and you find that enabling Protocol Encryption is
+not helping, then you may want to consider setting the encryption to "<em>Forced</em>" and disable legacy incoming connections.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_enable_NAT_Port_Mapping_Protocol" href="#How_do_I_enable_NAT_Port_Mapping_Protocol">How do I enable NAT Port Mapping Protocol (NAT-PMP)?</a></h3>
+<p>You can enable it from <a href="AppendixA_02_04.html#Listening_Port.Enable_NAT-PMP_port_mapping">the connection preferences</a>. Note that not all routers support NAT-PMP, in which case you will have to <a href="Chapter02_03.html">forward your port manually</a>.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_enable_Universal_Plug_and_Play" href="#How_do_I_enable_Universal_Plug_and_Play">How do I enable Universal Plug and Play (UPnP)?</a></h3>
+<p>You can enable it from <a href="AppendixA_02_04.html#Listening_Port.Enable_UPnP_port_mapping">the connection preferences</a>. Note that not all routers support UPnP, in which case you will have to <a href="Chapter02_03.html">forward your port manually</a>.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_load_a_.torrent_file_from_the_command_line" href="#How_do_I_load_a_.torrent_file_from_the_command_line">How do I load a .torrent file from the command line?</a></h3>
+<p>Run the µTorrent executable with the <a href="AppendixB_04.html#DIRECTORY">/DIRECTORY</a> command line option.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_allocate_all_the_files_when_I_start_a_torrent_job" href="#How_do_I_make_uTorrent_allocate_all_the_files_when_I_start_a_torrent_job">How do I make µTorrent allocate all the files when I start a torrent job?</a></h3>
+<p>Enable <a href="AppendixA_02_01.html#When_Downloading.Pre-allocate_all_files">Pre-allocate all files</a> in the general Preferences.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_append_a_ut_extension_to_incomplete_files" href="#How_do_I_make_uTorrent_append_a_ut_extension_to_incomplete_files">How do I make µTorrent append a !ut extension to incomplete files?</a></h3>
+<p>Enable <a href="AppendixA_02_01.html#When_Downloading.Append_ut_to_incomplete_files">Append !ut to incomplete files</a> in the general Preferences. The option takes effect immediately after the changes to the Preferences are saved.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_auto-load_.torrent_files_from_a_specified_directory" href="#How_do_I_make_uTorrent_auto-load_.torrent_files_from_a_specified_directory">How do I make µTorrent auto-load .torrent files from a specified directory?</a></h3>
+<p>Enable the <a href="AppendixA_02_03.html#Location_of_.torrents.Automatically_load_.torrents_in_directory">auto-load option</a> in the Preferences and select the directory you would like to automatically load .torrent files from.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_automatically_ban_peers_after_a_certain_number_of_hashfails" href="#How_do_I_make_uTorrent_automatically_ban_peers_after_a_certain_number_of_hashfails">How do I make µTorrent automatically ban peers after a certain number of hashfails?</a></h3>
+<p><a href="AppendixA_02_12.html#bt.ban_threshold">bt.ban_threshold</a> determines the number of hashfails µTorrent takes action against it. If <a href="AppendixA_02_12.html#bt.use_ban_ratio">bt.use_ban_ratio</a>
+is disabled, µTorrent will ban the peer immediately after it passes the
+ban threshold. Otherwise, µTorrent will look at the ratio of good to
+bad pieces that the peer has sent, and if it finds that the ratio is
+lower than <a href="AppendixA_02_12.html#bt.ban_ratio">bt.ban_ratio</a>, it will then ban the peer. If enough peers in the same range are banned, and <a href="AppendixA_02_12.html#bt.use_rangeblock">bt.use_rangeblock</a>
+is enabled, µTorrent will ban the entire range, since there is a good
+probability that the entire range is poisoning BitTorrent swarms.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_automatically_move_files_when_a_torrent_job_finishes" href="#How_do_I_make_uTorrent_automatically_move_files_when_a_torrent_job_finishes">How do I make µTorrent automatically move files when a torrent job finishes?</a></h3>
+<p>You can enable the <a href="AppendixA_02_03.html#Location_of_Downloaded_Files.Move_completed_downloads_to">Move completed downloads to</a>
+option in the Preferences and specify the directory you wish to move
+finished torrent jobs to. If you want to organize the selected
+directory by torrent job label, enable the <a href="AppendixA_02_03.html#Location_of_Downloaded_Files.Move_completed_downloads_to.Append_the_torrents_label">Append the torrents label</a> option.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_automatically_run_a_program_after_a_download_finishes" href="#How_do_I_make_uTorrent_automatically_run_a_program_after_a_download_finishes">How do I make µTorrent automatically run a program after a download finishes?</a></h3>
+<p>In the torrent job's properties, there is a <a href="AppendixA_04_04_02.html#Run_Program">Run Program</a>
+section in the advanced section. When properly filled out, µTorrent
+will run the selected application immediately after the torrent job
+finishes downloading.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_delete_files_to_the_Recycle_Bin" href="#How_do_I_make_uTorrent_delete_files_to_the_Recycle_Bin">How do I make µTorrent delete files to the Recycle Bin?</a></h3>
+<p>Enable the <a href="AppendixA_01_02.html#Remove.Move_to_trash_if_possible">Move to trash if possible</a>
+option in the Remove button's context menu in the toolbar. Note that
+files larger than the Recycle Bin's capacity will be removed from the
+drive immediately (bypassing the Recycle Bin entirely).</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_download_files_from_an_RSS_feed" href="#How_do_I_make_uTorrent_download_files_from_an_RSS_feed">How do I make µTorrent download files from an RSS feed?</a></h3>
+<p>The first step is to find a RSS feed that links to .torrent files in at least one of either its <span class="value">&lt;guid&gt;</span>, <span class="value">&lt;link&gt;</span>, or <span class="value">&lt;enclosure&gt;</span> tags. After you <a href="AppendixA_04_02.html">add such a feed</a> (making sure to provide the authentication information if necessary), you can create a <a href="AppendixA_03_01.html">Favorites filter</a>
+for the feed that automatically downloads and loads the linked .torrent
+files from the feed that match the filter you specify. Make sure you
+familiarize yourself with all of the filter options, as they can be
+confusing. When the filter is set up properly and is enabled, µTorrent
+will take care of the downloading for you.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_prioritize_the_first_and_last_piece_of_each_file" href="#How_do_I_make_uTorrent_prioritize_the_first_and_last_piece_of_each_file">How do I make µTorrent prioritize the first and last piece of each file?</a></h3>
+<p>Enable <a href="AppendixA_02_12.html#bt.prio_first_last_piece">bt.prio_first_last_piece</a> in the advanced Preferences.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_start_in_boss-key_mode" href="#How_do_I_make_uTorrent_start_in_boss-key_mode">How do I make µTorrent start in boss-key mode?</a></h3>
+<p>Run µTorrent with the <a href="AppendixB_04.html#HIDE">/HIDE</a> command line option. </p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_start_minimized" href="#How_do_I_make_uTorrent_start_minimized">How do I make µTorrent start minimized?</a></h3>
+<p>Run µTorrent with the <a href="AppendixB_04.html#MINIMIZED">/MINIMIZED</a> command line option. </p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_stop_downloading_and_only_upload" href="#How_do_I_make_uTorrent_stop_downloading_and_only_upload">How do I make µTorrent stop downloading and only upload?</a></h3>
+<p>To perform this on any and all torrent jobs, set the scheduler to <a href="AppendixA_02_09.html#Scheduler_Table.Seeding_only">seeding only</a> mode during the times you want it to upload only.</p>
+<p>To perform this on a specific torrent job, stop the torrent job, select all of its files in <a href="AppendixA_01_05_05.html">the Files tab</a>, then select "<em>Don't Download</em>." µTorrent might continue to download pieces if there are any left incomplete (you can check <a href="AppendixA_01_05_04.html">the Pieces tab</a>), but afterwards, it won't request any new pieces to download from other peers.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_stop_seeding_a_torrent_job_at_a_specific_share_ratio" href="#How_do_I_make_uTorrent_stop_seeding_a_torrent_job_at_a_specific_share_ratio">How do I make µTorrent stop seeding a torrent job at a specific share ratio?</a></h3>
+<p>Set the <a href="AppendixA_02_08.html#When_uTorrent_has_reached_the_seeding_goal.Limit_the_upload_rate_to">Limit the upload rate to</a> option to <span class="value">0</span>. Now, whenever any torrent job reaches the seeding goal, it will be stopped.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_make_uTorrent_use_my_proxy" href="#How_do_I_make_uTorrent_use_my_proxy">How do I make µTorrent use my proxy?</a></h3>
+<p>You can fill in the proxy information in <a href="AppendixA_02_04.html#Proxy_Server">the Connection preferences</a>. Unless you are sure your proxy server can handle the load, you should refrain from <a href="AppendixA_02_04.html#Proxy_Server.Use_proxy_server_for_peer-to-peer_connections">using the proxy server for peer-to-peer connections</a>.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_manually_announce_to_trackers" href="#How_do_I_manually_announce_to_trackers">How do I manually announce to trackers?</a></h3>
+<p>The <a href="AppendixA_01_04.html#Context_Menu.Torrent_Options.Update_Tracker">Update Tracker</a>
+feature in the torrent job context menu can be used to update all
+trackers in the selected torrent job(s). Alternatively, specific
+trackers can be updated via the <a href="AppendixA_01_05_02.html#Context_Menu.Update_Tracker">Trackers tab context menu</a>.
+Although an anti-hammer feature has been put in place to prevent abuse
+of the feature, manual update of the tracker should still be avoided
+where not absolutely necessary in order to minimize strain on trackers.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_move_a_torrent_job_to_the_top_or_bottom_of_the_queue" href="#How_do_I_move_a_torrent_job_to_the_top_or_bottom_of_the_queue">How do I move a torrent job to the top or bottom of the queue?</a></h3>
+<p>Hold <span class="key">Shift</span> on your keyboard while pressing the <a href="AppendixA_01_02.html#Move_Up_Queue">Move Up Queue</a> toolbar button to move the selected torrent job(s) to the top of the queue. Hold <span class="key">Shift</span> on your keyboard while pressing the <a href="AppendixA_01_02.html#Move_Down_Queue">Move Down Queue</a>
+toolbar button to move the selected torrent job(s) to the bottom of the
+queue. The respective move up/down queue items from the <a href="AppendixA_01_04.html#Context_Menu">torrent jobs list context menu</a> behave in the same way when <span class="key">Shift</span> is held while the menu item is selected.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_quickly_change_the_upload_and_download_limits" href="#How_do_I_quickly_change_the_upload_and_download_limits">How do I quickly change the upload and download limits?</a></h3>
+<p>The global transfer rate limits can be quickly set from the <a href="AppendixA_01_06.html#Context_Menu">status bar context menu</a>. If visible, the global transfer rate limits can also be quickly controlled from <a href="AppendixA_04_05.html">the system tray context menu</a>.</p>
+<p>For to quickly change the transfer rate limits of specific torrent jobs, select the torrent jobs you would like to modify, then <span class="mouse">right-click</span> it and use the <a href="AppendixA_01_04.html#Context_Menu.Torrent_Options.Bandwidth_Allocation">Bandwidth Allocation</a> menu.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_rename_a_torrent_job_in_the_torrent_jobs_list" href="#How_do_I_rename_a_torrent_job_in_the_torrent_jobs_list">How do I rename a torrent job in the torrent jobs list?</a></h3>
+<p>A torrent job can be renamed in the list by slow <span class="mouse">double-click</span>ing on the torrent job, or by pressing <span class="key">F2</span> on the keyboard while the torrent job is selected. To cancel the renaming, you should press <span class="key">Esc</span> on the keyboard. To confirm the change, you should press <span class="key">Enter</span> on the keyboard, or use the mouse to click anywhere else on the torrent jobs list.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_rename_a_torrent_jobs_download_directory" href="#How_do_I_rename_a_torrent_jobs_download_directory">How do I rename a torrent job's download directory?</a></h3>
+<p>In the <a href="AppendixA_04_01.html#Save_As">Add Torrent Jobs dialog</a>,
+you can edit the target directory before confirming the save location.
+If you wish to rename or move an existing torrent job's current
+location on disk:</p>
+<ol>
+	<li>Stop the torrent job whose contents you wish to move.</li>
+	<li>Rename or move the torrent contents.</li>
+	<li>Use <a href="AppendixA_01_04.html#Context_Menu.Torrent_Options.Advanced.Set_Download_Location">Set Download Location...</a> from the torrent jobs list context menu to select the new location.</li>
+	<li>If µTorrent doesn't automatically recheck the file, and you wish to confirm the integrity of the files, <a href="AppendixA_01_04.html#Context_Menu.Torrent_Options.Force_Re-Check">force a re-check</a> on the torrent job.</li>
+</ol>
+
+<hr />
+<h3><a class="name" id="How_do_I_run_multiple_instances_of_uTorrent_simultaneously" href="#How_do_I_run_multiple_instances_of_uTorrent_simultaneously">How do I run multiple instances of µTorrent simultaneously?</a></h3>
+<p>To run multiple instances of µTorrent, you can run each new instance with the <a href="AppendixB_04.html#RECOVER">/RECOVER</a>
+command line option. Because of the possibility of conflicts, you
+should perform the following before running multiple instances:</p>
+<ol>
+	<li>Create a new folder containing an <a href="AppendixB_01.html#Encapsulated_Installation">encapsulated installations</a> of µTorrent (you should copy the executable).</li>
+	<li>Create a shortcut for this copy of the executable.</li>
+	<li>Edit the shortcut's target by adding <span class="value">/RECOVER</span> to the end of the "<em>Target</em>" path, outside of any quotation marks, and separated from the executable path by a space.</li>
+	<li>Run the shortcut to open a new instance of µTorrent.</li>
+	<li>Configure this instance of µTorrent to use a different <a href="AppendixA_02_04.html#Listening_Port.Port_used_for_incoming_connections">listening port</a> (and different <a href="AppendixA_02_10.html#Connectivity.Alternative_listening_port">alternative listening port</a> if applicable).</li>
+	<li>If applicable, <a href="Chapter02_03.html">forward the port(s)</a> for this instance in your router and firewall.</li>
+</ol>
+<p>Because bandwidth must be split for each instance, you should probably run <a href="Chapter02_02.html#The_Setup_Guide">the Setup Guide</a> again for each instance, but select appropriate portions of your connection's maximum upload rate for each instance you run.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_set_a_boss-key_up" href="#How_do_I_set_a_boss-key_up">How do I set a boss-key up?</a></h3>
+<p>A boss-key can be set from <a href="AppendixA_02_01.html#Privacy.Boss-Key">the privacy preferences</a>. After setting it and confirming the changes, µTorrent's visibility can be toggled by pressing the selected key combination.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_set_the_default_torrent_job_Remove_action" href="#How_do_I_set_the_default_torrent_job_Remove_action">How do I set the default torrent job Remove action?</a></h3>
+<p>The default Remove action can be set by <span class="mouse">right-click</span>ing the <a href="AppendixA_01_02.html#Remove">Remove</a> button in the toolbar, holding <span class="key">Shift</span> on the keyboard, then <span class="mouse">left-click</span>ing one of the four possible options. Alternatively, the default behavior can be configured by setting <a href="AppendixA_02_12.html#gui.default_del_action">gui.default_del_action</a> appropriately.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_set_the_download_location_for_torrent_jobs_added_via_magnet_URI" href="#How_do_I_set_the_download_location_for_torrent_jobs_added_via_magnet_URI">How do I set the download location for torrent jobs added via magnet URI?</a></h3>
+<p>With magnet URIs, µTorrent does not have a copy of the <span class="value">info</span>
+dictionary on hand, so it does not know the name or the contents.
+Consequently, it must wait to find a source with the dictionary, which
+may sometimes take a long time. Because of this, µTorrent uses <a href="AppendixA_02_03.html#Location_of_Downloaded_Files.Put_new_downloads_in">the default download location</a> as the destination for the files (in case it happens to find the <span class="value">info</span>
+dictionary when the user is not available to set the download location
+manually). If no default download location is set, µTorrent will use <span class="value">%UserProfile%\My Documents\Downloads</span> as the destination.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_skip_certain_files_in_a_torrent_job" href="#How_do_I_skip_certain_files_in_a_torrent_job">How do I skip certain files in a torrent job?</a></h3>
+<p>Files can be skipped in the <a href="AppendixA_04_01.html#Torrent_Contents.Files">Files list in the Add New Torrent dialog</a>. Alternatively, files can be skipped via the <a href="AppendixA_01_05_05.html#Context_Menu">Files tab context menu</a>.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_sort_by_more_than_one_column_in_a_list-view" href="#How_do_I_sort_by_more_than_one_column_in_a_list-view">How do I sort by more than one column in a list-view?</a></h3>
+<p>You can sort by any column by <span class="mouse">left-click</span>ing on its header. To sort on another column as a secondary sort order, hold <span class="key">Shift</span> on the keyboard while <span class="mouse">left-click</span>ing on the column header you wish to use as the secondary sort criterion.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_use_the_embedded_tracker" href="#How_do_I_use_the_embedded_tracker">How do I use the embedded tracker?</a></h3>
+<p>Enable <a href="AppendixA_02_12.html#bt.enable_tracker">bt.enable_tracker</a> in the advanced preferences. Make sure you carefully read the description of the option.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_use_the_scheduler_to_control_transfer_rates" href="#How_do_I_use_the_scheduler_to_control_transfer_rates">How do I use the scheduler to control transfer rates?</a></h3>
+<p>The most important step is to understand how <a href="AppendixA_02_09.html">the scheduler options</a>
+affect µTorrent. The rest is as simple as clicking on the time slot you
+wish to set up to the color corresponding to the effect you want for
+the time slot.</p>
+
+<hr />
+<h3><a class="name" id="How_do_I_use_the_Web_UI" href="#How_do_I_use_the_Web_UI">How do I use the Web UI?</a></h3>
+<p><a href="AppendixA_02_10.html">Enable the Web UI</a>, and µTorrent
+should automatically install it for you. Afterwards, fill in the
+username and password you would like to use to log into the web
+interface. If you wish to use a different listening port from the <a href="AppendixA_02_04.html#Listening_Port.Port_used_for_incoming_connections">normal listening port</a> for the web interface, specify it in the <a href="AppendixA_02_10.html#Connectivity.Alternative_listening_port">Alternative listening port</a> field. Additionally, if you wish to allow only specific IP address to access your web interface, fill in the <a href="AppendixA_02_10.html#Connectivity.Restrict_access_to_the_following_IPs">restriction field</a> accordingly.</p>
+
+<hr />
+<h3><a class="name" id="What_are_labels_and_what_can_they_be_used_for" href="#What_are_labels_and_what_can_they_be_used_for">What are labels and what can they be used for?</a></h3>
+<p>Labels are used as a powerful tool for torrent job organization in
+µTorrent. They can make torrent job identification and sorting much
+easier for you.</p>
+<p>To set a label for a torrent job, use the <a href="AppendixA_01_04.html#Context_Menu.Torrent_Options.Label">Label</a>
+submenu in the torrent job's context menu. A benefit of using labels is
+that they can also be used to organize torrent contents (not just
+torrent jobs) with the <a href="AppendixA_02_03.html#Location_of_Downloaded_Files.Move_completed_downloads_to">Move completed downloads to</a> option.</p>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="FAQ_02.html">«&nbsp; Previous</a></li>
+				<li><a href="FAQ_04.html">Next &nbsp;»</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/FAQ_03.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+</html>

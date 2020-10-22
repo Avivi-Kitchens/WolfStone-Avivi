@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_01_03.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:00 GMT -->
+<head><title>Main Window: Category List</title>
+
+
+
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" /></head><body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="AppendixA_01_02.html">«&nbsp; Previous</a></li>
+				<li><a href="AppendixA_01_04.html">Next &nbsp;»</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">µTorrent User Manual</a> &gt;
+			<a href="AppendixA.html">Appendix A: The µTorrent Interface</a> &gt;
+			<a href="AppendixA_01.html">Main Window</a>
+			<h1>Category List</h1>
+		</div>
+		<div id="content">
+
+<p>The category list contains various features in the µTorrent client,
+including the list of torrent jobs, labels, and RSS feeds. The category
+list's visibility can be toggled by selecting "<em>Options</em>" then "<em>Show Category List</em>" in the <a href="AppendixA_01_01.html">main menus</a>, or by pressing <span class="key">F7</span>
+on the keyboard. The last selected category before µTorrent is exited
+will be automatically selected on the next start. Numbers in the
+parentheses next to the category name indicate the number of torrent
+jobs there are listed under the respective category. The treeview is
+composed of the following default categories:</p>
+<ul class="uienum">
+	
+	<li><a class="name" id="Torrents" href="AppendixA_01_03.html#Torrents"><img style="border: 0px solid ; width: 14px; height: 14px;" src="../img/tstatus_featured_content.png" alt="Torrents" /></a><a class="name" id="Torrents" href="#Featured_Content"> Featured Content</a> Replaces the main view with a Web-like pane of featured content.</li>
+  <li><a class="name" id="Torrents" href="AppendixA_01_03.html#Torrents"><img src="../img/tstatus_torrents.png" alt="Torrents" /></a><a class="name" id="Torrents" href="AppendixA_01_03.html#Torrents"> Torrents</a> applies no filters and displays all torrent jobs in your client.</li>
+
+	<li><a class="name" id="Downloading" href="#Downloading"><img src="../img/tstatus_downloading.png" alt="Downloading" /> Downloading</a> only shows torrent jobs that are not finished or completed.</li>
+  <li><a class="name" id="Completed" href="AppendixA_01_03.html#Completed"><img src="../img/tstatus_seeding.png" alt="Completed" /></a><a class="name" id="Downloading" href="AppendixA_01_03.html#Seeding"> Seeding</a> only shows torrent jobs that were completed and are now seeding.</li>
+
+	<li><a class="name" id="Completed" href="#Completed"><img style="border: 0px solid ; width: 12px; height: 13px;" src="../img/tstatus_finished.png" alt="Completed" /> Completed</a> displays all torrent jobs that have finished downloading.</li>
+	<li><a class="name" id="Active" href="#Active"><img src="../img/tstatus_active.png" alt="Active" /> Active</a>
+only shows torrent jobs that are actively being transferred, whether it
+is downloading or seeding. Torrent jobs must be downloading at rates
+above the value specified by <a href="AppendixA_02_12.html#queue.slow_dl_threshold">queue.slow_dl_threshold</a> or uploading at rates above the value specified by <a href="AppendixA_02_12.html#queue.slow_ul_threshold">queue.slow_ul_threshold</a> to be considered active.</li>
+	<li><a class="name" id="Inactive" href="#Inactive"><img src="../img/tstatus_inactive.png" alt="Inactive" /> Inactive</a>
+only shows torrent jobs that are not being actively transferred. This
+includes all torrent jobs that are stopped, waiting in the queue, or
+are started, but downloading at rates below the value specified by <a href="AppendixA_02_12.html#queue.slow_dl_threshold">queue.slow_dl_threshold</a> and uploading at rates below the value specified by <a href="AppendixA_02_12.html#queue.slow_ul_threshold">queue.slow_ul_threshold</a>.</li>
+	<li class="sep">&nbsp;</li>
+	<li><a class="name" id="Labels" href="#Labels"><img src="../img/labels.png" alt="Labels" /> Labels</a> applies no filters and displays all torrent jobs in your client. Underneath this item is the list of all labels on your client.</li>
+	<li><a class="name" id="No_Label" href="#No_Label"><img src="../img/labels.png" alt="No Label" /> No Label</a> will display all torrent jobs that have no labels set.</li>
+	<li class="sep">&nbsp;</li>
+	<li><a class="name" id="Feeds" href="#Feeds"><img src="../img/rss.png" alt="Feeds" /> Feeds</a> will display the RSS items from all RSS feeds. Underneath this item is the list of all feeds on your client. <br />
+</li>
+  <li><a class="name" id="Feeds" href="AppendixA_01_03.html#Feeds"><img style="border: 0px solid ; width: 12px; height: 14px;" src="../img/tstatus_devices.png" alt="Feeds" /></a><a class="name" id="Feeds" href="AppendixA_01_03.html#Devices"> Devices</a> will display a view all all the paired-devices that you have added.</li>
+
+	<li class="sep">&nbsp;</li>
+	
+</ul>
+
+<p>User-added labels will appear in the category list immediately below "<em>No Label</em>".
+Torrent jobs with labels will be displayed under their corresponding
+label. Standard labels are removed from the category list as soon as
+there are no torrent jobs using them.</p>
+<p>Not all categories are mutually exclusive, so if you have a torrent
+job that has no labels, and is inactive, it will show up in both the "<em>Inactive</em>" category, and the "<em>No Label</em>" category. Multiple categories can be selected by holding <span class="key">Shift</span> or <span class="key">Ctrl</span> while <span class="mouse">left-click</span>ing on a category. Holding <span class="key">Shift</span> will select all categories in between the first selected category and the last selected one. Holding <span class="key">Ctrl</span> allows you to select (or deselect) specific categories that aren't necessarily adjacent to each other.</p>
+<p>RSS feeds are displayed at the bottom of the category list (below
+the labels). When an RSS feed is selected, the torrent jobs list is
+filled with torrents as listed in the RSS feed. Torrent jobs added from
+a feed are also listed in their respective source feeds.</p>
+
+<h3><a class="name" id="Context_Menu" href="#Context_Menu">Context Menu</a></h3>
+<p>If you <span class="mouse">right-click</span> on an item in the category list, you'll see a context menu. They are described in the following list:</p>
+<ul class="uienum">
+	<li><a class="name" id="Context_Menu.Add_Torrent" href="#Context_Menu.Add_Torrent">Add Torrent...</a> prompts you for the location of the .torrent file that you are trying to open on disk. If you set a <a href="AppendixA_02_03.html#Location_of_Downloaded_Files.Put_new_downloads_in">default download location</a>, the torrent job will automatically be added to the torrent jobs list and started (if you did not set µTorrent to <a href="AppendixA_02_02.html#When_Adding_Torrents.Dont_start_the_download_automatically">start torrent jobs in stopped mode</a>).
+If you did not set a default download location, you will be prompted
+where you would like to save the torrent contents, with the <a href="AppendixA_04_01.html">Add New Torrent</a> dialog being shown by default.</li>
+	<li><a class="name" id="Context_Menu.Add_RSS_Feed" href="#Context_Menu.Add_RSS_Feed">Add RSS Feed...</a> opens up the <a href="AppendixA_04_02.html">Add RSS Feed</a> dialog, where you can add RSS feeds for µTorrent to monitor.</li>
+  <li><a class="name" id="Context_Menu.Add_RSS_Feed" href="AppendixA_01_03.html#Context_Menu.Add_RSS_Feed">Transfer to..</a> transfer contents to any of the connected paired-devices.</li>
+
+	<li class="sep">&nbsp;</li>
+	<li><a class="name" id="Context_Menu.Torrent_Options" href="#Context_Menu.Torrent_Options">Torrent Options</a> displays select menu items from the <a href="AppendixA_01_04.html#Context_Menu.Torrent_Options">torrent jobs list context menu</a>,
+and behave identically to their torrent jobs list context menu
+counterparts. These menu items show up only if there are torrent jobs
+selected in the torrent jobs list.</li> 
+	<li><a class="name" id="Context_Menu.RSS_Feed_Options" href="#Context_Menu.RSS_Feed_Options">RSS Feed Options</a> displays options for the RSS feed, and show up only if RSS items are selected in the torrent jobs list. If "<em>All Feeds</em>" item is right-clicked, the selected action is applied on every feed.
+		<ul class="sublist">
+			<li><a class="name" id="Context_Menu.RSS_Feed_Options.RSS_Downloader" href="#Context_Menu.RSS_Feed_Options.RSS_Downloader">RSS Downloader</a> opens up the <a href="AppendixA_03.html">RSS Downloader</a> dialog.</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Context_Menu.RSS_Feed_Options.Update_Feed" href="#Context_Menu.RSS_Feed_Options.Update_Feed">Update Feed</a>
+allows you to perform a manual reload of the selected RSS feed(s).
+Refrain from using this repeatedly in rapid succession, as hammering
+the RSS feed's server won't make the feed be updated with new items any
+more quickly, and you run the chance of causing the server to fail. In
+short, do not abuse this feature.</li>
+			<li><a class="name" id="Context_Menu.RSS_Feed_Options.Toggle_Feed" href="#Context_Menu.RSS_Feed_Options.Toggle_Feed">Enable/Disable Feed</a> enables or disables the RSS feed updating for the selected feed(s).</li>
+			<li><a class="name" id="Context_Menu.RSS_Feed_Options.Edit_Feed" href="#Context_Menu.RSS_Feed_Options.Edit_Feed">Edit Feed...</a> opens up the <a href="AppendixA_04_02.html">Edit RSS Feed</a>
+dialog, where you can edit the properties of the selected RSS feed(s).
+If multiple feeds are selected, µTorrent will open an edit dialog for
+each feed one at a time, opening another dialog for the next feed only
+after the current feed's edit dialog is closed.</li>
+			<li><a class="name" id="Context_Menu.RSS_Feed_Options.Delete_Feed" href="#Context_Menu.RSS_Feed_Options.Delete_Feed">Delete Feed</a> removes the RSS feed from the list.</li>
+			<li><a class="name" id="Context_Menu.RSS_Feed_Options.Clear_Feed_History" href="#Context_Menu.RSS_Feed_Options.Clear_Feed_History">Clear Feed History</a> removes all entries in the RSS Downloader's <a href="AppendixA_03_02.html">History tab</a> that came from the selected feed(s).</li>
+      <li><a class="name" id="Context_Menu.RSS_Feed_Options.Clear_Feed_History" href="AppendixA_01_03.html#Context_Menu.RSS_Feed_Options.Torrent_Options">Torrent Options </a><span class="name">displays select menu items from the</span><a class="name" id="Context_Menu.RSS_Feed_Options.Clear_Feed_History" href="AppendixA_01_03.html#Context_Menu.RSS_Feed_Options.Torrent_Options"> </a><a href="AppendixA_01_04.html#Context_Menu.Torrent_Options">torrent jobs list context menu</a>,
+and behave identically to their torrent jobs list context menu
+counterparts. These menu items show up only if there are torrent jobs
+selected in the torrent jobs list for the relevant RSS feed(s).<br />
+      </li>
+
+		</ul>
+	</li>
+</ul>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="AppendixA_01_02.html">«&nbsp; Previous</a></li>
+				<li><a href="AppendixA_01_04.html">Next &nbsp;»</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_01_03.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:02 GMT -->
+</html>

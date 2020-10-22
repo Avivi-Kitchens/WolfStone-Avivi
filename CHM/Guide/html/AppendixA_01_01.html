@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_01_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:37:56 GMT -->
+<head><title>Main Window: Main Menus</title>
+
+
+
+
+
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" /></head><body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="AppendixA_01.html">«&nbsp; Previous</a></li>
+				<li><a href="AppendixA_01_02.html">Next &nbsp;»</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">µTorrent User Manual</a> &gt;
+			<a href="AppendixA.html">Appendix A: The µTorrent Interface</a> &gt;
+			<a href="AppendixA_01.html">Main Window</a>
+			<h1>Main Menus</h1>
+		</div>
+		<div id="content">
+
+<p>The main menus are where you'll find many of the other facilities included in µTorrent, such as the <a href="AppendixA_02.html">Preferences</a>, or the <a href="AppendixA_03.html">RSS Downloader</a>.</p>
+
+<h3><a class="name" id="File" href="#File">File</a></h3>
+<ul class="uienum">
+	<li><a class="name" id="File.Add_Torrent" href="#File.Add_Torrent">Add Torrent...</a> <span class="key">Ctrl</span>+<span class="key">O</span> prompts you for the location of the .torrent file that you are trying to open on disk. If you set a <a href="AppendixA_02_03.html#Location_of_Downloaded_Files.Put_new_downloads_in">default download location</a>, the torrent job will automatically be added to the torrent jobs list and started (if you did not set µTorrent to <a href="AppendixA_02_02.html#When_Adding_Torrents.Dont_start_the_download_automatically">start torrent jobs in stopped mode</a>).
+If you did not set a default download location, you will be prompted
+where you would like to save the torrent contents, with the <a href="AppendixA_04_01.html">Add New Torrent</a> dialog being shown by default.</li>
+	<li><a class="name" id="File.Add_Torrent_no_default_save" href="#File.Add_Torrent_no_default_save">Add Torrent (no default save)...</a> <span class="key">Ctrl</span>+<span class="key">D</span> does the same thing as <a href="#File.Add_Torrent">Add Torrent</a>, but will always ask you where you'd like to save the torrent contents, regardless of whether you have a <a href="AppendixA_02_03.html#Location_of_Downloaded_Files.Put_new_downloads_in">default download location</a> set or not.</li>
+	<li><a class="name" id="File.Add_Torrent_from_URL" href="#File.Add_Torrent_from_URL">Add Torrent from URL...</a> <span class="key">Ctrl</span>+<span class="key">U</span>
+allows you to open a .torrent file directly from URL without having
+saved the it to your hard disk. Depending on the method used by the
+website for authenticating users (if any), the URL may have to be
+entered <a href="AppendixB_02.html">in a specific format</a>. Magnet URIs may be used here, and µTorrent will attempt to download the <span class="value">info</span> dictionary from the corresponding .torrent file from any other client that also supports the URI scheme.</li>
+	<li><a class="name" id="File.Add_RSS_Feed" href="#File.Add_RSS_Feed">Add RSS Feed...</a> opens up the <a href="AppendixA_04_02.html">Add RSS Feed</a> dialog, where you can add RSS feeds for µTorrent to monitor.</li>
+  <li><a class="name" id="File.Add_RSS_Feed" href="AppendixA_01_01.html#File.Add_Device">Add Device...</a> replaces the main view with a <a href="AppendixA_02_11b.html">Devices</a> pane, so that you can add a new remote paired-deivce to drag torrents onto it.</li>
+
+	<li class="sep">&nbsp;</li>
+	<li><a class="name" id="File.Create_New_Torrent" href="#File.Create_New_Torrent">Create New Torrent...</a> <span class="key">Ctrl</span>+<span class="key">N</span> lets you <a href="AppendixA_04_03.html">create .torrent files</a> that you can use to share your data with other people.</li>
+	<li class="sep">&nbsp;</li>
+	<li><a class="name" id="File.Exit" href="#File.Exit">Exit</a>
+does just that -- it exits µTorrent. Note that exiting µTorrent
+automatically sends a stop signal to trackers, so you do not have to
+stop all torrent jobs before exiting. Torrent jobs that are not stopped
+will automatically be started when µTorrent is next opened. Even after
+exiting, the µTorrent process might continue to run for a while longer.
+This happens because µTorrent is trying to finish transferring pieces
+and write remaining pieces to disk from memory. The process should
+disappear after a few seconds.</li>
+</ul>
+
+<h3><a class="name" id="Options" href="#Options">Options</a></h3>
+<ul class="uienum">
+	<li><a class="name" id="Options.Preferences" href="#Options.Get_uTorrent_Plus">Get µTorrent Plus</a> opens up an info-pane with µTorrent Plus information and related links.</li>
+  <li><a class="name" id="Options.Preferences" href="#Options.Preferences">Preferences</a> <span class="key">Ctrl</span>+<span class="key">P</span> opens up the <a href="AppendixA_02.html">Preferences</a> dialog, where you can configure most of µTorrent's options.</li>
+
+	<li><a class="name" id="Options.RSS_Downloader" href="#Options.RSS_Downloader">RSS Downloader</a> <span class="key">Ctrl</span>+<span class="key">R</span> opens up the <a href="AppendixA_03.html">RSS Downloader</a> dialog, where you can configure µTorrent's RSS settings.</li>
+	<li><a class="name" id="Options.Setup_Guide" href="#Options.Setup_Guide">Setup Guide</a> <span class="key">Ctrl</span>+<span class="key">G</span> opens up the <a href="Chapter02_02.html#The_Setup_Guide">Setup Guide</a> dialog, where you can tell µTorrent to configure some basic settings that can affect your speeds.</li>
+	<li class="sep">&nbsp;</li>
+	<li><a class="name" id="Options.Show_Toolbar" href="#Options.Show_Toolbar">Show Toolbar</a> <span class="key">F4</span> toggles the display of the <a href="AppendixA_01_02.html">toolbar</a> at the top of the main window.</li>
+	<li><a class="name" id="Options.Show_Detailed_Info" href="#Options.Show_Detailed_Info">Show Detailed Info</a> <span class="key">F5</span> toggles the display of the <a href="AppendixA_01_05.html">information pane</a> near the bottom of the main window.</li>
+	<li><a class="name" id="Options.Show_Status_Bar" href="#Options.Show_Status_Bar">Show Status Bar</a> <span class="key">F6</span> toggles the display of the <a href="AppendixA_01_06.html">status bar</a> at the bottom of the main window.</li>
+	<li><a class="name" id="Options.Show_Category_List" href="#Options.Show_Category_List">Show Category List</a> <span class="key">F7</span> toggles the display of the <a href="AppendixA_01_03.html">category list</a> at the left of the main window.</li>
+	<li><a class="name" id="Options.Show_Find_Pane" href="#Options.Show_Featured_Contentent">Show Featured Content</a> <span class="key">F8</span> toggles the display of the 'Featured Content' category-node at the left side category pane.</li>
+  <li><a class="name" id="Options.Show_Find_Pane" href="#Options.Show_Devices">Show Devices</a> toggles the display of the 'Devices' category-node at the left side category pane.<br />
+  </li>
+  <li><a class="name" id="Options.Show_Find_Pane" href="#Options.Show_Plus_Information">Show Plus Information</a> toggles the display of the 'µTorrent Plus' offer-link at the bottom of the left side category pane.</li>
+
+	<li><a class="name" id="Options.Narrow_Toolbar" href="#Options.Narrow_Toolbar">Narrow Toolbar</a> <span class="key">F11</span> toggles the width of the <a href="AppendixA_01_02.html">Toolbar</a> at the top of the main window. This also hides the <em>Add RSS Feed</em> icon when enabled.</li>
+	<li><a class="name" id="Options.Compact_Category_List" href="#Options.Compact_Category_List">Compact Category List</a> <span class="key">F12</span> toggles the display of dividers between sections at the left of the main window.</li>
+	<li class="sep">&nbsp;</li>
+	<li><a class="name" id="Options.Icons_on_Tabs" href="#Options.Icons_on_Tabs">Icons on Tabs</a> toggles the display of the graphic icons on the tabs at the top of the <a href="AppendixA_01_05.html">information pane</a>.</li>
+	<li class="sep">&nbsp;</li>
+	<li><a class="name" id="Options.Auto_Shutdown" href="#Options.Auto_Shutdown">Auto Shutdown</a>
+		<ul class="sublist">
+			<li><a class="name" id="Options.Auto_Shutdown.Disabled" href="#Options.Auto_Shutdown.Disabled">Disabled</a>
+tells µTorrent not to perform any of the following actions. Note that
+besides this option, all options in this submenu get disabled after
+they have occurred.</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Options.Auto_Shutdown.Quit_when_Downloads_Complete" href="#Options.Auto_Shutdown.Quit_when_Downloads_Complete">Quit when Downloads Complete</a> exits µTorrent when all currently downloading torrent jobs reach <span class="value">100</span>% download completion.</li>
+			<li><a class="name" id="Options.Auto_Shutdown.Quit_when_Everything_Completes" href="#Options.Auto_Shutdown.Quit_when_Everything_Completes">Quit when Everything Completes</a> exits µTorrent when all currently active torrent jobs are completed.</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Options.Auto_Shutdown.Hibernate_when_Downloads_Complete" href="#Options.Auto_Shutdown.Hibernate_when_Downloads_Complete">Hibernate when Downloads Complete</a> puts the computer into hibernation mode when all currently downloading torrent jobs reach <span class="value">100</span>% download completion.</li>
+			<li><a class="name" id="Options.Auto_Shutdown.Hibernate_when_Everything_Completes" href="#Options.Auto_Shutdown.Hibernate_when_Everything_Completes">Hibernate when Everything Completes</a> puts the computer into hibernation mode when all currently active torrent jobs are completed.</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Options.Auto_Shutdown.Standby_when_Downloads_Complete" href="#Options.Auto_Shutdown.Standby_when_Downloads_Complete">Standby when Downloads Complete</a> puts the computer into standby mode when all currently downloading torrent jobs reach <span class="value">100</span>% download completion.</li>
+			<li><a class="name" id="Options.Auto_Shutdown.Standby_when_Everything_Completes" href="#Options.Auto_Shutdown.Standby_when_Everything_Completes">Standby when Everything Completes</a> puts the computer into standby mode when all currently active torrent jobs are completed.</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Options.Auto_Shutdown.Reboot_when_Downloads_Complete" href="#Options.Auto_Shutdown.Reboot_when_Downloads_Complete">Reboot when Downloads Complete</a> restarts the computer when all currently downloading torrent jobs reach <span class="value">100</span>% download completion.</li>
+			<li><a class="name" id="Options.Auto_Shutdown.Reboot_when_Everything_Completes" href="#Options.Auto_Shutdown.Reboot_when_Everything_Completes">Reboot when Everything Completes</a> restarts the computer when all currently active torrent jobs are completed.</li>
+			<li class="sep">&nbsp;</li>
+			<li><a class="name" id="Options.Auto_Shutdown.Shutdown_when_Downloads_Complete" href="#Options.Auto_Shutdown.Shutdown_when_Downloads_Complete">Shutdown when Downloads Complete</a> shuts the computer down when all currently downloading torrent jobs reach <span class="value">100</span>% download completion.</li>
+			<li><a class="name" id="Options.Auto_Shutdown.Shutdown_when_Everything_Completes" href="#Options.Auto_Shutdown.Shutdown_when_Everything_Completes">Shutdown when Everything Completes</a> shuts the computer down when all currently active torrent jobs are completed.</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a class="name" id="Help" href="#Help">Help</a></h3>
+<ul class="uienum">
+	<li><a class="name" id="Help.uTorrent_Help" href="#Help.Learn_more_about_uTorrent_Plus">Learn more about µTorrent Plus</a> opens an info page in the main view with µTorrent Plus related information.</li>
+  <li class="sep">&nbsp;</li>
+  <li><a class="name" id="Help.uTorrent_Help" href="#Help.uTorrent_Help">µTorrent Help</a> <span class="key">F1</span> opens the user manual.</li>
+
+	<li><a class="name" id="Help.uTorrent_FAQ" href="#Help.uTorrent_FAQ">µTorrent FAQ</a> opens the <a href="FAQ.html">FAQ</a>.</li>
+	<li class="sep">&nbsp;</li>
+	<li><a class="name" id="Help.uTorrent_Webpage" href="#Help.uTorrent_Webpage">µTorrent Webpage</a> opens the <a href="ExternalLinks.html#uTorrent">µTorrent webpage</a> in your default web browser.</li>
+	<li><a class="name" id="Help.uTorrent_Forums" href="#Help.uTorrent_Forums">µTorrent Forums</a> opens the <a href="ExternalLinks.html#uTorrent">µTorrent forums</a> in your default web browser.</li>
+	<li class="sep">&nbsp;</li>
+	
+  <li><a class="name" id="Help.Check_for_Updates" href="#Help.Send_Beta_Feedback">Send Beta Feedback</a> opens an email for sending user comments and issues relelated to the current beta release being developed.</li>
+  <li class="sep">&nbsp;</li>
+  <li><a class="name" id="Help.Check_for_Updates" href="#Help.Check_for_Updates">Check for Updates</a>
+manually tells µTorrent to check for a newer stable build from the
+µTorrent servers. µTorrent will continue to check for newer versions
+once every <span class="value">24</span> hours after this is selected if you have enabled the option to <a href="AppendixA_02_01.html#Privacy.Check_for_updates_automatically">check for updates automatically</a>.</li>
+
+	<li><a class="name" id="Help.Download_Translation" href="#Help.Download_Translation">Download Translation</a> tells µTorrent to download the latest translation file and place it in the <a href="AppendixB_01.html#External_Files.Extended_Functionality.utorrent.lng">settings directory</a>.</li>
+	<li class="sep">&nbsp;</li>
+	<li><a class="name" id="Help.Show_Statistics" href="#Help.Show_Statistics">Show Statistics</a> opens a dialog displaying basic statistics that µTorrent has collected.</li>
+	<li class="sep">&nbsp;</li>
+	<li><a class="name" id="Help.About_uTorrent" href="#Help.About_uTorrent">About µTorrent</a> opens the About dialog, which displays the credits, version, and build number, among other things...</li>
+</ul>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="AppendixA_01.html">«&nbsp; Previous</a></li>
+				<li><a href="AppendixA_01_02.html">Next &nbsp;»</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_01_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:37:56 GMT -->
+</html>

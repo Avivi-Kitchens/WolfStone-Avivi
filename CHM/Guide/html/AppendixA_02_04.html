@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_02_04.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+<head>
+	<title>Preferences: Connection</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="AppendixA_02_03.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="AppendixA_02_05.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">&micro;Torrent User Manual</a> &gt;
+			<a href="AppendixA.html">Appendix A: The &micro;Torrent Interface</a> &gt;
+			<a href="AppendixA_02.html">Preferences</a>
+			<h1>Connection</h1>
+		</div>
+		<div id="content">
+
+<h3><a class="name" id="Listening_Port" href="#Listening_Port">Listening Port</a></h3>
+<ul class="uienum">
+	<li>The <a class="name" id="Listening_Port.Port_used_for_incoming_connections" href="#Listening_Port.Port_used_for_incoming_connections">Port used for incoming connections</a> field specifies the port that &micro;Torrent should use to listen for incoming connections. This port must be <a href="Chapter02_03.html">unfirewalled</a> for optimal usage of &micro;Torrent. Setting the port to <span class="value">0</span> indicates to &micro;Torrent that you would like for it to select a random port after the changes are confirmed.</li>
+	<li>The <a class="name" id="Listening_Port.Random_port" href="#Listening_Port.Random_port">Random port</a> button selects a random port between <span class="value">10000</span> and <span class="value">65000</span> as the listening port.</li>
+	<li><a class="name" id="Listening_Port.Enable_UPnP_port_mapping" href="#Listening_Port.Enable_UPnP_port_mapping">Enable UPnP port mapping</a> allows &micro;Torrent to communicate with the router to forward a port without your manual intervention. Some devices do not support Universal Plug and Play (UPnP), so you might still have to forward your ports manually. Disable UPnP if that is the case.</li>
+	<li><a class="name" id="Listening_Port.Enable_NAT-PMP_port_mapping" href="#Listening_Port.Enable_NAT-PMP_port_mapping">Enable NAT-PMP port mapping</a> allows &micro;Torrent to attempt to forward a port with routers that support the NAT port mapping protocol (Apple products, for example).</li>
+	<li><a class="name" id="Listening_Port.Randomize_port_each_start" href="#Listening_Port.Randomize_port_each_start">Randomize port each start</a> makes &micro;Torrent select a random port between <span class="value">1000</span> and <span class="value">65000</span> to use at startup. Note that this option might conflict with your port forwarding settings, so if you manually open ports in your router and firewall, it's best to leave this option disabled.</li>
+	<li><a class="name" id="Listening_Port.Add_Windows_Firewall_exception" href="#Listening_Port.Add_Windows_Firewall_exception">Add Windows Firewall exception</a> allows &micro;Torrent to add an entry to the Windows Firewall exceptions list that lets it bypass the firewall. This is useful only if you actually have Windows Firewall enabled. Note that this option works only on operating systems released after (and including) Windows XP with at least Service Pack 2 (SP2) installed.</li>
+</ul>
+
+<h3><a class="name" id="Proxy_Server" href="#Proxy_Server">Proxy Server</a></h3>
+<ul class="uienum">
+	<li>The <a class="name" id="Proxy_Server.Type" href="#Proxy_Server.Type">Type</a> dropdown menu specifies the type of proxy you are trying to use.</li>
+	<li>The <a class="name" id="Proxy_Server.Proxy" href="#Proxy_Server.Proxy">Proxy</a> field is where you enter the proxy's URL or IP address.</li>
+	<li>The <a class="name" id="Proxy_Server.Port" href="#Proxy_Server.Port">Port</a> field is where you enter the proxy's port.</li>
+	<li>Checking <a class="name" id="Proxy_Server.Authentication" href="#Proxy_Server.Authentication">Authentication</a> indicates that you need to log into the proxy server in order for it to work.
+		<ul class="sublist">
+			<li>The <a class="name" id="Proxy_Server.Authentication.Username" href="#Proxy_Server.Authentication.Username">Username</a> field is where you enter the username required to log into the proxy server for authentication.</li>
+			<li>The <a class="name" id="Proxy_Server.Authentication.Password" href="#Proxy_Server.Authentication.Password">Password</a> field is where you enter the password required to log into the proxy server for authentication.</li>
+		</ul>
+	</li>
+	<li><a class="name" id="Proxy_Server.Use_proxy_for_hostname_lookups" href="#Proxy_Server.Use_proxy_for_hostname_lookups">Use proxy for hostname lookups</a> forces &micro;Torrent to perform hostname (DNS) lookups through the proxy. Reverse DNS is not proxied.</li>
+	<li><a class="name" id="Proxy_Server.Use_proxy_for_peer-to-peer_connections" href="#Proxy_Server.Use_proxy_for_peer-to-peer_connections">Use proxy for peer-to-peer connections</a> forces &micro;Torrent to communicate and transfer data with peers through the proxy. By default, this option is disabled, and &micro;Torrent only uses the proxy to communicate with trackers. This option may not work with some HTTP proxies (not all HTTP proxies support HTTP CONNECT).</li>
+	<li><a class="name" id="Proxy_Server.Note" href="#Proxy_Server.Note">Note</a>: &micro;Torrent can only proxy UDP-based communication through SOCKS5 proxies. Proxying of IPv6 traffic is currently not supported. By default, connection types that your proxy does not support will simply connect as normal. </li>
+</ul>
+
+<h3><a class="name" id="Proxy_Privacy" href="#Proxy_Privacy">Proxy Privacy</a></h3>
+<ul class="uienum">
+	<li><a class="name" id="Proxy_Privacy.Disable_all_local_DNS_lookups" href="#Proxy_Privacy.Disable_all_local_DNS_lookups">Disable all local DNS lookups</a> will disable reverse DNS and prevent hostname lookups from bypassing the proxy. This will not function properly without enabling <em>"Use proxy for hostname lookups."</em> If your proxy is misconfigured or not working, then DNS will simply fail. As a safeguard, &micro;Torrent's autoupdates and crash reports will bypass this option.</li>
+	<li><a class="name" id="Proxy_Privacy.Disable_features_that_leak_identifying_information" href="#Proxy_Privacy.Disable_features_that_leak_identifying_information">Disable features that leak identifying information</a> will prevent &micro;Torrent from sharing your non-proxied IP through handshakes with other peers, as well as through DHT. It will also prevent it from handing out your IPv6 address to IPv4 peers and vice versa.</li>
+	<li><a class="name" id="Proxy_Privacy.Disable_connections_unsupported_by_the_proxy" href="#Proxy_Privacy.Disable_connections_unsupported_by_the_proxy">Disable connections unsupported by the proxy</a> will disable connection types that your proxy type cannot handle. For HTTP, HTTPS and SOCKS4 proxies, this will disable all UDP-based communication (DHT, uTP, UDP trackers, IPv6). For SOCKS5, it will only disable IPv6, as IPv6 is currently not proxied. If your proxy is misconfigured or not working, all traffic in the client will stop.</li>
+</ul>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="AppendixA_02_03.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="AppendixA_02_05.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixA_02_04.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+</html>

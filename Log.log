@@ -1,0 +1,123 @@
+-------------- Error (2020-05-20 13:07:27.4392) --------------
+
+ Call Site: WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick
+ Exception Type: System.ComponentModel.Win32Exception
+ Exception Message: The system cannot find the file specified
+ Stack Trace:    at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick(Object sender, ItemClickEventArgs e) in C:\Users\Ari\Documents\GitHub\WINFORMS C-SHARP\WolfStone-Master\WolfStone\Forms\MannagersNew.cs:line 2304
+ Additional Info: פקד תוכנית מפורקת
+
+-------------- Error (2020-05-20 13:07:56.6302) --------------
+
+ Call Site: WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick
+ Exception Type: System.ComponentModel.Win32Exception
+ Exception Message: The system cannot find the file specified
+ Stack Trace:    at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick(Object sender, ItemClickEventArgs e) in C:\Users\Ari\Documents\GitHub\WINFORMS C-SHARP\WolfStone-Master\WolfStone\Forms\MannagersNew.cs:line 2304
+ Additional Info: פקד תוכנית מפורקת
+
+-------------- Error (2020-05-20 13:13:49.8752) --------------
+
+ Call Site: WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick
+ Exception Type: System.Runtime.InteropServices.COMException
+ Exception Message: Exception occurred. (Exception from HRESULT: 0x80020009 (DISP_E_EXCEPTION))
+ Stack Trace:    at IWshRuntimeLibrary.WshShellClass.CreateShortcut(String PathLink)
+   at WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick(Object sender, ItemClickEventArgs e) in C:\Users\Ari\Documents\GitHub\WINFORMS C-SHARP\WolfStone-Master\WolfStone\Forms\MannagersNew.cs:line 2305
+ Additional Info: פקד תוכנית מפורקת
+
+-------------- Error (2020-05-20 13:14:35.4442) --------------
+
+ Call Site: WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick
+ Exception Type: System.Runtime.InteropServices.COMException
+ Exception Message: Exception occurred. (Exception from HRESULT: 0x80020009 (DISP_E_EXCEPTION))
+ Stack Trace:    at IWshRuntimeLibrary.WshShellClass.CreateShortcut(String PathLink)
+   at WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick(Object sender, ItemClickEventArgs e) in C:\Users\Ari\Documents\GitHub\WINFORMS C-SHARP\WolfStone-Master\WolfStone\Forms\MannagersNew.cs:line 2305
+ Additional Info: פקד תוכנית מפורקת
+
+-------------- Error (2020-05-20 13:16:36.7722) --------------
+
+ Call Site: WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick
+ Exception Type: System.ComponentModel.Win32Exception
+ Exception Message: The system cannot find the file specified
+ Stack Trace:    at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick(Object sender, ItemClickEventArgs e) in C:\Users\Ari\Documents\GitHub\WINFORMS C-SHARP\WolfStone-Master\WolfStone\Forms\MannagersNew.cs:line 2309
+ Additional Info: פקד תוכנית מפורקת
+
+-------------- Error (2020-05-20 13:18:25.1952) --------------
+
+ Call Site: WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick
+ Exception Type: System.IO.FileNotFoundException
+ Exception Message: Could not find file 'Z:\תיקים מפורקים\g14713.pdf'.
+ Stack Trace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   at System.IO.File.ReadAllText(String path)
+   at WolfStone.Forms.MannagersNew.LnkToFile(String fileLink) in C:\Users\Ari\Documents\GitHub\WINFORMS C-SHARP\WolfStone-Master\WolfStone\Forms\MannagersNew.cs:line 2324
+   at WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick(Object sender, ItemClickEventArgs e) in C:\Users\Ari\Documents\GitHub\WINFORMS C-SHARP\WolfStone-Master\WolfStone\Forms\MannagersNew.cs:line 2303
+ Additional Info: פקד תוכנית מפורקת
+
+-------------- Error (2020-05-20 13:19:21.5562) --------------
+
+ Call Site: WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick
+ Exception Type: System.ComponentModel.Win32Exception
+ Exception Message: The system cannot find the file specified
+ Stack Trace:    at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick(Object sender, ItemClickEventArgs e) in C:\Users\Ari\Documents\GitHub\WINFORMS C-SHARP\WolfStone-Master\WolfStone\Forms\MannagersNew.cs:line 2310
+ Additional Info: פקד תוכנית מפורקת
+
+-------------- Error (2020-05-20 14:44:42.4932) --------------
+
+ Call Site: WolfStone.Forms.MannagersNew.barButtonItem2_ItemClick
+ Exception Type: System.IO.DirectoryNotFoundException
+ Exception Message: Could not find a part of the path 'C:\Users\Ari\Documents\GitHub\Avivi-WolfStone\WolfStone.txt'.
+ Stack Trace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path)
+   at WolfStone.Forms.MannagersNew.barButtonItem2_ItemClick(Object sender, ItemClickEventArgs e) in C:\Users\Ari\Documents\GitHub\WINFORMS C-SHARP\WolfStone-Master\WolfStone\Forms\MannagersNew.cs:line 1629
+ Additional Info: יציקת קיצור דרך במקש ימני בעכבר
+
+-------------- Error (2020-05-20 14:44:46.7372) --------------
+
+ Call Site: WolfStone.Forms.MannagersNew.barButtonItem2_ItemClick
+ Exception Type: System.IO.DirectoryNotFoundException
+ Exception Message: Could not find a part of the path 'C:\Users\Ari\Documents\GitHub\Avivi-WolfStone\WolfStone.txt'.
+ Stack Trace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path)
+   at WolfStone.Forms.MannagersNew.barButtonItem2_ItemClick(Object sender, ItemClickEventArgs e) in C:\Users\Ari\Documents\GitHub\WINFORMS C-SHARP\WolfStone-Master\WolfStone\Forms\MannagersNew.cs:line 1629
+ Additional Info: יציקת קיצור דרך במקש ימני בעכבר
+
+-------------- Error (2020-06-22 10:08:19.6734) --------------
+
+ Call Site: WolfStone.Forms.MannagersNew.BtnStock_ItemClick
+ Exception Type: System.ArgumentException
+ Exception Message: The path is not of a legal form.
+ Stack Trace:    at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.GetFullPathInternal(String path)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at System.IO.FileInfo..ctor(String fileName)
+   at WolfStone.Forms.MannagersNew.BtnStock_ItemClick(Object sender, ItemClickEventArgs e) in C:\Users\Ari\Documents\GitHub\WINFORMS C-SHARP\WolfStone-Master\WolfStone\Forms\MannagersNew.cs:line 2182
+ Additional Info: פקד עדכון מלאי
+
+-------------- Error (2020-07-19 11:36:28.0761) --------------
+
+ Call Site: WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick
+ Exception Type: System.InvalidOperationException
+ Exception Message: Cannot start process because a file name has not been provided.
+ Stack Trace:    at System.Diagnostics.Process.Start()
+   at WolfStone.Forms.MannagersNew.barButtonItem15_ItemClick(Object sender, ItemClickEventArgs e) in C:\Users\Ari\Documents\GitHub\WINFORMS C-SHARP\WolfStone-Master\WolfStone\Forms\MannagersNew.cs:line 539
+ Additional Info: פקד תוכנית מפורקת
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixB_04.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+<head>
+	<title>Command Line Options</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="../img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../style.css" type="text/css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="navi" id="naviTop">
+			<ul>
+				<li><a href="AppendixB_03.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="AppendixB_05.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+		<div id="header">
+			<a href="../utorrent.html">&micro;Torrent User Manual</a> &gt;
+			<a href="AppendixB.html">Appendix B: Advanced Information</a>
+			<h1>Command Line Options</h1>
+		</div>
+		<div id="content">
+
+<p>There are several command line options you can use with &micro;Torrent to make it behave differently than normal. Do note that these options can only be used when &micro;Torrent is opened through a shortcut, by command line, or some other means that allows command line options to be used. At any time, a space should be appended along with the wanted option at the end of the target path for the shortcut, outside of any quotation marks that may exist in the target path.</p>
+<ul class="uienum">
+	<li><a class="name" id="ANSI" href="#ANSI">/ANSI</a> starts &micro;Torrent without Unicode support, in case anyone ever has trouble with Unicode.</li>
+	<li><a class="name" id="AUTOUPDATE" href="#AUTOUPDATE">/AUTOUPDATE</a> "<span class="value">FILE PATH</span>" [/NORUN] replaces the file located at <span class="value">FILE PATH</span> with the currently-running executable and starts the executable from the specified path. If <strong>/NORUN</strong> is used in conjunction with this option, then &micro;Torrent won't run the executable after the replacement occurs.</li>
+	<li><a class="name" id="BIGDUMP" href="#BIGDUMP">/BIGDUMP</a> tells &micro;Torrent to create a large memory dump instead of the minidumps it normally creates when it crashes. This can be useful for the developer to debug problems where minidumps provide insufficient information.</li>
+	<li><a class="name" id="BRINGTOFRONT" href="#BRINGTOFRONT">/BRINGTOFRONT</a> forces the &micro;Torrent window to be shown, regardless of whether it was previously minimized on exit, or whether <a href="#HIDE">/HIDE</a> or <a href="#MINIMIZED">/MINIMIZED</a> were also used as command line options.</li>
+	<li><a class="name" id="DIRECTORY" href="#DIRECTORY">/DIRECTORY</a> "<span class="value">SAVE PATH</span>" "<span class="value">.TORRENT FILE TO OPEN</span>" allows you to open a .torrent file and specify where you'd like to save the torrent contents to from the command line (without any GUI interaction), where "<span class="value">SAVE PATH</span>" is the path to the location you'd like to save the torrent contents, and "<span class="value">.TORRENT FILE TO OPEN</span>" is the location of the .torrent file. Note that the save path must not contain a trailing backslash, otherwise &micro;Torrent will fail to load the .torrent file. Only local .torrent files may be used.</li>
+	<li><a class="name" id="HIDE" href="#HIDE">/HIDE</a> starts &micro;Torrent in boss-key mode, meaning the tray icon and the entire interface is hidden until the boss-key is pressed. Note that you should <a href="AppendixA_02_01.html#Privacy.Boss-Key">set up a boss-key</a> before actually starting &micro;Torrent with this switch, otherwise you might find yourself having a difficult time seeing and using &micro;Torrent.</li>
+	<li><a class="name" id="LAUNCHBUNDLEDURL" href="#LAUNCHBUNDLEDURL">/LAUNCHBUNDLEDURL</a> "<span class="value">URL</span>" opens <span class="value">URL</span> in your default web browser.</li>
+	<li><a class="name" id="LOGFILE" href="#LOGFILE">/LOGFILE</a> "<span class="value">SAVE PATH</span>" will perform the initial file selection for the <a href="AppendixA_01_05_07.html#Log_to_File">log to file</a> feature automatically on startup.</li>
+	<li><a class="name" id="MINIMIZED" href="#MINIMIZED">/MINIMIZED</a> will start &micro;Torrent minimized, and if <a href="AppendixA_02_02.html#System_Tray.Minimize_to_tray">minimize to tray</a> is enabled, will start &micro;Torrent minimized to tray.</li>
+	<li><a class="name" id="NOINSTALL" href="#NOINSTALL">/NOINSTALL</a> will tell &micro;Torrent to bypass the installation dialog prompt.</li>
+	<li><a class="name" id="PERFORMINSTALL" href="#PERFORMINSTALL">/PERFORMINSTALL</a> <span class="value">FLAGS</span> is a bitfield that tells &micro;Torrent what shortcuts to create, depending on the following possible values for <span class="value">FLAGS</span>:
+		<ul class="sublist">
+			<li><a class="name" id="PERFORMINSTALL.2" href="#PERFORMINSTALL.2">2</a> tells &micro;Torrent to create a shortcut in the Start menu</li>
+			<li><a class="name" id="PERFORMINSTALL.4" href="#PERFORMINSTALL.4">4</a> tells &micro;Torrent to create a shortcut on the Desktop</li>
+			<li><a class="name" id="PERFORMINSTALL.8" href="#PERFORMINSTALL.8">8</a> tells &micro;Torrent to create a shortcut in the Quick Launch toolbar</li>
+		</ul>
+		Because the flags are interpreted as a bitfield, values can be added together to perform each of the combined actions.
+	</li>
+	<li><a class="name" id="RECOVER" href="#RECOVER">/RECOVER</a> will allow you to open up a second instance of &micro;Torrent instead of its normal behavior where it simply activates the currently-running instance. In order to prevent possible problems, it is recommended that you create an <a href="AppendixB_01.html#Encapsulated_Installation">encapsulated copy</a> of &micro;Torrent before opening it as a second instance, then create a shortcut for the encapsulated copy of the executable with the <strong>/RECOVER</strong> option. Remember that two applications cannot listen on the same port, so if you intend on having the second instance actually be a properly-working instance, you should set the second instance to listen on a different port, and forward that port as well.</li>
+	<li><a class="name" id="UNINSTALL" href="#UNINSTALL">/UNINSTALL</a> [/S] will uninstall &micro;Torrent after user confirmation, deleting even the <a href="AppendixB_01.html">settings directory</a>. If the install is broken enough that this switch doesn't work, running this option in conjunction with the <strong>/S</strong> option should force an uninstall without asking for confirmation.</li>
+</ul>
+
+		</div>
+		<div class="navi" id="naviBot">
+			<ul>
+				<li><a href="AppendixB_03.html">&laquo;&nbsp; Previous</a></li>
+				<li><a href="AppendixB_05.html">Next &nbsp;&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+<!-- Mirrored from www.netcheif.com/Articles/uTorrent/html/AppendixB_04.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Dec 2019 08:38:08 GMT -->
+</html>
