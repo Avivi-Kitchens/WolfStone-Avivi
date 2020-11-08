@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <assembly>
+    <name>DevExpress.XtraDialogs.v19.1</name>
+  </assembly>
+  <members>
+    <member name="T:DevExpress.XtraEditors.XtraFolderBrowserDialog">
+      <summary>
+        <para>A replacement for the standard WinForms FolderBrowserDialog. Supports theming by DevExpress Skins.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.XtraFolderBrowserDialog.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.XtraFolderBrowserDialog"/> class with the specified settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.XtraFolderBrowserDialog.#ctor(System.ComponentModel.IContainer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.XtraFolderBrowserDialog"/> class with the default settings.</para>
+      </summary>
+      <param name="container">An IContainer descendant that owns this <see cref="T:DevExpress.XtraEditors.XtraFolderBrowserDialog"/>.</param>
+    </member>
+    <member name="P:DevExpress.XtraEditors.XtraFolderBrowserDialog.Description">
+      <summary>
+        <para>Gets or sets the description that is displayed above the folder hierarchy. Note that dialogs with the <see cref="P:DevExpress.XtraEditors.XtraFolderBrowserDialog.DialogStyle"/> property set to Wide do not show their descriptions.</para>
+      </summary>
+      <value>A String value that is the description displayed above the folder hierarchy.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.XtraFolderBrowserDialog.DialogStyle">
+      <summary>
+        <para>Gets or sets the dialog style.</para>
+      </summary>
+      <value>A DevExpress.Utils.CommonDialogs.FolderBrowserDialogStyle enumeration value that specifies the dialog style.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.XtraFolderBrowserDialog.RootFolder">
+      <summary>
+        <para>Gets or sets the root folder from which the navigation starts. Note that this property is in effect only when a <see cref="P:DevExpress.XtraEditors.XtraFolderBrowserDialog.DialogStyle"/> property set to Compact, wide dialogs always start with the root &quot;Desktop&quot; folder.</para>
+      </summary>
+      <value>A <see cref="T:System.Environment.SpecialFolder"/> object that specifies the folder from which the navigation starts.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.XtraFolderBrowserDialog.SelectedPath">
+      <summary>
+        <para>Gets or sets the selected path.</para>
+      </summary>
+      <value>A String value that specifies the selected path.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.XtraFolderBrowserDialog.ShowNewFolderButton">
+      <summary>
+        <para>Gets or sets whether or not this <see cref="T:DevExpress.XtraEditors.XtraFolderBrowserDialog"/> should display the &quot;New Folder&quot; button.</para>
+      </summary>
+      <value>true, if the &quot;New Folder&quot; button is visible; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.XtraEditors.XtraOpenFileDialog">
+      <summary>
+        <para>A replacement for the standard WinForms OpenFileDialog. Supports theming by DevExpress Skins.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.XtraOpenFileDialog.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.XtraOpenFileDialog"/> class with the default settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.XtraOpenFileDialog.#ctor(System.ComponentModel.IContainer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.XtraOpenFileDialog"/> class with the specified settings.</para>
+      </summary>
+      <param name="container">An IContainer descendant that owns this <see cref="T:DevExpress.XtraEditors.XtraOpenFileDialog"/>.</param>
+    </member>
+    <member name="P:DevExpress.XtraEditors.XtraOpenFileDialog.CheckFileExists">
+      <summary>
+        <para>Gets or sets whether or not this <see cref="T:DevExpress.XtraEditors.XtraOpenFileDialog"/> should warn a user if a file with the specified name does not exist.</para>
+      </summary>
+      <value>true, to check file names; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.XtraOpenFileDialog.Multiselect">
+      <summary>
+        <para>Gets or sets whether or not users are allowed to select multiple files in this <see cref="T:DevExpress.XtraEditors.XtraOpenFileDialog"/>.</para>
+      </summary>
+      <value>true, if end-users can select multiple files; otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.XtraEditors.XtraOpenFileDialog.OpenFile">
+      <summary>
+        <para>Opens the file specified by the FileName property. The file is opened with read-only permission.</para>
+      </summary>
+      <returns>A Stream that stores the selected read-only file.</returns>
+    </member>
+    <member name="P:DevExpress.XtraEditors.XtraOpenFileDialog.SafeFileName">
+      <summary>
+        <para>Returns the selected file name and extension. The returned name does not include the file path.</para>
+      </summary>
+      <value>A String value that is the file name and extension.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.XtraOpenFileDialog.SafeFileNames">
+      <summary>
+        <para>Returns an array of file names and extensions for all the selected files in the dialog box. File names do not include paths.</para>
+      </summary>
+      <value>A String array that contains file names and extensions.</value>
+    </member>
+    <member name="T:DevExpress.XtraEditors.XtraSaveFileDialog">
+      <summary>
+        <para>A replacement for the standard WinForms SaveFileDialog. Supports theming by DevExpress Skins.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.XtraSaveFileDialog.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.XtraSaveFileDialog"/> class with the default settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.XtraSaveFileDialog.#ctor(System.ComponentModel.IContainer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.XtraSaveFileDialog"/> class with the specified settings.</para>
+      </summary>
+      <param name="container">An IContainer descendant that owns this <see cref="T:DevExpress.XtraEditors.XtraSaveFileDialog"/>.</param>
+    </member>
+    <member name="P:DevExpress.XtraEditors.XtraSaveFileDialog.CreatePrompt">
+      <summary>
+        <para>Gets or sets whether or not this <see cref="T:DevExpress.XtraEditors.XtraSaveFileDialog"/> should ask users for the permission to create a file if the specified file does not yet exist.</para>
+      </summary>
+      <value>true to display a message; false to automatically create a file without confirmation.</value>
+    </member>
+    <member name="M:DevExpress.XtraEditors.XtraSaveFileDialog.OpenFile">
+      <summary>
+        <para>Opens the user-selected file. The file is opened with read/write permissions.</para>
+      </summary>
+      <returns>A Stream that stores the selected read/write file.</returns>
+    </member>
+    <member name="P:DevExpress.XtraEditors.XtraSaveFileDialog.OverwritePrompt">
+      <summary>
+        <para>Gets or sets whether or not this <see cref="T:DevExpress.XtraEditors.XtraSaveFileDialog"/> should warn users when they try to save a file under an already existing name.</para>
+      </summary>
+      <value>true to display a warning, false to overwrite old files without confirmation.</value>
+    </member>
+  </members>
+</doc>

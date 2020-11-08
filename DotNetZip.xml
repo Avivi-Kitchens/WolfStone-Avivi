@@ -1150,7 +1150,7 @@
              <remarks>
                It will show up, for example, while viewing properties of the file in
                Windows Explorer.  You can use any arbitrary string, but typically you
-               want something like "Copyright © Dino Chiesa 2011".
+               want something like "Copyright � Dino Chiesa 2011".
              </remarks>
             
         </member>
@@ -1201,6 +1201,13 @@
             <summary>
               Additional options for the csc.exe compiler, when producing the SFX
               EXE.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="P:Ionic.Zip.SelfExtractorSaveOptions.CompilerVersion">
+            <summary>
+              Version of the csc.exe compiler, if not specified then the default version
+              will be used.
             </summary>
             <exclude/>
         </member>
@@ -1291,7 +1298,7 @@
             
              <para>
              The generated exe image will execute on any machine that has the .NET
-             Framework 2.0 installed on it.  The generated exe image is also a
+             Framework 4.0 installed on it.  The generated exe image is also a
              valid ZIP file, readable with DotNetZip or another Zip library or tool
              such as WinZip.
              </para>
@@ -1325,13 +1332,12 @@
              <c>SaveSelfExtractor()</c>/ The user who runs the SFX will have the
              opportunity to change the extract directory before extracting. When
              the user runs the Command-Line SFX, the user must explicitly specify
-             the directory to which to extract.  The .NET Framework 2.0 is required
+             the directory to which to extract.  The .NET Framework 4.0 is required
              on the computer when the self-extracting archive is run.
              </para>
             
              <para>
-             NB: This method is not available in the version of DotNetZip build for
-             the .NET Compact Framework, nor in the "Reduced" DotNetZip library.
+             NB: This method is not available in the "Reduced" DotNetZip library.
              </para>
             
              </remarks>
@@ -2337,7 +2343,7 @@
                directory path within the archive.  There is no need for a file by the
                given name to exist in the filesystem; the name is used within the zip
                archive only. The content for the entry is encoded using the default text
-               encoding for the machine, or on Silverlight, using UTF-8.
+               encoding for the machine.
              </remarks>
             
              <param name="content">
@@ -2812,9 +2818,9 @@
                the given file name and directory path, if it exists, and then calling
                <see cref="M:Ionic.Zip.ZipFile.AddEntry(System.String,System.String)" />.  See the documentation for
                that method for further explanation. The string content is encoded
-               using the default encoding for the machine, or on Silverlight, using
-               UTF-8. This encoding is distinct from the encoding used for the
-               filename itself.  See <see cref="P:Ionic.Zip.ZipFile.AlternateEncoding"/>.
+               using the default encoding for the machine. This encoding is distinct
+               from the encoding used for the filename itself.  See
+               <see cref="P:Ionic.Zip.ZipFile.AlternateEncoding"/>.
              </para>
             
              </remarks>
@@ -3143,8 +3149,7 @@
              <para> This method may take a long time to run for large zip files.  </para>
             
              <para>
-               This method is not supported in the Reduced or Compact Framework
-               versions of DotNetZip.
+               This method is not supported in the Reduced version of DotNetZip.
              </para>
             
              <para>
@@ -3184,8 +3189,7 @@
              </para>
             
              <para>
-               This method is not supported in the Reduced or Compact
-               Framework versions of DotNetZip.
+               This method is not supported in the Reduced version of DotNetZip.
              </para>
             
              </remarks>
@@ -4232,7 +4236,7 @@
                zipfile correctly, you have to specify the same codepage at the time you
                read it. If try to read that zip file with Windows Explorer or another
                application that is not flexible with respect to the codepage used to
-               decode filenames in zipfiles, you will get a filename like "Inf°.txt".
+               decode filenames in zipfiles, you will get a filename like "Inf�.txt".
              </para>
             
              <para>
@@ -4306,13 +4310,6 @@
               AlternateEncoding to encode the filenames and comments associated to
               of ZipEntry objects contained within this instance.
             </summary>
-        </member>
-        <member name="P:Ionic.Zip.ZipFile.DefaultEncoding">
-            <summary>
-            The default text encoding used in zip archives.  It is numeric 437, also
-            known as IBM437.
-            </summary>
-            <seealso cref="P:Ionic.Zip.ZipFile.ProvisionalAlternateEncoding"/>
         </member>
         <member name="P:Ionic.Zip.ZipFile.StatusMessageTextWriter">
              <summary>
@@ -4862,6 +4859,92 @@
              The maximum size of an output segment, when saving a split Zip file.
              </summary>
              <remarks>
+               <para>
+                 Make sure you do not read from this field if you've set the value using <see cref="P:Ionic.Zip.ZipFile.MaxOutputSegmentSize64"/>
+               </para>
+               
+               <para>
+                 Set this to a non-zero value before calling <see cref="M:Ionic.Zip.ZipFile.Save"/> or <see
+                 cref="M:Ionic.Zip.ZipFile.Save(System.String)"/> to specify that the ZipFile should be saved as a
+                 split archive, also sometimes called a spanned archive. Some also
+                 call them multi-file archives.
+               </para>
+            
+               <para>
+                 A split zip archive is saved in a set of discrete filesystem files,
+                 rather than in a single file. This is handy when transmitting the
+                 archive in email or some other mechanism that has a limit to the size of
+                 each file.  The first file in a split archive will be named
+                 <c>basename.z01</c>, the second will be named <c>basename.z02</c>, and
+                 so on. The final file is named <c>basename.zip</c>. According to the zip
+                 specification from PKWare, the minimum value is 65536, for a 64k segment
+                 size. The maximum number of segments allows in a split archive is 99.
+               </para>
+            
+               <para>
+                 The value of this property determines the maximum size of a split
+                 segment when writing a split archive.  For example, suppose you have a
+                 <c>ZipFile</c> that would save to a single file of 200k. If you set the
+                 <c>MaxOutputSegmentSize</c> to 65536 before calling <c>Save()</c>, you
+                 will get four distinct output files. On the other hand if you set this
+                 property to 256k, then you will get a single-file archive for that
+                 <c>ZipFile</c>.
+               </para>
+            
+               <para>
+                 The size of each split output file will be as large as possible, up to
+                 the maximum size set here. The zip specification requires that some data
+                 fields in a zip archive may not span a split boundary, and an output
+                 segment may be smaller than the maximum if necessary to avoid that
+                 problem. Also, obviously the final segment of the archive may be smaller
+                 than the maximum segment size. Segments will never be larger than the
+                 value set with this property.
+               </para>
+            
+               <para>
+                 You can save a split Zip file only when saving to a regular filesystem
+                 file. It's not possible to save a split zip file as a self-extracting
+                 archive, nor is it possible to save a split zip file to a stream. When
+                 saving to a SFX or to a Stream, this property is ignored.
+               </para>
+            
+               <para>
+                 About interoperability: Split or spanned zip files produced by DotNetZip
+                 can be read by WinZip or PKZip, and vice-versa. Segmented zip files may
+                 not be readable by other tools, if those other tools don't support zip
+                 spanning or splitting.  When in doubt, test.  I don't believe Windows
+                 Explorer can extract a split archive.
+               </para>
+            
+               <para>
+                 This property has no effect when reading a split archive. You can read
+                 a split archive in the normal way with DotNetZip.
+               </para>
+            
+               <para>
+                 When saving a zip file, if you want a regular zip file rather than a
+                 split zip file, don't set this property, or set it to Zero.
+               </para>
+            
+               <para>
+                 If you read a split archive, with <see cref="M:Ionic.Zip.ZipFile.Read(System.String)"/> and
+                 then subsequently call <c>ZipFile.Save()</c>, unless you set this
+                 property before calling <c>Save()</c>, you will get a normal,
+                 single-file archive.
+               </para>
+             </remarks>
+            
+             <seealso cref="P:Ionic.Zip.ZipFile.NumberOfSegmentsForMostRecentSave"/>
+        </member>
+        <member name="P:Ionic.Zip.ZipFile.MaxOutputSegmentSize64">
+             <summary>
+             The maximum size of an output segment, when saving a split Zip file.
+             </summary>
+             <remarks>
+               <para>
+                 If you set this value, make sure you do not accidently use <see cref="P:Ionic.Zip.ZipFile.MaxOutputSegmentSize"/> in your code
+               </para>
+               
                <para>
                  Set this to a non-zero value before calling <see cref="M:Ionic.Zip.ZipFile.Save"/> or <see
                  cref="M:Ionic.Zip.ZipFile.Save(System.String)"/> to specify that the ZipFile should be saved as a
@@ -7551,7 +7634,7 @@
              </exception>
             
              <exception cref="T:System.OverflowException">
-               Thrown if <see cref="P:Ionic.Zip.ZipFile.MaxOutputSegmentSize"/> is non-zero, and the number
+               Thrown if <see cref="P:Ionic.Zip.ZipFile.MaxOutputSegmentSize"/> or <see cref="P:Ionic.Zip.ZipFile.MaxOutputSegmentSize64"/> is non-zero, and the number
                of segments that would be generated for the spanned zip file during the
                save operation exceeds 99.  If this happens, you need to increase the
                segment size.
@@ -8712,6 +8795,25 @@
              </param>
             
         </member>
+        <member name="M:Ionic.Zip.ZipFile.#cctor">
+            <summary>
+            
+            
+            Static constructor for ZipFile
+            </summary>
+            <remarks>
+            Code Pages 437 and 1252 for English are same
+            Code Page 1252 Windows Latin 1 (ANSI) - <see href="https://msdn.microsoft.com/en-us/library/cc195054.aspx"/>
+            Code Page 437 MS-DOS Latin US - <see href="https://msdn.microsoft.com/en-us/library/cc195060.aspx"/>
+            </remarks>
+        </member>
+        <member name="P:Ionic.Zip.ZipFile.DefaultEncoding">
+            <summary>
+            The default text encoding used in zip archives.  It is numeric 437, also
+            known as IBM437.
+            </summary>
+            <seealso cref="P:Ionic.Zip.ZipFile.AlternateEncoding"/>
+        </member>
         <member name="M:Ionic.Zip.ZipFile.GetEnumerator">
              <summary>
              Generic IEnumerator support, for use of a ZipFile in an enumeration.
@@ -8928,11 +9030,6 @@
                article.</see>
              </para>
             
-             <para>
-               The WinZip AES algorithms are not supported with the version of DotNetZip that
-               runs on the .NET Compact Framework.  This is because .NET CF lacks the
-               HMACSHA1 class that is required for producing the archive.
-             </para>
              </remarks>
         </member>
         <member name="F:Ionic.Zip.EncryptionAlgorithm.None">
@@ -9567,6 +9664,15 @@
             <param name="pathName">source path.</param>
             <returns>transformed path</returns>
         </member>
+        <member name="M:Ionic.Zip.SharedUtilities.SanitizePath(System.String)">
+            <summary>
+            Sanitize paths in zip files. This means making sure that relative paths in a zip file don't go outside
+            the top directory. Entries like something/../../../../Temp/evil.txt get sanitized to Temp/evil.txt
+            when extracting
+            </summary>
+            <param name="path">A path with forward slashes as directory separator</param>
+            <returns>sanitized path</returns>
+        </member>
         <member name="M:Ionic.Zip.SharedUtilities.FindSignature(System.IO.Stream,System.Int32)">
              <summary>
                Finds a signature in the zip stream. This is useful for finding
@@ -9597,11 +9703,6 @@
             </summary>
             <remarks>
             <para>
-              The System.IO.Path.GetRandomFileName() method is not available on
-              the Compact Framework, so this library provides its own substitute
-              on NETCF.
-            </para>
-            <para>
               This method produces a filename of the form
               DotNetZip-xxxxxxxx.tmp, where xxxxxxxx is replaced by randomly
               chosen characters, and creates that file.
@@ -9614,7 +9715,8 @@
             </summary>
             <remarks>
             This could be gracefully handled with an extension attribute, but
-            This assembly is built for .NET 2.0, so I cannot use them.
+            This assembly used to be built for .NET 2.0, so could not use
+            extension methods.
             </remarks>
         </member>
         <member name="T:Ionic.Zip.CountingStream">
@@ -10207,6 +10309,13 @@
              </remarks>
             
         </member>
+        <member name="P:Ionic.Zip.ZipEntry.DontEmitLastModified">
+            <summary>
+            Ability to set Last Modified DOS time to zero
+            (for using with EmitTimesInWindowsFormatWhenSaving+EmitTimesInUnixFormatWhenSaving setted to false)
+            some flasher hardware use as marker of first binary
+            </summary>
+        </member>
         <member name="P:Ionic.Zip.ZipEntry.ModifiedTime">
              <summary>
              Last Modified time for the file represented by the entry.
@@ -10642,13 +10751,6 @@
                These attributes may not be interesting or useful if the resulting archive
                is extracted on a non-Windows platform.  How these attributes get used
                upon extraction depends on the platform and tool used.
-             </para>
-            
-             <para>
-               This property is only partially supported in the Silverlight version
-               of the library: applications can read attributes on entries within
-               ZipFiles. But extracting entries within Silverlight will not set the
-               attributes on the extracted files.
              </para>
             
              </remarks>
@@ -17836,6 +17938,15 @@
             <param name="dictionary">The dictionary bytes to use.</param>
             <returns>Z_OK if all goes well.</returns>
         </member>
+        <member name="M:Ionic.Zlib.ZlibCodec.SetDictionaryUnconditionally(System.Byte[])">
+            <summary>
+            Set the dictionary to be used for either Inflation or Deflation unconditionally.
+            </summary>
+            <remarks>Decoding a MSZip file requires the dictionary state to be set unconditionally
+            at the end of each block to the previous decoded data</remarks>
+            <param name="dictionary">The dictionary bytes to use.</param>
+            <returns>Z_OK if all goes well.</returns>
+        </member>
         <member name="T:Ionic.Zlib.ZlibConstants">
             <summary>
             A bunch of constants used in the Zlib interface.
@@ -17883,12 +17994,12 @@
         </member>
         <member name="F:Ionic.Zlib.ZlibConstants.WorkingBufferSizeDefault">
             <summary>
-            The size of the working buffer used in the ZlibCodec class. Defaults to 8192 bytes.
+            The size of the working buffer used in the ZlibCodec class.
             </summary>
         </member>
         <member name="F:Ionic.Zlib.ZlibConstants.WorkingBufferSizeMin">
             <summary>
-            The minimum size of the working buffer used in the ZlibCodec class.  Currently it is 128 bytes.
+            The minimum size of the working buffer used in the ZlibCodec class.
             </summary>
         </member>
         <member name="T:Ionic.Zlib.ZlibStream">
