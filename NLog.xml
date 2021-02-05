@@ -1686,7 +1686,7 @@
             with embedded ${}).
             </summary>
         </member>
-        <member name="M:NLog.Conditions.ConditionLayoutExpression.#ctor(NLog.Layouts.Layout)">
+        <member name="M:NLog.Conditions.ConditionLayoutExpression.#ctor(NLog.Layouts.SimpleLayout)">
             <summary>
             Initializes a new instance of the <see cref="T:NLog.Conditions.ConditionLayoutExpression" /> class.
             </summary>
@@ -1735,11 +1735,12 @@
             Condition literal expression (numeric, <b>LogLevel.XXX</b>, <b>true</b> or <b>false</b>).
             </summary>
         </member>
-        <member name="M:NLog.Conditions.ConditionLiteralExpression.#ctor(System.Object)">
+        <member name="M:NLog.Conditions.ConditionLiteralExpression.#ctor(System.Object,System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:NLog.Conditions.ConditionLiteralExpression" /> class.
             </summary>
             <param name="literalValue">Literal value.</param>
+            <param name="toStringValue">ToString value.</param>
         </member>
         <member name="P:NLog.Conditions.ConditionLiteralExpression.LiteralValue">
             <summary>
@@ -3492,7 +3493,7 @@
             Get default file paths (including filename) for possible NLog config files. 
             </summary>
         </member>
-        <member name="M:NLog.Config.LoggingConfigurationFileLoader.GetAppSpecificNLogLocations(System.String)">
+        <member name="M:NLog.Config.LoggingConfigurationFileLoader.GetAppSpecificNLogLocations(System.String,System.String)">
             <summary>
             Get default file paths (including filename) for possible NLog config files. 
             </summary>
@@ -11834,6 +11835,11 @@
             Gets or sets whether to render innermost Exception from <see cref="M:System.Exception.GetBaseException"/>
             </summary>
         </member>
+        <member name="P:NLog.LayoutRenderers.ExceptionLayoutRenderer.FlattenException">
+            <summary>
+            Gets or sets whether to collapse exception tree using <see cref="M:System.AggregateException.Flatten"/>
+            </summary>
+        </member>
         <member name="P:NLog.LayoutRenderers.ExceptionLayoutRenderer.Formats">
             <summary>
              Gets the formats of the output of inner exceptions to be rendered in target.
@@ -14881,6 +14887,12 @@
         <member name="P:NLog.Layouts.JsonLayout.IncludeAllProperties">
             <summary>
             Gets or sets the option to include all properties from the log event (as JSON)
+            </summary>
+            <docgen category='JSON Output' order='10' />
+        </member>
+        <member name="P:NLog.Layouts.JsonLayout.ExcludeEmptyProperties">
+            <summary>
+            Gets or sets the option to exclude null/empty properties from the log event (as JSON)
             </summary>
             <docgen category='JSON Output' order='10' />
         </member>
