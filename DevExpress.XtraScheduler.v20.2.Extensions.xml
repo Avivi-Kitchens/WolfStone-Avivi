@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <assembly>
+    <name>DevExpress.XtraScheduler.v20.2.Extensions</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.XtraScheduler.UI">
+      <summary>
+        <para>Contains classes which implement the user-interface interaction functionality of XtraScheduler.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.UI.ResourcesTree">
+      <summary>
+        <para>The control used to display hierarchically ordered resources for the <see cref="T:DevExpress.XtraScheduler.SchedulerControl"/>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.ResourcesTree.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.UI.ResourcesTree"/> class with default settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.UI.ResourcesTree.ColumnPanelRowHeight">
+      <summary>
+        <para>Hides the corresponding property of the base class.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.UI.ResourcesTree.Columns">
+      <summary>
+        <para>Provides access to a collection of ResourcesTree columns.</para>
+      </summary>
+      <value>A ResourceTreeColumnCollection object that is a collection of all the columns within a resources tree control.</value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.UI.ResourcesTree.DataMember">
+      <summary>
+        <para>For internal use only.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.UI.ResourcesTree.DataSource">
+      <summary>
+        <para>For internal use only.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="E:DevExpress.XtraScheduler.UI.ResourcesTree.FilterNode">
+      <summary>
+        <para>Hides the corresponding event of the base class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.ResourcesTree.FilterNodes">
+      <summary>
+        <para>Forces the control to re-filter its data.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.UI.ResourcesTree.FindPanelVisible">
+      <summary>
+        <para>Gets or sets whether the Find Panel is visible.</para>
+      </summary>
+      <value>true, if the Find Panel is visible; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.UI.ResourcesTree.HorzScrollVisibility">
+      <summary>
+        <para>Gets or sets whether the horizontal scrollbar should be displayed.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraTreeList.ScrollVisibility"/> enumeration value specifying whether the horizontal scrollbar should be displayed.</value>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.ResourcesTree.InternalGetService(System.Type)">
+      <summary>
+        <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
+      </summary>
+      <param name="service"></param>
+      <returns></returns>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.UI.ResourcesTree.IsUnboundMode">
+      <summary>
+        <para>Gets whether the Resources Tree control is in unbound mode.</para>
+      </summary>
+      <value>true, if the control is in unbound mode, otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.ResourcesTree.LayoutChanged">
+      <summary>
+        <para>Called when substantial changes are applied to the ResourcesTree object.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.UI.ResourcesTree.OptionsFilter">
+      <summary>
+        <para>Provides access to the Resources Tree filtering options.</para>
+      </summary>
+      <value>An object that contains filter options.</value>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.ResourcesTree.Refresh">
+      <summary>
+        <para>Recalculates all graphical information of the current ResourcesTree instance and redraws it.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.UI.ResourcesTree.RefreshDataOnSchedulerChanges">
+      <summary>
+        <para>Forces the control to reload its data on every update of the data displayed in the associated SchedulerControl.</para>
+      </summary>
+      <value>True, to force the ResourcesTree to refresh its data when the data displayed in the SchedulerControl changes; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.UI.ResourcesTree.SchedulerControl">
+      <summary>
+        <para>Gets or sets the SchedulerControl to which the current control is bound.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraScheduler.SchedulerControl"/> whose resources should be displayed.</value>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.UI.ResourcesTree.VertScrollVisibility">
+      <summary>
+        <para>Gets or sets whether the vertical scrollbar is displayed.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraTreeList.ScrollVisibility"/> enumeration member specifying the scrollbar visibility.</value>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.UI.ResourcesTreeOptionsFilter">
+      <summary>
+        <para>Provides filtering options for the <see cref="T:DevExpress.XtraScheduler.UI.ResourcesTree"/>.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.ResourcesTreeOptionsFilter.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.UI.ResourcesTreeOptionsFilter"/> class with the default settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraScheduler.UI.ResourcesTreeOptionsFilter.FilterMode">
+      <summary>
+        <para>Overrides the corresponding property of the base class to make it constant. Specifies filter mode for column values in the Resources Tree.</para>
+      </summary>
+      <value>A <see cref="F:DevExpress.XtraTreeList.FilterMode.Smart"/> enumeration value.</value>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.UI.RibbonViewNavigator">
+      <summary>
+        <para>A component used to create a View Navigator Ribbon page.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.RibbonViewNavigator.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.UI.RibbonViewNavigator"/> class with default settings.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.UI.RibbonViewSelector">
+      <summary>
+        <para>A component used to create a View Selector Ribbon page.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.RibbonViewSelector.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.UI.RibbonViewSelector"/> class with default settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.RibbonViewSelector.#ctor(System.ComponentModel.IContainer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.UI.RibbonViewSelector"/> class with the specified container.</para>
+      </summary>
+      <param name="container">An object which implements the <see cref="T:System.ComponentModel.IContainer"/> interface.</param>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.UI.ViewNavigator">
+      <summary>
+        <para>A component used to create a View Navigator bar.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.ViewNavigator.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.UI.ViewNavigator"/> class with default settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.ViewNavigator.#ctor(System.ComponentModel.IContainer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.UI.ViewNavigator"/> class with the specified container.</para>
+      </summary>
+      <param name="container">An object which implements the <see cref="T:System.ComponentModel.IContainer"/> interface.</param>
+    </member>
+    <member name="T:DevExpress.XtraScheduler.UI.ViewSelector">
+      <summary>
+        <para>A component used to create a View Selector bar.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.ViewSelector.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.UI.ViewSelector"/> class with default settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraScheduler.UI.ViewSelector.#ctor(System.ComponentModel.IContainer)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraScheduler.UI.ViewSelector"/> class with the specified container.</para>
+      </summary>
+      <param name="container">An object which implements the <see cref="T:System.ComponentModel.IContainer"/> interface.</param>
+    </member>
+  </members>
+</doc>
