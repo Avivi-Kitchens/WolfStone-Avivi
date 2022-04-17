@@ -1,0 +1,6 @@
+[0103/130013.503:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0205/093722.083:WARNING:spdy_session.cc(3335)] Received WINDOW_UPDATE for invalid stream 5
+[0205/094530.756:WARNING:ipc_message_attachment_set.cc(49)] MessageAttachmentSet destroyed with unconsumed attachments: 0/1
+[0205/094530.756:WARNING:ipc_message_attachment_set.cc(49)] MessageAttachmentSet destroyed with unconsumed attachments: 0/1
+[0205/095227.798:INFO:CONSOLE(1)] "A preload for 'https://github.com/webgl-globe/data/data.json' is found, but is not used because the request credentials mode does not match. Consider taking a look at crossorigin attribute.", source: https://github.githubassets.com/assets/webgl-globe-c520e735.js (1)
+[0205/095230.800:INFO:CONSOLE(0)] "The resource https://github.com/webgl-globe/data/data.json was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.", source: https://github.com/ (0)
