@@ -1,2 +1,0 @@
-Warnung: String ist leer (nicht uebersetzt) in Zeile: 1836 
-Warnung: String ist leer (nicht uebersetzt) in Zeile: 1847 
